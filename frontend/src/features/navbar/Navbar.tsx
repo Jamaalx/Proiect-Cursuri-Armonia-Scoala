@@ -21,7 +21,7 @@ export default function Navbar() {
     };
   }, []);
   return (
-    <div className="container h-20 mx-auto flex items-center justify-between bg-[#09B289]/80 rounded-full mt-11 text-white px-4">
+    <div className="md:container h-20 mx-auto flex items-center justify-between bg-green-secondary-rgb rounded-full mt-11 text-white px-4">
       {/* Mobile Menu */}
       <div className="navbar-start lg:hidden">
         <div className="dropdown">
@@ -37,7 +37,7 @@ export default function Navbar() {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 bg-[#09B289]/80 text-white">
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 bg-green-secondary text-white">
             <li>
               <details>
                 <summary>Programe</summary>
@@ -72,7 +72,7 @@ export default function Navbar() {
           <li>
             <details>
               <summary>Despre Noi</summary>
-              <ul className="p-2 bg-[#09B289]/80">
+              <ul className="p-2 bg-green-secondary">
                 <li><a>Submenu 1</a></li>
                 <li><a>Submenu 2</a></li>
               </ul>

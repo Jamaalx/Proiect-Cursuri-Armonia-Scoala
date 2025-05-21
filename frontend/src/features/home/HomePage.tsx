@@ -1,8 +1,12 @@
+import Hero from "./Hero";
 
 export default function RegisterForm() {
 
 
   return (
-    <div>Home Page</div>
+    <div>
+      <Hero />
+      {/* <p className="font-saint text-3xl">Fontul Saint Regus</p> */}
+    </div>
   );
 }
