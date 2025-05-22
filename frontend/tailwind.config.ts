@@ -29,6 +29,7 @@ export default {
       colors: {
         'green-secondary': '#09B289',
         'green-secondary-rgb': '#09B289CC',
+        'purple-primary': '#7E56C6',
       },
       fontSize: {
         ...fluidFontSize, // importă toate fontSize-urile de la fluid-tailwind

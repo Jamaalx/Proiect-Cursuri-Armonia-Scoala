@@ -1,24 +1,6 @@
 export default function Hero() {
   return (
     <>
-      {/* <div className="container mx-auto flex items-center justify-around mt-6">
-        <div className="flex items-center gap-4 bg-green-secondary/10 p-3 rounded-lg ml-10">
-          <div className="w-4 h-4 bg-green-400 rounded-full"></div>
-          <div className="text-green-secondary-rgb">
-            ARMONIA Academy
-          </div>
-        </div>
-        <div></div>
-        <div></div>
-        <div className="">
-          <img src="./images/yellow-circle.png" alt="" />
-        </div>
-      </div>
-
-      <div className="text-center relative">
-        <img className="absolute -top-9" src="./images/gray-cilinder.png" alt="" />
-        <p className="tracking-normal text-fluid-md lg:text-fluid-2xl font-saint">Descoperă Magia</p>
-      </div> */}
       <div className="flex justify-center">
         <img className="hidden md:block xl:w-[81%]" src="./images/hero.png" alt="" />
         <img className="md:hidden w-full" src="./images/hero-mobile.png" alt="" />
@@ -55,9 +37,6 @@ export default function Hero() {
       </div>
       <div className="relative scale-50 md:scale-100 container mx-auto bottom-20 md:bottom-0 md:mt-24 flex justify-center lg:justify-start">
         <a className="bg-green-secondary px-16 rounded-full btn btn-ghost hover:bg-green-secondary-rgb text-white text-lg">Sediile Noastre</a>
-      </div>
-      <div className="mt-20">
-        dadaw
       </div>
     </>
   );
