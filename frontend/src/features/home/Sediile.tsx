@@ -5,7 +5,7 @@ export default function Sediile() {
         <img src="./images/cercuri.png" alt="" />
       </div>
       <div className="md:container mx-auto md:mt-10 gap-10 flex mb-10 flex-wrap">
-        <div className="bg-white/70 shadow-lg rounded-xl p-8 flex flex-col w-full md:max-w-80 min-h-[560px] relative">
+        <div className="bg-white/70 shadow-lg rounded-xl p-8 flex flex-col w-full md:max-w-80 lg:max-w-96 min-h-[560px] relative">
           <div className="flex items-center justify-between gap-4 md:gap-16 mb-10">
             <div>
               <img src="./images/sediu-green.png" alt="" />
@@ -55,7 +55,7 @@ export default function Sediile() {
           </div>
         </div>
 
-        <div className="bg-white/70 shadow-lg rounded-xl p-8 flex flex-col w-full md:max-w-80 min-h-[560px] relative">
+        <div className="bg-white/70 shadow-lg rounded-xl p-8 flex flex-col w-full md:max-w-80 lg:max-w-96 min-h-[560px] relative">
           <div className="flex items-center justify-between gap-4 md:gap-16 mb-10">
             <div>
               <img src="./images/sediu-green.png" alt="" />
@@ -105,7 +105,7 @@ export default function Sediile() {
           </div>
         </div>
 
-        <div className="bg-white/70 shadow-lg rounded-xl p-8 flex flex-col w-full md:max-w-80 min-h-[560px] relative">
+        <div className="bg-white/70 shadow-lg rounded-xl p-8 flex flex-col w-full md:max-w-80 lg:max-w-96 min-h-[560px] relative">
           <div className="flex items-center justify-between gap-4 md:gap-16 mb-10">
             <div>
               <img src="./images/isolation_mode.png" alt="" />
@@ -155,7 +155,7 @@ export default function Sediile() {
           </div>
         </div>
 
-        <div className="bg-white/70 shadow-lg rounded-xl p-8 flex flex-col w-full md:max-w-80 min-h-[560px] relative">
+        <div className="bg-white/70 shadow-lg rounded-xl p-8 flex flex-col w-full md:max-w-80 lg:max-w-96 min-h-[560px] relative">
           <div className="flex items-center justify-between gap-4 md:gap-16 mb-10">
             <div>
               <img src="./images/purple-hamburger.png" alt="" />
@@ -205,7 +205,7 @@ export default function Sediile() {
           </div>
         </div>
 
-        <div className="bg-white/70 shadow-lg rounded-xl p-8 flex flex-col w-full md:max-w-80 min-h-[560px] relative">
+        <div className="bg-white/70 shadow-lg rounded-xl p-8 flex flex-col w-full md:max-w-80 lg:max-w-96 min-h-[560px] relative">
           <div className="flex items-center justify-between gap-4 md:gap-16 mb-10">
             <div>
               <img src="./images/purple-hamburger.png" alt="" />
