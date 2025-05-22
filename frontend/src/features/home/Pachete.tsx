@@ -2,7 +2,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperType } from 'swiper/types';
 import { FiChevronLeft, FiChevronRight, FiArrowRight } from 'react-icons/fi';
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import 'swiper/swiper-bundle.css';
 import { cn } from '../../lib/cn';
 
@@ -86,7 +86,7 @@ const Pachete = () => {
           prevEl: '.custom-prev',
         }}
         pagination={{
-          el: '.custom-pagination',
+          el: '.custom-pagination-pachete',
           clickable: true,
           renderBullet: (index, className) =>
             `<span class="swiper-bullet ${className}"></span>`,
@@ -185,7 +185,7 @@ const Pachete = () => {
       </div>
 
       {/* PAGINATION */}
-      <div className="custom-pagination mt-6 flex justify-center gap-2" />
+      <div className="custom-pagination-pachete mt-6 flex justify-center gap-2" />
 
       {/* Bullet customization */}
       <style>{`
