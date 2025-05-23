@@ -1,0 +1,192 @@
+import { useState } from "react";
+import { cn } from "../../lib/cn";
+import { FiArrowRight } from "react-icons/fi";
+
+const cardData = [
+  {
+    id: 1,
+    name: "Pian",
+    category: "sound",
+    instrumentImage: "./images/pian.png",
+    pin: "./images/green-pin.png",
+    culoareText: "text-green-secondary-rgb",
+    humanIcon: "./images/green-human.png",
+    buttonColor1: "bg-green-secondary",
+    buttonColor2: "bg-teal-400",
+  },
+];
+export default function Program() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState<Category>(null);
+  type Category = "sound" | "digital" | null;
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(e.target.value.toLowerCase());
+  };
+  const handleCategoryFilter = (cat: Exclude<Category, null>) => {
+    setSelectedCategory((prev) => (prev === cat ? null : cat));
+  };
+
+  const filteredCards = cardData.filter((card) => {
+    const matchesSearch = card.name.toLowerCase().includes(searchTerm);
+    const matchesCategory = selectedCategory ? card.category === selectedCategory : true;
+    return matchesSearch && matchesCategory;
+
+  });
+  return (
+    <div className="md:container md:mx-auto flex flex-col gap-10 mt-[50px]">
+      {/* Banner */}
+      <div className="mb-[70px]">
+        <img src="./images/banner.png" alt="" className="w-full" />
+      </div>
+
+      {/* Buttons and search bar */}
+      <div className="flex flex-col mx-0 md:mx-auto xl:mx-0 gap-6 xl:flex-row items-center xl:justify-between">
+        {/* Filter buttons */}
+        <div className="flex items-center gap-6">
+          <button
+            onClick={() => handleCategoryFilter("sound")}
+            className={`~text-sm/2xl px-4 py-3 rounded-full tracking-wider font-semibold ${selectedCategory === "sound"
+              ? "bg-green-secondary text-white"
+              : "border border-green-secondary text-green-secondary"
+              }`}
+          >
+            Armonia Sound
+          </button>
+
+          <button
+            onClick={() => handleCategoryFilter("digital")}
+            className={`~text-sm/2xl px-4 py-3 rounded-full tracking-wider font-semibold ${selectedCategory === "digital"
+              ? "bg-green-secondary text-white"
+              : "border border-green-secondary text-green-secondary"
+              }`}
+          >
+            Armonia Digital
+          </button>
+        </div>
+
+        {/* Search bar */}
+        <form
+          onSubmit={(e) => e.preventDefault()}
+          className="flex bg-white md:w-full max-w-lg rounded-full overflow-hidden shadow-2xl text-sm"
+        >
+          <input
+            type="text"
+            placeholder="Ce dorești să înveți astăzi?"
+            value={searchTerm}
+            onChange={handleSearchChange}
+            className="flex-1 pl-4 lg:px-6 py-4 text-black focus:outline-none placeholder:text-gray-300 placeholder:text-base text-lg"
+          />
+          <button
+            type="submit"
+            className="bg-teal-500 rounded-full hover:bg-teal-400 text-white px-5 py-4 transition"
+          >
+            <img src="./images/search.png" alt="Search" className="w-6 h-6" />
+          </button>
+        </form>
+      </div>
+
+      {/* Chat Buble */}
+      <div className="hidden xl:flex justify-end absolute -bottom-60 right-10">
+        <a className="btn btn-ghost hover:bg-transparent text-base font-normal px-0 pb-2 relative z-10">
+          <img className="scale-50 md:scale-90 lg:scale-100" src="./images/chat_bot.png" alt="" />
+        </a>
+      </div>
+
+      {/* Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+        {filteredCards.length > 0 ? (
+          filteredCards.map((card) => (
+            <div
+              key={card.id}
+
+              className="bg-white text-black rounded-xl p-6 shadow-lg hover:shadow-xl transition"
+            >
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div>
+                  <img src={card.instrumentImage} alt="" />
+                </div>
+
+                <div className="flex flex-col">
+                  <div className='flex w-fit mb-6 gap-3 bg-green-secondary-rgb/10 items-center py-2 px-2 rounded-lg'>
+                    <div className="h-3 w-3 rounded-full bg-green-400" />
+                    <p className="text-sm font-medium text-green-secondary-rgb">ARMONIA Academy</p>
+                  </div>
+
+                  <div className="flex gap-2">
+                    <img src={card.pin} alt="" className="w-5 aspect-square object-contain" />
+                    <p className="m-0 text-sm tracking-wider text-[#4D5756]">Bucuresti</p>
+                  </div>
+
+                  <div className={`text-[52px] font-saint ${card.culoareText}`}>
+                    <p>{card.name}</p>
+                  </div>
+
+                  <div className="text-[#333931] text-sm max-w-[345px]">
+                    <p>Lorem ipsum dolor sit amet, consectetur elit, sed doeiusmod tempor</p>
+                  </div>
+
+                  <div className="flex gap-2 mt-6">
+                    <div className="relative text-[#E6E6E6]">
+                      <div className="absolute">
+                        <img src="./images/red-line.png" alt="" />
+                      </div>
+                      <p className="text-xl font-bold font-epilogue">1420 €</p>
+                    </div>
+                    <div>
+                      <p className="text-xl font-bold font-epilogue text-green-secondary">1200 €</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between mt-6">
+                    <div
+                      className={cn(
+                        'flex select-none items-center justify-center rounded-full gap-2 pl-4 text-white transition active:scale-[0.97]', card.buttonColor1
+                      )}
+                    >
+                      <span className="text-sm font-medium">Vezi mai Mult</span>
+                      <div className={cn("p-4 rounded-full", card.buttonColor2)}>
+                        <FiArrowRight className="text-xl" />
+                      </div>
+                    </div>
+                    <div className="flex md:hidden items-end">
+                      <img src={card.humanIcon} alt="" className="w-7 h-12" />
+                    </div>
+                  </div>
+
+                </div>
+
+                <div className="hidden md:flex self-end">
+                  <img src={card.humanIcon} alt="" className="w-7 h-12" />
+                </div>
+              </div>
+            </div>
+          ))
+        ) : (
+          <p className="text-center col-span-full text-gray-300">Nicio potrivire</p>
+        )}
+      </div>
+
+      {/* Banner */}
+      <div className="md:container flex flex-col md:flex-row relative md:mx-auto rounded-3xl mx-6 bg-yellow-secondary text-black mb-20">
+        <div className="py-5 px-10 flex justify-center md:block">
+          <img src="./images/intrebare-black.png" alt="" />
+        </div>
+        <div className="flex flex-col p-5 items-center md:items-start text-center md:text-start gap-2 py-5 max-w-3xl">
+          <div className="font-saint text-3xl">
+            <p>Ai nevoie de ajutor?</p>
+          </div>
+          <div>
+            <p>Programează o întâlnire cu un consultant Armonia Academy care te va ajuta pas cu pas pentru o
+              alegere corectă a noului tău drum în carieră.</p>
+          </div>
+          <div className="mt-6 btn-click-effect cursor-pointer select-none">
+            <span className="bg-white rounded-full tracking-wider font-semibold px-4 py-2">
+              Programează o discuție
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
