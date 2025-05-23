@@ -1,4 +1,3 @@
-import Footer from "../footer/footer";
 import Galerie from "./Galerie";
 import Help from "./Help";
 import Hero from "./Hero";
@@ -19,7 +18,6 @@ export default function RegisterForm() {
       <Help />
       <Testimonial />
       <Galerie />
-      <Footer />
       {/* <p className="font-saint text-3xl">Fontul Saint Regus</p> */}
     </div>
   );

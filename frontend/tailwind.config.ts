@@ -26,11 +26,17 @@ export default {
         sans: ['Inter', ...fontFamily.sans],
         saint: ['"Saint Regus"', 'sans-serif'],
         raleway: ['Raleway', 'sans-serif'],
+        epilogue: ["Epilogue", "sans-serif"],
       },
       colors: {
         'green-secondary': '#09B289',
         'green-secondary-rgb': '#09B289CC',
         'purple-primary': '#7E56C6',
+        'purple-secondary': "#A67DEF",
+        'sky-primary': "#25C4CB",
+        'sky-secondary': "#43D6DD",
+        'yellow-primary': "#FFC230",
+        'yellow-secondary': "#FFD46C"
       },
       fontSize: {
         ...fluidFontSize, // importă toate fontSize-urile de la fluid-tailwind

@@ -80,7 +80,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="bg-teal-700 m-2.5 rounded-3xl hover:bg-teal-800 text-white px-6 md:px-10 py-5 transition"
+                className="bg-teal-600 m-2.5 rounded-3xl hover:bg-teal-500 text-white px-6 md:px-10 py-5 transition"
               >
                 Send
               </button>

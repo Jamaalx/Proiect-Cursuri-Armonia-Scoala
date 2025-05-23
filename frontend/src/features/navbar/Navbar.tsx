@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router";
 
 export default function Navbar() {
   useEffect(() => {
@@ -38,15 +39,7 @@ export default function Navbar() {
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 bg-green-secondary text-white">
-            <li>
-              <details>
-                <summary>Programe</summary>
-                <ul className="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </details>
-            </li>
+            <li><Link to={"programe"}>Programe</Link></li>
             <li><a>Profesori</a></li>
             <li>
               <details>
@@ -67,7 +60,7 @@ export default function Navbar() {
       {/* Desktop Left Menu */}
       <div className="hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-lg xl:gap-8">
-          <li><a>Programe</a></li>
+          <li><Link to={"programe"}>Programe</Link></li>
           <li><a>Profesori</a></li>
           <li>
             <details>
@@ -83,9 +76,9 @@ export default function Navbar() {
 
       {/* Logo center */}
       <div className="navbar-center px-2 xl:px-10">
-        <a className="btn btn-ghost hover:bg-transparent p-0 mb-4">
+        <Link to={"/"} className="btn btn-ghost hover:bg-transparent p-0 mb-4">
           <img src="./images/armonia.png" alt="Armonia Logo" className="h-10" />
-        </a>
+        </Link>
       </div>
 
       {/* Desktop Right Menu */}
