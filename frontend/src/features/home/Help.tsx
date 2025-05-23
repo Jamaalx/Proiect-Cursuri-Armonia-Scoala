@@ -16,7 +16,7 @@ export default function Help() {
             <p>Programează o întâlnire cu un consultant Armonia Academy care te va ajuta pas cu pas pentru o
               alegere corectă a noului tău drum în carieră.</p>
           </div>
-          <div className="mt-6">
+          <div className="mt-6 btn-click-effect cursor-pointer select-none">
             <span className="bg-white rounded-full tracking-wider font-semibold text-purple-primary px-4 py-2">
               Programează o discuție
             </span>

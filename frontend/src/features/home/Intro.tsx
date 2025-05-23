@@ -1,6 +1,6 @@
 export default function Intro() {
   return (
-    <div className="relative flex ~mt-10/96">
+    <div className="relative flex ~mt-10/40">
       <div className="absolute -right-14 xl:right-0 -bottom-64 lg:-bottom-40 xl:-bottom-20 scale-50 xl:scale-100 opacity-30">
         <img src="./images/half-yellow-circle.png" alt="" />
       </div>

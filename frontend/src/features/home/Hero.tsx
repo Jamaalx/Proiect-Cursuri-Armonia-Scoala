@@ -35,7 +35,7 @@ export default function Hero() {
           </a>
         </div>
       </div>
-      <div className="relative scale-50 md:scale-100 container mx-auto bottom-20 md:bottom-0 md:mt-24 flex justify-center lg:justify-start">
+      <div className="relative scale-50 md:scale-100 container mx-auto bottom-20 md:bottom-0 md:mt-24 flex justify-center">
         <a className="bg-green-secondary px-16 rounded-full btn btn-ghost hover:bg-green-secondary-rgb text-white text-lg">Sediile Noastre</a>
       </div>
     </>

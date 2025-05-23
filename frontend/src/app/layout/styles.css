@@ -1,4 +1,5 @@
 @import "@fontsource/inter/400.css";
+@import "@fontsource/raleway";
 /* folosește fontul variabil */
 @tailwind base;
 @tailwind components;

@@ -25,6 +25,7 @@ export default {
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans],
         saint: ['"Saint Regus"', 'sans-serif'],
+        raleway: ['Raleway', 'sans-serif'],
       },
       colors: {
         'green-secondary': '#09B289',

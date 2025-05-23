@@ -87,7 +87,7 @@ export default function Sediile() {
         <img src="./images/cercuri.png" alt="" />
       </div>
 
-      <div className="md:container mx-auto md:mt-10 gap-10 flex mb-10 flex-wrap">
+      <div className="md:container mx-auto md:mt-10 gap-10 flex mb-10 justify-center flex-wrap">
         {sediiData.map((sediu, index) => (
           <div
             key={index}
