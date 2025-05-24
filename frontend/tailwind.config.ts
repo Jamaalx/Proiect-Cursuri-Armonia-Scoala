@@ -28,6 +28,8 @@ export default {
         raleway: ['Raleway', 'sans-serif'],
         epilogue: ["Epilogue", "sans-serif"],
         abril: ['"Abril Fatface"', 'cursive'],
+        sora: ['Sora', 'sans-serif'],
+        hind: ['Hind', 'sans-serif'],
       },
       colors: {
         'green-secondary': '#09B289',

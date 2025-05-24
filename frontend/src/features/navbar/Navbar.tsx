@@ -47,6 +47,7 @@ export default function Navbar() {
                 <ul className="p-2">
                   <li><a>Blog</a></li>
                   <li><Link to="/despre-noi">Despre Noi</Link></li>
+                  <li><Link to="/curs">Curs</Link></li>
                 </ul>
               </details>
             </li>
@@ -58,7 +59,7 @@ export default function Navbar() {
       </div>
 
       {/* Desktop Left Menu */}
-      <div className="hidden lg:flex">
+      <div className="hidden lg:flex z-20">
         <ul className="menu menu-horizontal px-1 text-lg xl:gap-8">
           <li><Link to={"programe"}>Programe</Link></li>
           <li><a>Profesori</a></li>
@@ -68,6 +69,7 @@ export default function Navbar() {
               <ul className="p-2 bg-green-secondary">
                 <li><a>Blog</a></li>
                 <li><Link to="/despre-noi">Despre Noi</Link></li>
+                <li><Link to="/curs">Curs</Link></li>
               </ul>
             </details>
           </li>
