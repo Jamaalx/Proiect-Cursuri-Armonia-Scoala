@@ -3,7 +3,7 @@ export default function Footer() {
     <div className="relative mt-52 bg-cover min-h-[550px] text-white" style={{ backgroundImage: "url('./images/footer-feet.png')" }}>
 
       {/* Elemente decorative */}
-      <div className="absolute -top-44 -left-36 md:-left-2 -z-10">
+      <div className="absolute -top-44 -left-36 md:-left-2 z-10">
         <img className="scale-75 md:scale-100" src="./images/footer-gear.png" alt="" />
       </div>
       <div className="absolute -right-20 md:right-0 -top-64 lg:-top-48 z-10">

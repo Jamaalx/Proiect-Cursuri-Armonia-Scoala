@@ -43,7 +43,6 @@ const courses = [
     buttonColor2: "bg-teal-400",
     icon: "./images/green-human.png"
   },
-  // adaugă restul cursurilor după acest model...
 ];
 
 const Pachete = () => {
