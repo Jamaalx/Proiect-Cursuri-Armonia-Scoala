@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export default function Hero() {
   return (
     <>
@@ -18,9 +20,11 @@ export default function Hero() {
             <div
               className="absolute inset-0 flex items-center justify-center"
             >
-              <span className="text-white font-bold text-[8px] md:text-[10px] lg:text-lg text-center mr-4 md:mr-10 lg:mr-16">
-                Vezi Cursuriile
-              </span>
+              <Link to={"cursuri"}>
+                <span className="text-white font-bold text-[8px] md:text-[10px] lg:text-lg text-center mr-4 md:mr-10 lg:mr-16">
+                  Vezi Cursuriile
+                </span>
+              </Link>
             </div>
           </a>
         </div>

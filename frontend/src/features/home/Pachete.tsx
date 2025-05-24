@@ -5,6 +5,7 @@ import { FiChevronLeft, FiChevronRight, FiArrowRight } from 'react-icons/fi';
 import { useState, useRef } from 'react';
 import 'swiper/swiper-bundle.css';
 import { cn } from '../../lib/cn';
+import { Link } from 'react-router';
 
 const courses = [
   {
@@ -64,7 +65,9 @@ const Pachete = () => {
               'flex bg-green-secondary items-center justify-center rounded-full gap-2 pl-4 text-white transition active:scale-[0.97]',
             )}
           >
-            <span className="text-sm font-medium select-none">Vezi mai Mult</span>
+            <Link to={"cursuri"}>
+              <span className="text-sm font-medium select-none">Vezi mai Mult</span>
+            </Link>
             <div className={cn("p-4 rounded-full bg-teal-400")}>
               <FiArrowRight className="text-xl" />
             </div>
@@ -153,7 +156,9 @@ const Pachete = () => {
                       course.buttonColor1
                     )}
                   >
-                    <span className="text-sm font-medium">Vezi mai Mult</span>
+                    <Link to={"program"}>
+                      <span className="text-sm font-medium">Vezi mai Mult</span>
+                    </Link>
                     <div className={cn("p-4 rounded-full", course.buttonColor2)}>
                       <FiArrowRight className="text-xl" />
                     </div>

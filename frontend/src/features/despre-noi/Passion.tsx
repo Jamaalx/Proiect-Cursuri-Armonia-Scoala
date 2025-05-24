@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 const teachers = [
   {
     nume: "Micheal Hammond",
@@ -73,16 +75,15 @@ export default function Passion() {
         {/* Profesori carduri */}
         <div className="px-4 py-8 md:container md:mx-auto gap-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {teachers.map((teacher, index) => (
-            <div key={index} className="p-2 shadow-lg rounded-lg flex flex-col">
-
-
-              <img src={teacher.imagineTeacher} alt="" />
-
-              <div className="m-4">
-                <p className="font-bold text-lg text-blue-text-primary">{teacher.nume}</p>
-                <p className="text-sm text-green-secondary">Teacher</p>
+            <Link to={"/profesor"}>
+              <div key={index} className="p-2 shadow-lg rounded-lg flex flex-col">
+                <img src={teacher.imagineTeacher} alt="" />
+                <div className="m-4">
+                  <p className="font-bold text-lg text-blue-text-primary">{teacher.nume}</p>
+                  <p className="text-sm text-green-secondary">Teacher</p>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -20,7 +20,7 @@ export const router = createBrowserRouter([
       { path: "program", element: <Program /> },
 
       { path: "despre-noi", element: <DespreNoi /> },
-      { path: "curs", element: <CursMain /> },
+      { path: "cursuri", element: <CursMain /> },
       { path: "profesori", element: <Profesori /> },
 
       // this will be for the insgle profesor by id
