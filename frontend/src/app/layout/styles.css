@@ -1,6 +1,7 @@
 @import "@fontsource/inter/400.css";
 @import "@fontsource/raleway";
 @import "@fontsource/epilogue/700.css";
+@import '@fontsource/abril-fatface';
 /* folosește fontul variabil */
 @tailwind base;
 @tailwind components;

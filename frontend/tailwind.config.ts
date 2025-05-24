@@ -27,6 +27,7 @@ export default {
         saint: ['"Saint Regus"', 'sans-serif'],
         raleway: ['Raleway', 'sans-serif'],
         epilogue: ["Epilogue", "sans-serif"],
+        abril: ['"Abril Fatface"', 'cursive'],
       },
       colors: {
         'green-secondary': '#09B289',
@@ -36,7 +37,8 @@ export default {
         'sky-primary': "#25C4CB",
         'sky-secondary': "#43D6DD",
         'yellow-primary': "#FFC230",
-        'yellow-secondary': "#FFD46C"
+        'yellow-secondary': "#FFD46C",
+        "blue-text-primary": "#0E2A46"
       },
       fontSize: {
         ...fluidFontSize, // importă toate fontSize-urile de la fluid-tailwind

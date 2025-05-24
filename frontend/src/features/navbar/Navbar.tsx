@@ -45,8 +45,8 @@ export default function Navbar() {
               <details>
                 <summary>Despre Noi</summary>
                 <ul className="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
+                  <li><a>Blog</a></li>
+                  <li><Link to="/despre-noi">Despre Noi</Link></li>
                 </ul>
               </details>
             </li>
@@ -66,8 +66,8 @@ export default function Navbar() {
             <details>
               <summary>Despre Noi</summary>
               <ul className="p-2 bg-green-secondary">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
+                <li><a>Blog</a></li>
+                <li><Link to="/despre-noi">Despre Noi</Link></li>
               </ul>
             </details>
           </li>

@@ -3,6 +3,7 @@ import App from "../layout/App";
 import HomePage from "../../features/home/HomePage";
 import Programe from "../../features/programe/Programe";
 import Program from "../../features/programe/Program";
+import DespreNoi from "../../features/despre-noi/DespreNoi";
 
 export const router = createBrowserRouter([
   {
@@ -11,7 +12,8 @@ export const router = createBrowserRouter([
     children: [
       { path: "", element: <HomePage /> },
       { path: "programe", element: <Programe /> },
-      { path: "program", element: <Program /> }
+      { path: "program", element: <Program /> },
+      { path: "despre-noi", element: <DespreNoi /> }
     ]
   }
 ]);
