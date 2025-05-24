@@ -38,14 +38,13 @@ export default function Navbar() {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 bg-green-secondary text-white">
+            className="menu relative z-30 menu-sm dropdown-content mt-3 p-2 shadow rounded-box w-52 bg-green-secondary text-white">
             <li><Link to={"programe"}>Programe</Link></li>
-            <li><a>Profesori</a></li>
+            <li><Link to={"profesori"}>Profesori</Link></li>
             <li>
               <details>
                 <summary>Despre Noi</summary>
                 <ul className="p-2">
-                  <li><a>Blog</a></li>
                   <li><Link to="/despre-noi">Despre Noi</Link></li>
                   <li><Link to="/curs">Curs</Link></li>
                 </ul>
@@ -62,12 +61,11 @@ export default function Navbar() {
       <div className="hidden lg:flex z-20">
         <ul className="menu menu-horizontal px-1 text-lg xl:gap-8">
           <li><Link to={"programe"}>Programe</Link></li>
-          <li><a>Profesori</a></li>
+          <li><Link to={"profesori"}>Profesori</Link></li>
           <li>
             <details>
               <summary>Despre Noi</summary>
               <ul className="p-2 bg-green-secondary">
-                <li><a>Blog</a></li>
                 <li><Link to="/despre-noi">Despre Noi</Link></li>
                 <li><Link to="/curs">Curs</Link></li>
               </ul>

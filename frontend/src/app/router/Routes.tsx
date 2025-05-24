@@ -5,6 +5,8 @@ import Programe from "../../features/programe/Programe";
 import Program from "../../features/programe/Program";
 import DespreNoi from "../../features/despre-noi/DespreNoi";
 import CursMain from "../../features/curs/CursMain";
+import Profesori from "../../features/profesori/Profesori";
+import Profesor from "../../features/profesori/Profesor";
 
 export const router = createBrowserRouter([
   {
@@ -13,9 +15,16 @@ export const router = createBrowserRouter([
     children: [
       { path: "", element: <HomePage /> },
       { path: "programe", element: <Programe /> },
+
+      // this will be for the insgle program by id
       { path: "program", element: <Program /> },
+
       { path: "despre-noi", element: <DespreNoi /> },
-      { path: "curs", element: <CursMain /> }
+      { path: "curs", element: <CursMain /> },
+      { path: "profesori", element: <Profesori /> },
+
+      // this will be for the insgle profesor by id
+      { path: "profesor", element: <Profesor /> },
     ]
   }
 ]);
