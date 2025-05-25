@@ -7,6 +7,7 @@ import DespreNoi from "../../features/despre-noi/DespreNoi";
 import CursMain from "../../features/curs/CursMain";
 import Profesori from "../../features/profesori/Profesori";
 import Profesor from "../../features/profesori/Profesor";
+import Blogs from "../../features/blog/Blogs";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,8 @@ export const router = createBrowserRouter([
 
       // this will be for the insgle profesor by id
       { path: "profesor", element: <Profesor /> },
+
+      { path: "blogs", element: <Blogs /> }
     ]
   }
 ]);

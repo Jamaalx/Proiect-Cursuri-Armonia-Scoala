@@ -50,7 +50,7 @@ export default function Navbar() {
                 </ul>
               </details>
             </li>
-            <li><a>Blog</a></li>
+            <li><Link to={"blogs"}>Blog</Link></li>
             <li><a>Contact</a></li>
             <li><a>Înregistrează-Te</a></li>
           </ul>
@@ -84,7 +84,7 @@ export default function Navbar() {
       {/* Desktop Right Menu */}
       <div className="hidden lg:flex gap-0 xl:gap-8 items-center text-lg">
         <ul className="menu menu-horizontal px-0 text-lg xl:gap-8">
-          <li><a>Blog</a></li>
+          <li><Link to={"blogs"}>Blog</Link></li>
           <li><a>Contact</a></li>
         </ul>
         <a className="btn btn-ghost hover:bg-transparent text-base font-normal px-0 pb-2 relative">
