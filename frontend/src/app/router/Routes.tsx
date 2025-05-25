@@ -12,6 +12,7 @@ import Blog from "../../features/blog/Blog";
 import Contact from "../../features/contact/Contact";
 import SignUp from "../../features/auth/SignUp";
 import SignIn from "../../features/auth/SignIn";
+import NotFound from "../../features/not-found/NotFound";
 
 export const router = createBrowserRouter([
   {
@@ -39,6 +40,7 @@ export const router = createBrowserRouter([
       { path: "contact", element: <Contact /> },
       { path: "signup", element: <SignUp /> },
       { path: "signin", element: <SignIn /> },
+      { path: "not-found", element: <NotFound /> },
     ]
   }
 ]);
