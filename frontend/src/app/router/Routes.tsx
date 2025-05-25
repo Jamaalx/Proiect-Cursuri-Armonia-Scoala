@@ -9,6 +9,7 @@ import Profesori from "../../features/profesori/Profesori";
 import Profesor from "../../features/profesori/Profesor";
 import Blogs from "../../features/blog/Blogs";
 import Blog from "../../features/blog/Blog";
+import Contact from "../../features/contact/Contact";
 
 export const router = createBrowserRouter([
   {
@@ -31,7 +32,9 @@ export const router = createBrowserRouter([
       { path: "blogs", element: <Blogs /> },
 
       // this will be for the single profesor by id
-      { path: "blog", element: <Blog /> }
+      { path: "blog", element: <Blog /> },
+
+      { path: "contact", element: <Contact /> }
     ]
   }
 ]);

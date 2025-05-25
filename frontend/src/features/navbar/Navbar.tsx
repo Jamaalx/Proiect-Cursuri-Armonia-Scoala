@@ -39,8 +39,8 @@ export default function Navbar() {
           <ul
             tabIndex={0}
             className="menu relative z-30 menu-sm dropdown-content mt-3 p-2 shadow rounded-box w-52 bg-green-secondary text-white">
-            <li><Link to={"programe"}>Programe</Link></li>
-            <li><Link to={"profesori"}>Profesori</Link></li>
+            <li><Link to={"/programe"}>Programe</Link></li>
+            <li><Link to={"/profesori"}>Profesori</Link></li>
             <li>
               <details>
                 <summary>Despre Noi</summary>
@@ -50,8 +50,8 @@ export default function Navbar() {
                 </ul>
               </details>
             </li>
-            <li><Link to={"blogs"}>Blog</Link></li>
-            <li><a>Contact</a></li>
+            <li><Link to={"/blogs"}>Blog</Link></li>
+            <li><Link to={"/Contact"}>Contact</Link></li>
             <li><a>Înregistrează-Te</a></li>
           </ul>
         </div>
@@ -60,8 +60,8 @@ export default function Navbar() {
       {/* Desktop Left Menu */}
       <div className="hidden lg:flex z-20">
         <ul className="menu menu-horizontal px-1 text-lg xl:gap-8">
-          <li><Link to={"programe"}>Programe</Link></li>
-          <li><Link to={"profesori"}>Profesori</Link></li>
+          <li><Link to={"/programe"}>Programe</Link></li>
+          <li><Link to={"/profesori"}>Profesori</Link></li>
           <li>
             <details>
               <summary>Despre Noi</summary>
@@ -84,8 +84,8 @@ export default function Navbar() {
       {/* Desktop Right Menu */}
       <div className="hidden lg:flex gap-0 xl:gap-8 items-center text-lg">
         <ul className="menu menu-horizontal px-0 text-lg xl:gap-8">
-          <li><Link to={"blogs"}>Blog</Link></li>
-          <li><a>Contact</a></li>
+          <li><Link to={"/blogs"}>Blog</Link></li>
+          <li><Link to={"/Contact"}>Contact</Link></li>
         </ul>
         <a className="btn btn-ghost hover:bg-transparent text-base font-normal px-0 pb-2 relative">
           <img src="./images/inregistreaza-te.png" alt="" />
