@@ -8,6 +8,7 @@ import CursMain from "../../features/curs/CursMain";
 import Profesori from "../../features/profesori/Profesori";
 import Profesor from "../../features/profesori/Profesor";
 import Blogs from "../../features/blog/Blogs";
+import Blog from "../../features/blog/Blog";
 
 export const router = createBrowserRouter([
   {
@@ -17,17 +18,20 @@ export const router = createBrowserRouter([
       { path: "", element: <HomePage /> },
       { path: "programe", element: <Programe /> },
 
-      // this will be for the insgle program by id
+      // this will be for the single program by id
       { path: "program", element: <Program /> },
 
       { path: "despre-noi", element: <DespreNoi /> },
       { path: "cursuri", element: <CursMain /> },
       { path: "profesori", element: <Profesori /> },
 
-      // this will be for the insgle profesor by id
+      // this will be for the single profesor by id
       { path: "profesor", element: <Profesor /> },
 
-      { path: "blogs", element: <Blogs /> }
+      { path: "blogs", element: <Blogs /> },
+
+      // this will be for the single profesor by id
+      { path: "blog", element: <Blog /> }
     ]
   }
 ]);

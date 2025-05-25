@@ -169,10 +169,10 @@ export default function Blogs() {
       scale-75 xl:scale-100 -left-5 opacity-40 hidden lg:block">
         <img src="./images/right-half-circle.png" alt="" />
       </div>
-      <div className="absolute hidden 2xl:block -right-28 2xl:top-[500px] ">
+      <div className="absolute hidden 2xl:block right-0 2xl:top-[500px] ">
         <img src="./images/footer-air-scaleddown.png" alt="" />
       </div>
-      <div className="absolute hidden 2xl:block -right-10 2xl:top-[1200px] ">
+      <div className="absolute hidden 2xl:block right-0 2xl:top-[1200px] ">
         <img src="./images/green-right-gear.png" alt="" />
       </div>
       <div className="md:container md:mx-auto flex gap-20 mt-10">
@@ -296,7 +296,7 @@ export default function Blogs() {
                           'flex select-none items-center justify-center rounded-full gap-2 pl-4 text-white transition active:scale-[0.97] bg-purple-primary',
                         )}
                       >
-                        <Link to={"blog"}>
+                        <Link to={"/blog"}>
                           <span className="text-sm font-sora">Vezi Mai Mult</span>
                         </Link>
                         <div className={cn("p-4 rounded-full bg-purple-secondary")}>
