@@ -10,6 +10,8 @@ import Profesor from "../../features/profesori/Profesor";
 import Blogs from "../../features/blog/Blogs";
 import Blog from "../../features/blog/Blog";
 import Contact from "../../features/contact/Contact";
+import SignUp from "../../features/auth/SignUp";
+import SignIn from "../../features/auth/SignIn";
 
 export const router = createBrowserRouter([
   {
@@ -34,7 +36,9 @@ export const router = createBrowserRouter([
       // this will be for the single profesor by id
       { path: "blog", element: <Blog /> },
 
-      { path: "contact", element: <Contact /> }
+      { path: "contact", element: <Contact /> },
+      { path: "signup", element: <SignUp /> },
+      { path: "signin", element: <SignIn /> },
     ]
   }
 ]);

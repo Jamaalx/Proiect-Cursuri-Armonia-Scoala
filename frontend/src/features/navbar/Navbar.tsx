@@ -22,7 +22,7 @@ export default function Navbar() {
     };
   }, []);
   return (
-    <div className="md:container h-20 mx-auto flex items-center justify-between bg-green-secondary-rgb rounded-full mt-11 text-white px-4">
+    <div className="md:container relative z-30 h-20 mx-auto flex items-center justify-between bg-green-secondary-rgb rounded-full mt-11 text-white px-4">
       {/* Mobile Menu */}
       <div className="navbar-start lg:hidden">
         <div className="dropdown">
@@ -52,7 +52,7 @@ export default function Navbar() {
             </li>
             <li><Link to={"/blogs"}>Blog</Link></li>
             <li><Link to={"/Contact"}>Contact</Link></li>
-            <li><a>Înregistrează-Te</a></li>
+            <li><Link to={"/signup"}>Înregistrează-Te</Link></li>
           </ul>
         </div>
       </div>
@@ -87,10 +87,10 @@ export default function Navbar() {
           <li><Link to={"/blogs"}>Blog</Link></li>
           <li><Link to={"/Contact"}>Contact</Link></li>
         </ul>
-        <a className="btn btn-ghost hover:bg-transparent text-base font-normal px-0 pb-2 relative">
+        <Link to={"/signup"} className="btn btn-ghost hover:bg-transparent text-base font-normal px-0 pb-2 relative">
           <img src="./images/inregistreaza-te.png" alt="" />
           <div className="absolute mr-6 mt-2">Înregistrează-Te</div>
-        </a>
+        </Link>
       </div>
     </div>
   );
