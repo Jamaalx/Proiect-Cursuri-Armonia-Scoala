@@ -99,7 +99,7 @@ const cardData = [
 
 export default function CursuriOferte() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [_, setActiveIndex] = useState(0);
   const swiperRef = useRef<SwiperType | null>(null);
   return (
     <div>
@@ -149,7 +149,7 @@ export default function CursuriOferte() {
             pagination={{
               el: '.custom-pagination-cursuri-oferte',
               clickable: true,
-              renderBullet: (index, className) =>
+              renderBullet: (_, className) =>
                 `<span class="swiper-bullet ${className}"></span>`,
             }}
           >

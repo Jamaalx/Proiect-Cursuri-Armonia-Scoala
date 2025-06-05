@@ -90,7 +90,7 @@ const Pachete = () => {
         pagination={{
           el: '.custom-pagination-pachete',
           clickable: true,
-          renderBullet: (index, className) =>
+          renderBullet: (_, className) =>
             `<span class="swiper-bullet ${className}"></span>`,
         }}
       >

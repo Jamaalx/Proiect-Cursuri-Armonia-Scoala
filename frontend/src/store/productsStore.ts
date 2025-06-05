@@ -1,6 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import agent from "../lib/agent";
-import { useLocation } from "react-router";
 
 interface ProductsResponse {
   success: boolean;
@@ -19,7 +18,6 @@ interface Products {
 
 export const useProducts = (id?: string) => {
   const queryClient = useQueryClient();
-  const location = useLocation();
 
   const { data: products, isPending } = useQuery<Products[]>({
     queryKey: ["products"],

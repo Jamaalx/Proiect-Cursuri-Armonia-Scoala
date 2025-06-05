@@ -1,7 +1,13 @@
-import React from "react";
+
+interface OferteType {
+  title: string,
+  price: string,
+  color: "green" | "yellow" | "red" | "blue" | "purple" | "pink" | string;
+  features: string[];
+}
 
 const EmilServiceComponent = () => {
-  const oferteSiteuri = [
+  const oferteSiteuri: OferteType[] = [
     {
       title: "Esențial",
       price: "800€ TVA inclus",
@@ -91,7 +97,12 @@ const EmilServiceComponent = () => {
     },
   ];
 
-  const CardGrid = ({ data, title }) => (
+  type CardGridProps = {
+    data: OferteType[];
+    title: string;
+  };
+
+  const CardGrid = ({ data, title }: CardGridProps) => (
     <section className="py-12 bg-gradient-to-b from-blue-50 via-purple-50 to-pink-50">
       <h2 className="text-3xl font-bold text-center mb-10 text-gray-900">{title}</h2>
       <div className="grid gap-8 md:grid-cols-3 px-6 max-w-7xl mx-auto">
