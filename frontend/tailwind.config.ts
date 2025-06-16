@@ -4,12 +4,14 @@ import fluid, { extract, screens as fluidScreens, fontSize as fluidFontSize } fr
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx,css}",
-    "./src/app/layout/styles.css",
-  ],
-  extract,
+  content: {
+    files: [
+      "./index.html",
+      "./src/**/*.{js,ts,jsx,tsx,css}",
+      "./src/app/layout/styles.css",
+    ],
+    extract,
+  },
   theme: {
     // definim screens pentru fluid responsiveness
     screens: {
