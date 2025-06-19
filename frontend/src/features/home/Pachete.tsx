@@ -51,27 +51,20 @@ const Pachete = () => {
   const swiperRef = useRef<SwiperType | null>(null);
 
   return (
-    <div className="md:container mx-auto px-4 py-10 bg-green-50 rounded-3xl relative">
+    <div className="md:container mx-auto px-6 py-10 bg-green-50 rounded-3xl relative">
       <div className='flex flex-col md:flex-row justify-between'>
-        <div className='flex flex-col gap-4 pl-6'>
-          <div className='flex'>
-            <p className='bg-green-secondary text-white tracking-wider text-sm font-semibold px-4 py-2 rounded-full'>Cursuri Populare</p>
-          </div>
-          <p className='font-saint text-3xl'>Alege cel mai bun pachet pentru învățare</p>
-        </div>
-        <div className="flex items-center justify-between mt-6 cursor-pointer ml-6 md:mr-6">
-          <div
-            className={cn(
-              'flex bg-green-secondary items-center justify-center rounded-full gap-2 pl-4 text-white transition active:scale-[0.97]',
-            )}
-          >
-            <Link to={"cursuri"}>
-              <span className="text-sm font-medium select-none">Vezi mai Mult</span>
+        <div className='flex flex-col gap-4'>
+          <div className='flex justify-between'>
+            <p className='bg-green-secondary text-white tracking-wider text-sm font-semibold ~px-2/4 ~py-1/2 rounded-full'>
+              Cursuri Populare
+            </p>
+            <Link to={"/cursuri"}>
+              <p className='text-green-secondary underline tracking-wider text-sm font-semibold ~px-2/4 ~py-1/2 rounded-full'>
+                Vezi toate cursurile
+              </p>
             </Link>
-            <div className={cn("p-4 rounded-full bg-teal-400")}>
-              <FiArrowRight className="text-xl" />
-            </div>
           </div>
+          <p className='font-saint ~text-md/3xl'>Alege cel mai bun pachet pentru învățare</p>
         </div>
       </div>
 
@@ -88,7 +81,7 @@ const Pachete = () => {
           prevEl: '.custom-prev',
         }}
         pagination={{
-          el: '.custom-pagination-pachete',
+          el: '.custom-pagination-pach',
           clickable: true,
           renderBullet: (_, className) =>
             `<span class="swiper-bullet ${className}"></span>`,
@@ -117,10 +110,10 @@ const Pachete = () => {
                   <div>
                     <img src={course.instrumentImage} alt="" />
                   </div>
-                  <div className="flex flex-col gap-3 px-3 py-1 rounded-lg">
+                  <div className="flex flex-col gap-3 px-2 py-1 rounded-lg">
                     <div className='flex gap-3 bg-green-secondary-rgb/10 items-center py-2 px-2 rounded-lg'>
                       <div className="h-3 w-3 rounded-full bg-green-400" />
-                      <p className="text-sm font-medium text-green-secondary-rgb">ARMONIA Academy</p>
+                      <p className="text-[10px] sm:text-sm font-medium text-green-secondary-rgb text-nowrap">ARMONIA Academy</p>
                     </div>
                   </div>
                 </div>
@@ -163,7 +156,7 @@ const Pachete = () => {
                       <FiArrowRight className="text-xl" />
                     </div>
                   </div>
-                  <img src={course.icon} alt="" className="w-8 h-8 pr-2" />
+                  <img src={course.icon} alt="" className="w-5 h-10 shrink-0" />
                 </div>
               </div>
             </div>
@@ -172,7 +165,7 @@ const Pachete = () => {
       </Swiper>
 
       {/* NAVIGATION BUTTONS */}
-      <div className="custom-prev absolute top-1/2 left-0 transform -translate-y-1/2 z-10 cursor-pointer">
+      <div className="custom-prev absolute left-4 transform -translate-y-1/2 z-10 cursor-pointer">
         <div className="group w-10 h-10 flex items-center justify-center bg-white rounded-full shadow hover:bg-green-secondary transition">
           <span className="text-2xl text-teal-600 group-hover:text-white">
             <FiChevronLeft />
@@ -180,7 +173,7 @@ const Pachete = () => {
         </div>
       </div>
 
-      <div className="custom-next absolute top-1/2 right-0 transform -translate-y-1/2 z-10 cursor-pointer">
+      <div className="custom-next absolute right-4 transform -translate-y-1/2 z-10 cursor-pointer">
         <div className="group w-10 h-10 flex items-center justify-center bg-white rounded-full shadow hover:bg-green-secondary transition">
           <span className="text-2xl text-teal-600 group-hover:text-white">
             <FiChevronRight />
@@ -189,7 +182,7 @@ const Pachete = () => {
       </div>
 
       {/* PAGINATION */}
-      <div className="custom-pagination-pachete mt-6 flex justify-center gap-2" />
+      <div className="custom-pagination-pach flex justify-center gap-2" />
 
       {/* Bullet customization */}
       <style>{`
@@ -210,6 +203,22 @@ const Pachete = () => {
           opacity: 1;
         }
       `}</style>
+
+      <div className="flex items-center justify-center mt-6 cursor-pointer ml-6 md:mr-6">
+        <div
+          className={cn(
+            'flex bg-green-secondary items-center justify-center rounded-full gap-2 pl-4 text-white transition active:scale-[0.97]',
+          )}
+        >
+          <Link to={"cursuri"}>
+            <span className="text-sm font-medium select-none">Vezi Cursurile</span>
+          </Link>
+          <div className={cn("p-4 rounded-full bg-teal-400")}>
+            <FiArrowRight className="text-xl" />
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 };

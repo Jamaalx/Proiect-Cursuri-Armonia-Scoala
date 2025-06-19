@@ -149,7 +149,8 @@ const Testimonial = () => {
       `}</style>
       </div>
       <div>
-        <img className="w-full relative" src="./images/purple-banner.png" alt="" />
+        <img className="hidden lg:block w-full relative" src="./images/purple-banner.png" alt="" />
+        <img className="lg:hidden w-full relative" src="./images/purple-banner-small.png" alt="" />
       </div>
     </div>
   );

@@ -1,13 +1,19 @@
+import { useRef, useState } from 'react';
+import { Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper as SwiperType } from 'swiper/types';
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+
 export default function Sediile() {
   const sediiData = [
     {
-      nume: "Sediul Obor\nMoșilor",
+      nume: "Obor-Fainari ",
       imagineSediu: "./images/sediu-green.png",
       pin: "./images/green-pin.png",
       culoareText: "text-green-secondary-rgb",
       telefon: "+ 40738318373",
-      email: "contact@scoalaarmona.ro",
-      adresa: "Strada Profesor Ion Maiorescu 37, Sector 2, Bucuresti",
+      email: "obor@armoniaacademy.ro",
+      adresa: "Str. Episcopul Radu nr. 63 (langa Patiseria Blitz 'n Roll din str. Fainari nr. 5)",
       zona: "Zona Obor - Mosilor, vis-a-vis de Scoala 50 Maica Domnului",
       program: [
         "Luni - Vineri: 10:00 - 21:00",
@@ -66,7 +72,7 @@ export default function Sediile() {
     },
     {
       nume: "Sediul Premium Atomic Academy",
-      customText: "text-4xl",
+      customText: "",
       imagineSediu: "./images/purple-hat.png",
       pin: "./images/purple-pin.png",
       culoareText: "text-purple-primary",
@@ -80,14 +86,19 @@ export default function Sediile() {
       icon: "./images/purple-human.png"
     },
   ];
-
+  const [, setActiveIndex] = useState(0);
+  const swiperRef = useRef<SwiperType | null>(null);
   return (
     <div className="relative">
       <div className="absolute right-0 -top-40">
         <img src="./images/cercuri.png" alt="" />
       </div>
-
-      <div className="md:container mx-auto md:mt-10 gap-10 flex mb-10 justify-center flex-wrap">
+      <div className="ml-8 relative container md:mx-auto md:mt-24 flex md:justify-center">
+        <a className="bg-green-secondary font-normal ~px-6/16 rounded-full btn btn-ghost hover:bg-green-secondary-rgb text-white ~text-sm/lg">
+          Sediile Noastre
+        </a>
+      </div>
+      <div className="hidden lg:container mx-auto md:mt-10 gap-10 md:flex mb-10 justify-center flex-wrap">
         {sediiData.map((sediu, index) => (
           <div
             key={index}
@@ -152,6 +163,134 @@ export default function Sediile() {
             </div>
           </div>
         ))}
+      </div>
+      <div className='lg:hidden mx-8'>
+        <Swiper
+          modules={[Navigation, Pagination]}
+          slidesPerView="auto"
+          centeredSlides
+          initialSlide={3}
+          spaceBetween={30}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
+          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+          navigation={{
+            nextEl: '.custom-next',
+            prevEl: '.custom-prev',
+          }}
+          pagination={{
+            el: '.custom-pagination-pachete',
+            clickable: true,
+            renderBullet: (_, className) =>
+              `<span class="swiper-bullet ${className}"></span>`,
+          }}
+        >
+          {sediiData.map((sediu, index) => (
+            <SwiperSlide
+              key={index}
+              className="md:!w-80 flex justify-center py-10"
+            >
+              <div
+                key={index}
+                className="bg-white/70 shadow-lg rounded-xl p-8 flex flex-col w-full md:max-w-80 lg:max-w-96 min-h-[530px] relative"
+              >
+                <div className="flex items-center justify-between gap-4 md:gap-16 ~mb-2/10">
+                  <div>
+                    <img src={sediu.imagineSediu} alt="" className='~w-20/40' />
+                  </div>
+                  <div className="flex gap-2 border rounded-full items-center ~py-1/3 px-2">
+                    <div>
+                      <img src="./images/google-pin.png" alt="" />
+                    </div>
+                    <p className="m-0 text-blue-500 font-semibold ~text-xs/sm tracking-wider">Direction</p>
+                  </div>
+                </div>
+
+                <h2 className={`${sediu.customText || "text-md leading-7"} font-saint mb-2 ${sediu.culoareText}`}>
+                  {sediu.nume.split("\n").map((line, i) => (
+                    <div key={i}>{line}</div>
+                  ))}
+                </h2>
+
+                <div className='~text-sm/md'>
+                  <div className="flex gap-2 rounded-full items-center">
+                    <div>
+                      <img src={sediu.pin} alt="" />
+                    </div>
+                    <p className="m-0 tracking-wider">Bucuresti</p>
+                  </div>
+
+                  <div className="flex gap-2 rounded-full items-center">
+                    <p className="m-0 tracking-wider">{sediu.telefon}</p>
+                  </div>
+
+                  <div className="flex gap-2 rounded-full items-center">
+                    <p className="m-0 tracking-wider">{sediu.email}</p>
+                  </div>
+
+                  <div className="flex gap-2 rounded-full items-center">
+                    <p className="m-0 tracking-wider whitespace-pre-line">{sediu.adresa}</p>
+                  </div>
+
+                  <div className="flex gap-2 rounded-full items-center">
+                    <p className="m-0 tracking-wider whitespace-pre-line">{sediu.zona}</p>
+                  </div>
+                  <div className="h-5"></div>
+                  <div className="flex gap-2 rounded-full items-center">
+                    <p className="m-0 tracking-wider font-bold">Program:</p>
+                  </div>
+
+                  {sediu.program.map((linie, idx) => (
+                    <div key={idx} className="flex gap-2 rounded-full items-center">
+                      <p className="m-0 tracking-wider">{linie}</p>
+                    </div>
+                  ))}
+
+                  <div className="absolute right-5 bottom-5">
+                    <img src={sediu.icon} alt="" />
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+          {/* NAVIGATION BUTTONS */}
+          <div className="custom-prev absolute left-2 md:left-20 transform -translate-y-1/2 z-50 cursor-pointer">
+            <div className="group w-10 h-10 flex items-center justify-center bg-white rounded-full shadow hover:bg-green-secondary transition">
+              <span className="text-2xl text-teal-600 group-hover:text-white">
+                <FiChevronLeft />
+              </span>
+            </div>
+          </div>
+
+          <div className="custom-next absolute right-2 md:right-20 transform -translate-y-1/2 z-10 cursor-pointer">
+            <div className="group w-10 h-10 flex items-center justify-center bg-white rounded-full shadow hover:bg-green-secondary transition">
+              <span className="text-2xl text-teal-600 group-hover:text-white">
+                <FiChevronRight />
+              </span>
+            </div>
+          </div>
+          {/* PAGINATION */}
+          <div className="custom-pagination-pachete mb-2 relative bottom-7 flex justify-center gap-2" />
+
+          {/* Bullet customization */}
+          <style>{`
+        .swiper-bullet {
+          width: 12px;
+          height: 12px;
+          border-radius: 9999px;
+          background-color: #cbd5e0;
+          margin: 0 4px;
+          display: inline-block;
+          opacity: 0.7;
+          transition: all 0.3s ease;
+        }
+        .swiper-bullet.swiper-pagination-bullet-active {
+          background-color: #14b8a6;
+          width: 12px;
+          height: 12px;
+          opacity: 1;
+        }
+      `}</style>
+        </Swiper>
       </div>
     </div>
   );

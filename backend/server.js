@@ -1,5 +1,5 @@
 import express from "express";
-import { connectDb } from "./config/db.js";
+// import { connectDb } from "./config/db.js";
 import productRoutes from "./routes/product.route.js";
 import cors from "cors";
 import path from "path";
@@ -42,6 +42,6 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.listen(PORT, () => {
-  connectDb();
+  // connectDb();
   console.log("Server started at http://localhost:" + PORT);
-})
+});

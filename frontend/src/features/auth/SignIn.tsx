@@ -8,7 +8,7 @@ export default function SignIn() {
       <div className="absolute inset-0 z-20"></div>
       <div className="flex justify-center">
         <div className="flex flex-col md:flex-row relative justify-center gap-10 mx-4 w-full md:max-w-[1200px]
-        bg-white rounded-3xl px-10 lg:px-0 py-10 shadow-xl top-44 z-30">
+        bg-white rounded-3xl px-10 lg:px-0 py-10 shadow-xl top-44 z-20">
           {/* Form begin */}
           <form className="flex justify-center flex-col gap-6">
             <div className="flex">
