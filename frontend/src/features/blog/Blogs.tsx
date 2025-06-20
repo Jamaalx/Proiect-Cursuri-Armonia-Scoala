@@ -246,7 +246,7 @@ export default function Blogs() {
                         <p className="text-sm text-gray-700">Autor: {post.author}</p>
                       </div>
                     </div>
-                    <h3 className="text-3xl font-semibold text-blue-text-primary mb-2">{post.title}</h3>
+                    <h3 className="~text-xl/3xl font-semibold text-blue-text-primary mb-2">{post.title}</h3>
                     <div className="flex items-center justify-between my-6">
                       <div
                         className={cn(

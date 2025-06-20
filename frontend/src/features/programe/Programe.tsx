@@ -270,7 +270,7 @@ export default function Programe() {
         )}
       </div>
 
-      <div className="md:container flex relative md:mx-auto rounded-3xl mx-6 bg-yellow-secondary text-black">
+      <div className="md:container flex w-full relative md:mx-auto rounded-3xl  bg-yellow-secondary text-black">
         <div className="py-5 ~px-2/10 flex justify-center md:block">
           <img src="./images/intrebare-black.png" alt="" className="w-80 h-20 sm:hidden" />
           <img src="./images/intrebare-black.png" alt="" className="hidden sm:block" />
@@ -284,7 +284,7 @@ export default function Programe() {
               alegere corectă a noului tău drum în carieră.</p>
           </div>
           <div className="btn-click-effect mt-2 cursor-pointer select-none">
-            <span className="bg-white rounded-full tracking-wider font-semibold px-4 py-2">
+            <span className="bg-white ~text-xs/sm text-nowrap rounded-full tracking-wider font-semibold px-4 py-2">
               Programează o discuție
             </span>
           </div>
