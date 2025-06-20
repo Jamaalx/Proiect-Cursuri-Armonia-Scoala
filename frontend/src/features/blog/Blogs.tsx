@@ -175,65 +175,19 @@ export default function Blogs() {
       <div className="absolute hidden 2xl:block right-0 2xl:top-[1200px] ">
         <img src="./images/green-right-gear.png" alt="" />
       </div>
-      <div className="md:container md:mx-auto flex gap-20 mt-10">
+      <div className="md:container md:mx-auto flex mx-6 gap-20 mt-10">
         <div className="flex flex-col flex-1">
-          <div className="pl-4 lg:hidden flex flex-col gap-5 mb-4">
-            <p className="text-blue-text-primary font-epilogue tracking-wider text-xl">
-              RECENT POST
-            </p>
-            <div className="flex gap-4">
-              <img src="./images/recent-1.png" alt="" />
-              <div className="flex flex-col gap-1">
-                <div className="flex gap-1 items-center">
-                  <img src="./images/green-calendar.png" alt="" />
-                  <p className="text-sm">14 Iunie 2025</p>
-                </div>
-                <p className="max-w-56 text-blue-text-primary font-semibold text-[13px]">Interdum velit laoreet id
-                  donec ultrices tincidunt arcu.</p>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <img src="./images/recent-2.png" alt="" />
-              <div className="flex flex-col gap-1">
-                <div className="flex gap-1 items-center">
-                  <img src="./images/green-calendar.png" alt="" />
-                  <p className="text-sm">14 Iunie 2025</p>
-                </div>
-                <p className="max-w-56 text-blue-text-primary font-semibold text-[13px]">Interdum velit laoreet id
-                  donec ultrices tincidunt arcu.</p>
-              </div>
-            </div>
-            <p className="text-blue-text-primary font-epilogue tracking-wider text-xl">
-              POPULAR TAG:
-            </p>
-            <div className="flex flex-col gap-2">
-              <div className="flex gap-2">
-                <div className="font-sora text-sm text-[#4D5756] bg-gray-100 px-10 py-3">Balance</div>
-                <div className="font-sora text-sm text-[#4D5756] bg-gray-100 px-10 py-3">Coaching</div>
-              </div>
-              <div className="flex gap-2">
-                <div className="font-sora text-sm text-[#4D5756] bg-gray-100 px-10 py-3">Motivation</div>
-                <div className="font-sora text-sm text-[#4D5756] bg-gray-100 px-10 py-3">Courses</div>
-              </div>
-              <div className="flex gap-2">
-                <div className="font-sora text-sm text-[#4D5756] bg-gray-100 px-10 py-3">Life Guide</div>
-                <div className="font-sora text-sm text-[#4D5756] bg-gray-100 px-10 py-3">Strategy</div>
-              </div>
-              <div className="flex gap-2">
-                <div className="font-sora text-sm text-[#4D5756] bg-gray-100 px-10 py-3">Education</div>
-                <div className="font-sora text-sm text-[#4D5756] bg-gray-100 px-10 py-3">Coaching</div>
-              </div>
-            </div>
+          <div className="lg:hidden flex flex-col gap-5 mb-4">
             <form
               onSubmit={(e) => e.preventDefault()}
-              className="flex border border-gray-200 bg-white md:w-full max-w-xs rounded-full overflow-hidden shadow-xl text-sm"
+              className="flex border border-gray-200 bg-white w-full rounded-full overflow-hidden shadow-xl text-sm"
             >
               <input
                 type="text"
-                placeholder="Search"
+                placeholder="Pe cine doresti sa cauti?"
                 value={searchTerm}
                 onChange={handleSearchChange}
-                className="flex-1 pl-4 lg:px-6 py-4 text-black
+                className="flex-1 pl-4 lg:px-6 py-2 text-black
                 focus:outline-none placeholder:text-gray-300 placeholder:text-base text-lg"
               />
               <button
@@ -242,9 +196,12 @@ export default function Blogs() {
                 <img src="./images/search-black.png" alt="Search" className="w-10 h-10 mr-4" />
               </button>
             </form>
+            <p className="text-blue-text-primary font-epilogue tracking-wider text-xl">
+              RECENT POST
+            </p>
           </div>
 
-          <div className="p-4">
+          <div className="">
             {selectedPosts.map((post) => {
               const hasMultipleImages = Array.isArray(post.photosUrls) && post.photosUrls.length > 0;
               const currentImageIndex = imageIndices[post.id] ?? 0;
@@ -258,21 +215,21 @@ export default function Blogs() {
                     <img
                       src={currentImage}
                       alt="blog"
-                      className="rounded-3xl mb-3 h-[429px] w-full object-cover"
+                      className="rounded-3xl mb-3 w-full"
                     />
                     {hasMultipleImages && post.photosUrls!.length > 1 && (
-                      <div className="absolute top-1/2 left-0 right-0 flex justify-between items-center transform -translate-y-1/2">
+                      <div className="absolute bottom-0 left-0 mx-2 right-0 flex justify-between items-center transform -translate-y-1/2">
                         <button
                           onClick={() => handlePrevImage(post.id, post.photosUrls!.length)}
                           className="bg-white text-white px-2 py-1 rounded hover:bg-opacity-70"
                         >
-                          <img src="./images/left-arrow.png" alt="" className="p-4" />
+                          <img src="./images/left-arrow.png" alt="" className="~p-1/4" />
                         </button>
                         <button
                           onClick={() => handleNextImage(post.id, post.photosUrls!.length)}
                           className="bg-white text-white px-2 py-1 rounded hover:bg-opacity-70"
                         >
-                          <img src="./images/right-arrow.png" alt="" className="p-4" />
+                          <img src="./images/right-arrow.png" alt="" className="~p-1/4" />
                         </button>
                       </div>
                     )}
@@ -347,28 +304,7 @@ export default function Blogs() {
               →
             </button>
           </div>
-          <div className="md:container flex mt-36 flex-col md:flex-row relative md:mx-auto rounded-3xl mx-6 bg-yellow-secondary text-black mb-20">
-            <div className="py-5 px-10 flex justify-center md:block">
-              <img src="./images/intrebare-black.png" alt="" />
-            </div>
-            <div className="flex flex-col p-5 items-center md:items-start text-center md:text-start gap-2 py-5 max-w-3xl">
-              <div className="font-saint text-3xl">
-                <p>Ai nevoie de ajutor?</p>
-              </div>
-              <div>
-                <p>Programează o întâlnire cu un consultant Armonia Academy care te va ajuta pas cu pas pentru o
-                  alegere corectă a noului tău drum în carieră.</p>
-              </div>
-              <div className="mt-6 btn-click-effect cursor-pointer select-none">
-                <span className="bg-white rounded-full tracking-wider font-semibold px-4 py-2">
-                  Programează o discuție
-                </span>
-              </div>
-            </div>
-          </div>
         </div>
-
-
         {/* Sidebar */}
         <div className="hidden lg:flex flex-col gap-10">
           <form
@@ -377,7 +313,7 @@ export default function Blogs() {
           >
             <input
               type="text"
-              placeholder="Search"
+              placeholder="Pe cine doresti sa cauti?"
               value={searchTerm}
               onChange={handleSearchChange}
               className="flex-1 pl-4 lg:px-6 py-4 text-black
@@ -390,14 +326,14 @@ export default function Blogs() {
             </button>
           </form>
           <p className="text-blue-text-primary font-epilogue tracking-wider text-xl">
-            RECENT POST
+            RECENT POST dadw
           </p>
-          <div className="flex gap-4">
+          <div className="gap-4">
             <img src="./images/recent-1.png" alt="" />
             <div className="flex flex-col gap-1">
               <div className="flex gap-1 items-center">
                 <img src="./images/green-calendar.png" alt="" />
-                <p className="text-sm">14 Iunie 2025</p>
+                <p className="text-sm">14 Iunie</p>
               </div>
               <p className="max-w-56 text-blue-text-primary font-semibold text-[13px]">Interdum velit laoreet id
                 donec ultrices tincidunt arcu.</p>
@@ -467,6 +403,26 @@ export default function Blogs() {
               <div className="font-sora text-sm text-[#4D5756] bg-gray-100 px-10 py-3">Education</div>
               <div className="font-sora text-sm text-[#4D5756] bg-gray-100 px-10 py-3">Coaching</div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="md:container flex mt-10 relative md:mx-auto rounded-3xl mx-6 bg-yellow-secondary text-black">
+        <div className="py-5 ~px-2/10 flex justify-center md:block">
+          <img src="./images/intrebare-black.png" alt="" className="w-80 h-20 sm:hidden" />
+          <img src="./images/intrebare-black.png" alt="" className="hidden sm:block" />
+        </div>
+        <div className="flex flex-col pr-4 items-center md:items-start text-center md:text-start gap-2 py-5 max-w-4xl">
+          <div className="font-saint ~text-2xl/3xl">
+            <p>Ai nevoie de ajutor?</p>
+          </div>
+          <div>
+            <p>Programează o întâlnire cu un consultant Armonia Academy care te va ajuta pas cu pas pentru o
+              alegere corectă a noului tău drum în carieră.</p>
+          </div>
+          <div className="btn-click-effect mt-2 cursor-pointer select-none">
+            <span className="bg-white rounded-full tracking-wider font-semibold px-4 py-2">
+              Programează o discuție
+            </span>
           </div>
         </div>
       </div>

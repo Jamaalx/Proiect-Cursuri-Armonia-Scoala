@@ -15,7 +15,7 @@ export default function Blog() {
 
       {/* content start here */}
       <div className="md:container md:mx-auto mt-12">
-        <div className="mx-5 xl:mx-10 flex flex-col gap-8">
+        <div className="mx-5 xl:mx-10 flex flex-col ~gap-4/8">
           <img className="w-full" src="./images/blog-image-main.png" alt="" />
           <div className="flex gap-4">
             <div className="flex items-center gap-2">
@@ -27,16 +27,14 @@ export default function Blog() {
               <p className="text-[#888888] font-bold">Comment (06)</p>
             </div>
           </div>
-          <p className="text-[#202124] font-semibold text-4xl">Pellentesque dignissim enim sit amet venenatis cursus eget nunc</p>
+          <p className="text-[#202124] font-semibold ~text-lg/4xl">Pellentesque dignissim enim sit amet venenatis cursus eget nunc</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor in reprehenderit.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor in reprehenderit.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor in reprehenderit.</p>
           <div className="flex justify-center flex-col lg:flex-row gap-4">
             <img src="./images/blog-img1.png" alt="" />
-            <img src="./images/blog-img1.png" alt="" />
-            <img src="./images/blog-img1.png" alt="" />
           </div>
-          <p className="text-blue-text-primary font-epilogue font-semibold text-4xl">
+          <p className="text-blue-text-primary font-epilogue font-semibold ~text-lg/4xl">
             Latest Articles Uldated Daily
           </p>
           <p className="text-[17px]">
@@ -93,8 +91,9 @@ export default function Blog() {
               <div className="flex h-60">
                 <textarea
                   className="flex-1 shadow-lg px-5 py-3 rounded-2xl text-black focus:outline-none"
-                  name="" id="">
-
+                  name="" id=""
+                  placeholder="Mesaj"
+                >
                 </textarea>
               </div>
 
@@ -102,7 +101,7 @@ export default function Blog() {
               <div className="flex justify-center md:justify-start">
                 <button
                   type="submit"
-                  className="bg-purple-primary text-white font-bold tracking-wide px-10 py-4 rounded-full text-lg transition hover:scale-105"
+                  className="bg-purple-primary text-white tracking-wide px-10 py-4 rounded-full ~text-sm/lg transition hover:scale-105"
                 >
                   SEND MESSAGE
                 </button>

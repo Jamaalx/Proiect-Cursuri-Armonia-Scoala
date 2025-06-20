@@ -1,82 +1,108 @@
+import { useState } from "react";
 import { Link } from "react-router";
 
 const teachers = [
   {
-    nume: "Micheal Hammond",
+    name: "Micheal Hammond",
     imagineTeacher: "./images/michel-hamond.png",
   },
   {
-    nume: "Cherly Curry",
+    name: "Cherly Curry",
     imagineTeacher: "./images/chery-cury.png",
   },
   {
-    nume: "Willie Diaz",
+    name: "Willie Diaz",
     imagineTeacher: "./images/whillie-diaz.png",
   },
   {
-    nume: "Jimmy Sifuentes",
+    name: "Jimmy Sifuentes",
     imagineTeacher: "./images/jhimmy-siluete.png",
   },
   {
-    nume: "Justin Clark",
+    name: "Justin Clark",
     imagineTeacher: "./images/justin-clark.png",
   },
   {
-    nume: "Walter Skeete",
+    name: "Walter Skeete",
     imagineTeacher: "./images/walter-skeete.png",
   },
   {
-    nume: "Willky Diaz",
+    name: "Willky Diaz",
     imagineTeacher: "./images/w-diaz.png",
   },
   {
-    nume: "Ann Dooley",
+    name: "Ann Dooley",
     imagineTeacher: "./images/ann-doley.png",
   },
 ];
 
 export default function Profesori() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(e.target.value.toLowerCase());
+  };
+  const filteredCards = teachers.filter((teacher) => {
+    const matchesSearch = teacher.name.toLowerCase().includes(searchTerm);
+    return matchesSearch;
+
+  });
   return (
     <div className="relative">
-      <div className="absolute top-[80px] sm:top-[150px] md:top-[200px] lg:top-[350px] xl:top-[450px] 2xl:top-[500px] 
-      scale-75 xl:scale-100 -left-5 opacity-20 2xl:opacity-100">
+      <div className="hidden md:block absolute top-[80px] sm:top-[150px] md:top-[200px] lg:top-[350px] xl:top-[450px] 2xl:top-[500px] 
+      scale-75 xl:scale-100 -left-5 opacity-0 2xl:opacity-100">
         <img src="./images/right-half-circle.png" alt="" />
       </div>
-      <div className="absolute right-0 top-[80px] sm:top-[150px] md:top-[200px] lg:top-[350px] xl:top-[450px] 2xl:top-[500px] 
-      scale-75 xl:scale-100 opacity-20 lg:opacity-100">
+      <div className=" hidden  md:block absolute right-0 top-[80px] sm:top-[150px] md:top-[200px] lg:top-[350px] xl:top-[450px] 2xl:top-[500px] 
+      scale-75 xl:scale-100 opacity-0 2xl:opacity-100">
         <img src="./images/footer-air-scaleddown.png" alt="" />
       </div>
-      <div className="md:container md:mx-auto flex flex-col gap-10 mt-[50px]">
+      <div className="md:container md:mx-auto flex flex-col gap-10 mx-4 mt-[50px]">
         {/* Banner */}
-        <div className="mb-[70px]">
-          <img src="./images/banner.png" alt="" className="w-full" />
+        <div className="~mb-6/10">
+          <img src="./images/profesori-banner.png" alt="" className="w-full" />
         </div>
       </div>
-      <div className="md:container md:mx-auto mt-10">
-        <div className="flex justify-center">
-          <div>
-            <p className="tracking-wider font-saint text-green-secondary text-[42px]">Profesorii Armonia Academy</p>
-          </div>
-        </div>
+      {/* Search bar */}
+      <div className="md:container md:mx-auto">
+        <form
+          onSubmit={(e) => e.preventDefault()}
+          className="flex bg-white md:w-full max-w-lg rounded-full overflow-hidden shadow-2xl mx-4 text-sm"
+        >
+          <input
+            type="text"
+            placeholder="Ce dorești să înveți astăzi?"
+            value={searchTerm}
+            onChange={handleSearchChange}
+            className="flex-1 pl-4 lg:px-6 py-4 text-black focus:outline-none placeholder:text-gray-300 placeholder:text-base text-lg"
+          />
+          <button
+            type="submit"
+            className="bg-teal-500 rounded-full hover:bg-teal-400 text-white px-5 py-4 transition"
+          >
+            <img src="./images/search.png" alt="Search" className="w-6 h-6" />
+          </button>
+        </form>
         {/* Profesori carduri */}
         <Link to={"/profesor"}>
           <div className="px-4 py-8 md:container md:mx-auto gap-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-            {teachers.map((teacher, index) => (
-              <div key={index} className="p-2 shadow-lg rounded-lg flex flex-col">
+            {filteredCards.length > 0 ? (
+              filteredCards.map((teacher, index) => (
 
-
-                <img src={teacher.imagineTeacher} alt="" />
-
-                <div className="m-4">
-                  <p className="font-bold text-lg text-blue-text-primary">{teacher.nume}</p>
-                  <p className="text-sm text-green-secondary">Teacher</p>
+                <div key={index} className="p-2 shadow-lg rounded-lg flex flex-col">
+                  <img src={teacher.imagineTeacher} alt="" />
+                  <div className="m-4">
+                    <p className="font-bold text-lg text-blue-text-primary">{teacher.name}</p>
+                    <p className="text-sm text-green-secondary">Teacher</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))
+            ) : (
+              <p className="text-center col-span-full text-gray-300">Nicio potrivire</p>
+            )}
           </div>
         </Link>
-      </div>
-      <div className="md:container flex flex-col md:flex-row relative md:mx-auto rounded-3xl mx-6 bg-yellow-secondary text-black mb-20">
+      </div >
+      <div className="hidden md:flex container flex-col md:flex-row relative md:mx-auto rounded-3xl mx-6 bg-yellow-secondary text-black mb-20">
         <div className="py-5 px-10 flex justify-center md:block">
           <img src="./images/intrebare-black.png" alt="" />
         </div>
@@ -95,6 +121,6 @@ export default function Profesori() {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }

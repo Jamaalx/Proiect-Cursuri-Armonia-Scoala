@@ -38,7 +38,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="md:container relative z-30 h-20 mx-auto flex items-center justify-between bg-green-secondary-rgb rounded-full mt-11 text-white">
+    <div className="md:container relative z-30 h-20 mx-4 md:mx-auto flex items-center justify-between bg-green-secondary-rgb rounded-full mt-11 text-white">
       {/* Mobile Menu */}
       <div className="navbar-start lg:hidden">
         <div className="dropdown">
@@ -95,7 +95,7 @@ export default function Navbar() {
       </div>
 
       {/* Logo center */}
-      <div className="navbar-center px-7 xl:px-10">
+      <div className="navbar-center pr-7 xl:px-10">
         <Link to="/" className="btn btn-ghost hover:bg-transparent p-0 mb-4">
           <img src="./images/armonia.png" alt="Armonia Logo" className="h-10" />
         </Link>

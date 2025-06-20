@@ -134,7 +134,7 @@ export default function Programe() {
 
   });
   return (
-    <div className="md:container md:mx-auto flex flex-col gap-10 mt-[50px]">
+    <div className="md:container md:mx-auto px-6 flex flex-col gap-10 mt-[50px]">
       {/* Banner */}
       <div className="mb-[70px]">
         <img src="./images/banner.png" alt="" className="w-full" />
@@ -202,9 +202,10 @@ export default function Programe() {
 
               className="bg-white text-black hover:scale-105 rounded-xl p-6 shadow-xl hover:shadow-xl transition"
             >
-              <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="flex items-center gap-8">
                 <div>
-                  <img src={card.instrumentImage} alt="" />
+                  <img src={card.instrumentImage} alt="" className="hidden lg:block" />
+                  <img src={card.instrumentImage} alt="" className="w-20 h-30 lg:hidden" />
                 </div>
 
                 <div className="flex flex-col">
@@ -218,11 +219,11 @@ export default function Programe() {
                     <p className="m-0 text-sm tracking-wider text-[#4D5756]">Bucuresti</p>
                   </div>
 
-                  <div className={`text-[52px] font-saint ${card.culoareText}`}>
+                  <div className={`~text-4xl/5xl mt-2 font-saint ${card.culoareText}`}>
                     <p>{card.name}</p>
                   </div>
 
-                  <div className="text-[#333931] text-sm max-w-[540px]">
+                  <div className="text-[#333931] text-sm max-w-64">
                     <p>Lorem ipsum dolor sit amet, consectetur elit, sed doeiusmod tempor</p>
                   </div>
 
@@ -269,20 +270,20 @@ export default function Programe() {
         )}
       </div>
 
-      {/* Banner */}
-      <div className="md:container flex flex-col md:flex-row relative md:mx-auto rounded-3xl mx-6 bg-yellow-secondary text-black mb-20">
-        <div className="py-5 px-10 flex justify-center md:block">
-          <img src="./images/intrebare-black.png" alt="" />
+      <div className="md:container flex relative md:mx-auto rounded-3xl mx-6 bg-yellow-secondary text-black">
+        <div className="py-5 ~px-2/10 flex justify-center md:block">
+          <img src="./images/intrebare-black.png" alt="" className="w-80 h-20 sm:hidden" />
+          <img src="./images/intrebare-black.png" alt="" className="hidden sm:block" />
         </div>
-        <div className="flex flex-col p-5 items-center md:items-start text-center md:text-start gap-2 py-5 max-w-3xl">
-          <div className="font-saint text-3xl">
+        <div className="flex flex-col pr-4 items-center md:items-start text-center md:text-start gap-2 py-5 max-w-4xl">
+          <div className="font-saint ~text-2xl/3xl">
             <p>Ai nevoie de ajutor?</p>
           </div>
           <div>
             <p>Programează o întâlnire cu un consultant Armonia Academy care te va ajuta pas cu pas pentru o
               alegere corectă a noului tău drum în carieră.</p>
           </div>
-          <div className="mt-6 btn-click-effect cursor-pointer select-none">
+          <div className="btn-click-effect mt-2 cursor-pointer select-none">
             <span className="bg-white rounded-full tracking-wider font-semibold px-4 py-2">
               Programează o discuție
             </span>

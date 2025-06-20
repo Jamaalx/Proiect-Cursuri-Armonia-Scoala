@@ -56,10 +56,10 @@ const OurClients = () => {
         <div className='flex flex-col items-center'>
           <div className='flex flex-col gap-4 pl-6'>
             <div className='flex justify-center'>
-              <p className='bg-purple-primary text-white tracking-widest text-sm
+              <p className='bg-purple-primary text-white tracking-widest ~text-sm/lg
               font-semibold px-8 py-2 rounded-full'>Testimoniale</p>
             </div>
-            <p className='font-saint text-[42px]'>Ce spun studenții noștri</p>
+            <p className='font-saint ~text-2xl/5xl'>Ce spun studenții noștri</p>
           </div>
         </div>
 
@@ -88,7 +88,7 @@ const OurClients = () => {
               className="!w-[90%] md:!w-[450px] flex justify-center py-10"
             >
               <div
-                className={`relative w-full h-[450px] rounded-3xl shadow-md transition-all duration-300 ease-in-out ${activeIndex === index ? "scale-105 shadow-xl" : "scale-95 opacity-50"
+                className={`relative w-full h-96 rounded-3xl shadow-md transition-all duration-300 ease-in-out ${activeIndex === index ? "scale-105 shadow-xl" : "scale-95 opacity-50"
                   }`}
                 onClick={() => {
                   swiperRef.current?.slideTo(index);
@@ -151,7 +151,7 @@ const OurClients = () => {
         </Swiper>
 
         {/* PAGINATION */}
-        <div className="custom-pagination-pachete mt-6 flex justify-center gap-2" />
+        <div className="custom-pagination-pachete flex justify-center gap-2" />
 
         {/* Bullet customization */}
         <style>{`
@@ -176,7 +176,7 @@ const OurClients = () => {
 
       {/* Pink Banner */}
       <div>
-        <img className="w-full relative" src="./images/purple-banner.png" alt="" />
+        <img className="w-full relative" src="./images/purple-banner-small.png" alt="" />
       </div>
 
     </div>

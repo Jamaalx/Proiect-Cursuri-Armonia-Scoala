@@ -14,12 +14,11 @@ export default function Contact() {
       </div>
 
 
-      <div className="md:container md:mx-auto justify-center mt-16 p-4 md:p-16 flex flex-col lg:flex-row gap-10 shadow-xl rounded-xl">
+      <div className="md:container md:mx-auto justify-center mt-16 p-4 md:p-16 flex flex-col lg:flex-row gap-10 rounded-xl">
         <div className="flex flex-col gap-6 flex-1">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl text-blue-text-primary 
-          font-bold font-saint">Get in Touch
+          <h2 className="text-center text-3xl md:text-4xl text-blue-text-primary font-sora">Get in Touch
           </h2>
-          <p className="text-[#333931]">
+          <p className="text-[#333931] text-center">
             Suspendisse ultrice gravida dictum fusce placerat
             ultricies integer
           </p>
@@ -97,34 +96,35 @@ export default function Contact() {
               <input
                 type="text"
                 placeholder="Nume"
-                className="flex-1 shadow-lg px-5 py-3 rounded-full text-black focus:outline-none"
+                className="flex-1 bg-gray-100 shadow-lg px-5 py-3 rounded-full text-black focus:outline-none"
               />
             </div>
             <div className="flex">
               <input
                 type="text"
                 placeholder="Email"
-                className="flex-1 shadow-lg px-5 py-3 rounded-full text-black focus:outline-none"
+                className="flex-1 bg-gray-100 shadow-lg px-5 py-3 rounded-full text-black focus:outline-none"
               />
             </div>
             <div className="flex">
               <input
                 type="text"
                 placeholder="Telefon"
-                className="flex-1 shadow-lg px-5 py-3 rounded-full text-black focus:outline-none"
+                className="flex-1 bg-gray-100 shadow-lg px-5 py-3 rounded-full text-black focus:outline-none"
               />
             </div>
             <div className="flex">
               <input
                 type="text"
                 placeholder="Subiect"
-                className="flex-1 shadow-lg px-5 py-3 rounded-full text-black focus:outline-none"
+                className="flex-1 bg-gray-100 shadow-lg px-5 py-3 rounded-full text-black focus:outline-none"
               />
             </div>
 
             <div className="flex h-60">
               <textarea
-                className="flex-1 shadow-lg px-5 py-3 rounded-2xl text-black focus:outline-none"
+                className="flex-1 bg-gray-100 shadow-lg px-5 py-3 rounded-2xl text-black focus:outline-none"
+                placeholder="Mesaj"
                 name="" id="">
 
               </textarea>
@@ -134,7 +134,7 @@ export default function Contact() {
             <div className="flex justify-center md:justify-start">
               <button
                 type="submit"
-                className="bg-purple-primary text-white font-bold tracking-wide px-10 py-4 rounded-full text-lg transition hover:scale-105"
+                className="bg-purple-primary text-white font-bold tracking-wide px-10 py-4 rounded-full ~text-sm/lg transition hover:scale-105"
               >
                 Trimite
               </button>

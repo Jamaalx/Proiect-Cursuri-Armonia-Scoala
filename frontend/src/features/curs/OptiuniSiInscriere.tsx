@@ -1,9 +1,9 @@
 export default function OptiuniSiInscriere() {
   return (
     <div className="">
-      <div className="md:container md:mx-auto text-3xl font-bold">
-        <p className="text-center font-saint text-[42px]">Optiuni de plata</p>
-        <div className="bg-yellow-secondary p-8 rounded-2xl flex flex-col gap-4 mx-2">
+      <div className="md:container relative top-24 z-10 md:mx-auto ~text-lg/3xl font-bold">
+        <p className="text-center font-saint ~text-3xl/5xl mb-4">Optiuni de plata</p>
+        <div className="bg-yellow-secondary p-8 rounded-2xl flex flex-col gap-4 mx-6">
           <div className="flex justify-between text-center flex-col md:flex-row items-center bg-white rounded-full px-6 py-2 mb-4">
             <p>Pret intreg</p>
             <p>1234 Lei</p>
@@ -23,7 +23,7 @@ export default function OptiuniSiInscriere() {
       <div className="mb-10"></div>
       <div className="bg-purple-primary w-full absolute h-[1000px] py-16 px-4 text-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8">Vreau să încep!</h2>
+          <h2 className="text-2xl text-center sm:text-3xl md:text-4xl font-bold mb-8">Vreau să încep!</h2>
 
           {/* Form begin */}
           <form className="flex flex-col gap-6">

@@ -2,20 +2,20 @@ export default function Povestea() {
   return (
     <div className="flex flex-col">
       <div className="relative flex ~mt-10/20">
-        <div className="absolute -right-14 xl:right-0 -bottom-64 lg:-bottom-40 xl:-bottom-20 scale-50 xl:scale-100 opacity-30 xl:opacity-100">
+        <div className="absolute hidden lg:block -right-14 xl:right-0 -bottom-64 lg:-bottom-40 xl:-bottom-20 scale-50 xl:scale-100 opacity-30 xl:opacity-100">
           <img src="./images/half-yellow-circle.png" alt="" />
         </div>
-        <div className="absolute bottom-0 xl:-bottom-20 scale-75 xl:scale-100 opacity-30 xl:opacity-100">
+        <div className="absolute hidden lg:block bottom-0 xl:-bottom-20 scale-75 xl:scale-100 opacity-30 xl:opacity-100">
           <img src="./images/green-left-gear.png" alt="" />
         </div>
-        <div className="container mx-auto items-center pl-4 flex flex-col lg:flex-row  mb-10 gap-12">
+        <div className="container mx-auto items-center pl-4 flex flex-col lg:flex-row  mb-10 ~gap-2/12">
           <div className="flex items-end">
             <div className="">
-              <img src="./images/business-mens.png" alt="" className="~w-56/96" />
+              <img src="./images/business-mens.png" alt="" className="~w-20/96" />
             </div>
           </div>
 
-          <div className="flex flex-col gap-6 ~max-w-xs/3xl justify-center">
+          <div className="flex flex-col ~gap-2/6 ~max-w-xs/3xl justify-center">
             <div className="w-max bg-green-secondary text-sm font-semibold text-white py-2 px-4 rounded-full">
               <p className="tracking-wider">Armonia Acedemy</p>
             </div>
@@ -23,14 +23,6 @@ export default function Povestea() {
               Povestea fondatorului Mircea Codrin si a lui George Nedelcu
             </div>
 
-            <div className="~text-sm/lg">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae incidunt magni quas doloribus, velit facilis beatae nobis consectetur nostrum
-                dolor in. Fugiat dolorum iste dolore consectetur laudantium eum modi! Mollitia!</p>
-            </div>
-            <div className="~text-sm/lg">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae incidunt magni quas doloribus, velit facilis beatae nobis consectetur nostrum
-                dolor in. Fugiat dolorum iste dolore consectetur laudantium eum modi! Mollitia!</p>
-            </div>
             <div className="~text-sm/lg">
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae incidunt magni quas doloribus, velit facilis beatae nobis consectetur nostrum
                 dolor in. Fugiat dolorum iste dolore consectetur laudantium eum modi! Mollitia!</p>
@@ -48,7 +40,7 @@ export default function Povestea() {
 
             <div className="flex flex-col justify-between">
               <div>
-                <p className="font-epilogue text-3xl">3K +</p>
+                <p className="font-epilogue ~text-lg/3xl">3K +</p>
               </div>
               <div>
                 <p className="text-sm">Successfully Trained</p>
@@ -62,7 +54,7 @@ export default function Povestea() {
 
             <div className="flex flex-col justify-between">
               <div>
-                <p className="font-epilogue text-3xl">3K +</p>
+                <p className="font-epilogue ~text-lg/3xl">3K +</p>
               </div>
               <div>
                 <p className="text-sm">Successfully Trained</p>
@@ -76,7 +68,7 @@ export default function Povestea() {
 
             <div className="flex flex-col justify-between">
               <div>
-                <p className="font-epilogue text-3xl">3K +</p>
+                <p className="font-epilogue ~text-lg/3xl">3K +</p>
               </div>
               <div>
                 <p className="text-sm">Successfully Trained</p>
@@ -90,7 +82,7 @@ export default function Povestea() {
 
             <div className="flex flex-col justify-between">
               <div>
-                <p className="font-epilogue text-3xl">3K +</p>
+                <p className="font-epilogue ~text-lg/3xl">3K +</p>
               </div>
               <div>
                 <p className="text-sm">Successfully Trained</p>
@@ -101,28 +93,28 @@ export default function Povestea() {
 
         <div className="bg-purple-primary flex flex-col md:hidden rounded-3xl gap-4 py-10 px-14">
           <div className="flex flex-1 justify-around">
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col items-center text-center sm:flex-row gap-4">
               <div>
                 <img src="./images/student-icon.png" alt="" />
               </div>
 
               <div className="flex flex-col justify-between">
                 <div>
-                  <p className="font-epilogue text-3xl">3K +</p>
+                  <p className="font-epilogue ~text-lg/3xl">3K +</p>
                 </div>
                 <div>
                   <p className="text-sm">Successfully Trained</p>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col items-center text-center sm:flex-row gap-4">
               <div>
                 <img src="./images/student-icon.png" alt="" />
               </div>
 
               <div className="flex flex-col justify-between">
                 <div>
-                  <p className="font-epilogue text-3xl">3K +</p>
+                  <p className="font-epilogue ~text-lg/3xl">3K +</p>
                 </div>
                 <div>
                   <p className="text-sm">Successfully Trained</p>
@@ -131,28 +123,28 @@ export default function Povestea() {
             </div>
           </div>
           <div className="flex flex-1 justify-around">
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col items-center text-center sm:flex-row gap-4">
               <div>
                 <img src="./images/student-icon.png" alt="" />
               </div>
 
               <div className="flex flex-col justify-between">
                 <div>
-                  <p className="font-epilogue text-3xl">3K +</p>
+                  <p className="font-epilogue ~text-lg/3xl">3K +</p>
                 </div>
                 <div>
                   <p className="text-sm">Successfully Trained</p>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col items-center text-center sm:flex-row gap-4">
               <div>
                 <img src="./images/student-icon.png" alt="" />
               </div>
 
               <div className="flex flex-col justify-between">
                 <div>
-                  <p className="font-epilogue text-3xl">3K +</p>
+                  <p className="font-epilogue ~text-lg/3xl">3K +</p>
                 </div>
                 <div>
                   <p className="text-sm">Successfully Trained</p>

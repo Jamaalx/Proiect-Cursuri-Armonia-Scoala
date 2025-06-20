@@ -131,8 +131,8 @@ export default function CursuriOferte() {
       </div>
 
       {/* swiper is here */}
-      <div className="relative md:container md:mx-auto mb-10">
-        <p>Cursuri Populare</p>
+      <div className="relative md:container md:mx-auto ~mb-2/10 text-center">
+        <p className='font-saint ~text-2xl/5xl'>Cursuri Populare</p>
         <div className='className="relative max-w-6xl mx-auto px-4"'>
           <Swiper
             modules={[Navigation, Pagination]}
@@ -157,17 +157,17 @@ export default function CursuriOferte() {
             {cardData.map((card, index) => (
               <SwiperSlide
                 key={index}
-                className="w-full md:w-auto !max-w-[540px] flex justify-center py-6"
+                className="w-full md:w-auto !max-w-[540px] flex justify-center"
               >
                 <Link to="/program">
                   <div
                     key={card.id}
 
-                    className="bg-white text-black hover:scale-105 rounded-xl p-6 shadow-lg hover:shadow-xl transition"
+                    className="bg-white text-black hover:scale-105 rounded-xl mx-6 py-6 shadow-xl hover:shadow-xl transition"
                   >
-                    <div className="flex flex-col md:flex-row items-center gap-8">
+                    <div className="flex items-center ~gap-4/8">
                       <div>
-                        <img src={card.instrumentImage} alt="" className='w-40 md:w-60 h-auto' />
+                        <img src={card.instrumentImage} alt="" className='~w-10/60 h-auto mx-4' />
                       </div>
 
                       <div className="flex flex-col">
@@ -181,11 +181,11 @@ export default function CursuriOferte() {
                           <p className="m-0 text-sm tracking-wider text-[#4D5756]">Bucuresti</p>
                         </div>
 
-                        <div className={`text-[52px] font-saint ${card.culoareText}`}>
+                        <div className={`~text-4xl/6xl mt-2 font-saint ${card.culoareText}`}>
                           <p>{card.name}</p>
                         </div>
 
-                        <div className="text-[#333931] text-sm max-w-[540px]">
+                        <div className="text-[#333931] text-sm ~max-w-52/96">
                           <p>Lorem ipsum dolor sit amet, consectetur elit, sed doeiusmod tempor</p>
                         </div>
 
@@ -212,15 +212,10 @@ export default function CursuriOferte() {
                               <FiArrowRight className="text-xl" />
                             </div>
                           </div>
-                          <div className="flex md:hidden items-end">
-                            <img src={card.humanIcon} alt="" className="w-7 h-12" />
+                          <div className="flex items-end">
+                            <img src={card.humanIcon} alt="" className="w-5 h-10" />
                           </div>
                         </div>
-
-                      </div>
-
-                      <div className="hidden md:flex self-end">
-                        <img src={card.humanIcon} alt="" className="w-7 h-12" />
                       </div>
                     </div>
                   </div>
@@ -230,7 +225,7 @@ export default function CursuriOferte() {
           </Swiper>
 
           {/* NAVIGATION BUTTONS */}
-          <div className="custom-prev absolute top-1/2 left-0 transform -translate-y-1/2 z-10 cursor-pointer">
+          <div className="custom-prev absolute ml-6 -bottom-8 left-0 transform -translate-y-1/2 z-10 cursor-pointer">
             <div className="group w-10 h-10 flex items-center justify-center bg-white rounded-full shadow hover:bg-green-secondary transition">
               <span className="text-2xl text-teal-600 group-hover:text-white">
                 <FiChevronLeft />
@@ -238,7 +233,7 @@ export default function CursuriOferte() {
             </div>
           </div>
 
-          <div className="custom-next absolute top-1/2 right-0 transform -translate-y-1/2 z-10 cursor-pointer">
+          <div className="custom-next absolute -bottom-8 mr-6 right-0 transform -translate-y-1/2 z-10 cursor-pointer">
             <div className="group w-10 h-10 flex items-center justify-center bg-white rounded-full shadow hover:bg-green-secondary transition">
               <span className="text-2xl text-teal-600 group-hover:text-white">
                 <FiChevronRight />
@@ -271,23 +266,33 @@ export default function CursuriOferte() {
         </div>
       </div>
       {/* purple ai nevoie de ajutor */}
-      <div className="md:container flex flex-col md:flex-row relative md:mx-auto rounded-3xl mx-6 bg-purple-primary text-white mb-20">
-        <div className="py-5 px-10 flex justify-center md:block">
-          <img src="./images/intrebare.png" alt="" />
+      <div className="mt-16 relative">
+        <div className="absolute -top-40 left-0">
+          <img className="w-1/2 md:w-full" src="./images/cercuri-purple.png" alt="" />
         </div>
-        <div className="flex flex-col p-5 items-center md:items-start text-center md:text-start gap-2 py-5 max-w-3xl">
-          <div className="font-saint text-3xl">
-            <p>Ai nevoie de ajutor?</p>
+        <div className="md:container flex relative md:mx-auto rounded-3xl mx-6 bg-purple-primary text-white">
+          <div className="py-5 ~px-2/10 flex justify-center md:block">
+            <img src="./images/intrebare.png" alt="" className="w-80 h-20 sm:hidden" />
+            <img src="./images/intrebare.png" alt="" className="hidden sm:block" />
           </div>
-          <div>
-            <p>Programează o întâlnire cu un consultant Armonia Academy care te va ajuta pas cu pas pentru o
-              alegere corectă a noului tău drum în carieră.</p>
+          <div className="flex flex-col pr-4 items-center md:items-start text-center md:text-start gap-2 py-5 max-w-4xl">
+            <div className="font-saint ~text-2xl/3xl">
+              <p>Ai nevoie de ajutor?</p>
+            </div>
+            <div>
+              <p>Programează o întâlnire cu un consultant Armonia Academy care te va ajuta pas cu pas pentru o
+                alegere corectă a noului tău drum în carieră.</p>
+            </div>
+            <div className="btn-click-effect mt-2 cursor-pointer select-none">
+              <span className="bg-white rounded-full tracking-wider font-semibold text-purple-primary px-4 py-2">
+                Programează o discuție
+              </span>
+            </div>
           </div>
-          <div className="mt-6 btn-click-effect cursor-pointer select-none">
-            <span className="bg-white text-black rounded-full tracking-wider font-semibold px-4 py-2">
-              Programează o discuție
-            </span>
-          </div>
+        </div>
+        <div className='mb-8'>
+          <img className="mt-16 hidden lg:block w-full relative" src="./images/yellow-banner.png" alt="" />
+          <img className="mt-16 lg:hidden w-full relative" src="./images/yellow-banner-small.png" alt="" />
         </div>
       </div>
     </div>
