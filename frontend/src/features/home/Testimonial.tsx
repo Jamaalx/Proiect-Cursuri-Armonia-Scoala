@@ -37,7 +37,7 @@ const Testimonial = () => {
 
   return (
     <div>
-      <div className="md:container mx-auto px-4 py-40 relative">
+      <div className="md:container mx-auto px-4 py-16 relative">
         <div className='flex flex-col md:flex-row justify-center'>
           <div className='flex flex-col gap-4 pl-6 items-center'>
             <div className='flex'>

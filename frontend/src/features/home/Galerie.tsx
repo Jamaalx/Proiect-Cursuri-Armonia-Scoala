@@ -25,7 +25,7 @@ const Galerie = () => {
 
   return (
     <div>
-      <div className="md:container mx-auto px-4 py-10 bg-green-50 rounded-3xl relative">
+      <div className="md:container mx-auto px-4 py-20 bg-green-50 rounded-3xl relative mt-16">
         <div className='flex flex-col md:flex-row justify-center'>
           <div className='flex justify-center md:justify-between md:flex-row'>
             <p className='bg-green-secondary text-white tracking-wider text-sm font-semibold px-16 py-2 rounded-full self-center'>

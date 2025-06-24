@@ -25,8 +25,7 @@ export default function Intro() {
           </div>
 
           <div className="~text-xs/lg ~max-w-36/5xl mb-2">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae incidunt magni quas doloribus, velit facilis beatae nobis consectetur nostrum
-              dolor in. Fugiat dolorum iste dolore consectetur laudantium eum modi! Mollitia!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae incidunt !</p>
           </div>
 
           <div className="flex flex-col lg:flex-row gap-1">
