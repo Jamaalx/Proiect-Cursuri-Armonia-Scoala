@@ -65,9 +65,9 @@ const Pachete = () => {
 
   return (
     <div className="md:container mx-auto px-6 py-10 bg-green-50 rounded-3xl relative">
-      <div className='flex flex-col md:flex-row justify-between'>
-        <div className='flex flex-col gap-4'>
-          <div className='flex justify-between'>
+      <div className='flex flex-col md:flex-row justify-center items-center'>
+        <div className='flex flex-col gap-4 items-center text-center'>
+          <div className='flex justify-center gap-4'>
             <p className='bg-green-secondary text-white tracking-wider text-sm font-semibold ~px-2/4 ~py-1/2 rounded-full'>
               Cursuri Populare
             </p>
