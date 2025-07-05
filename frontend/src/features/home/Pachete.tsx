@@ -44,6 +44,19 @@ const courses = [
     buttonColor2: "bg-teal-400",
     icon: "./images/green-human.png"
   },
+  {
+    instrumentImage: "./images/pian.png",
+    calendar: "./images/yellow-calendar.png",
+    date: "Martie 28, 2025",
+    pin: "./images/green-pin.png",
+    localitate: "Bucuresti",
+    type: "Pian",
+    colorText: "text-green-secondary",
+    buttonColor1: "bg-green-secondary",
+    buttonColor2: "bg-teal-400",
+    icon: "./images/green-human.png"
+  },
+
 ];
 
 const Pachete = () => {
