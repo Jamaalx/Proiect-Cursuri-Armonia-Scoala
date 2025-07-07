@@ -20,22 +20,22 @@ export default function Intro() {
             <p className="tracking-wider">Armonia Acedemy</p>
           </div>
           <div className="font-saint text-sm md:text-xl xl:text-5xl leading-tight ~max-w-36/5xl text-[#0E2A46]">
-            It's Our Passion To Work With People At
+            Pasiunea Noastră pentru educație și dezvoltare personală ne definește.
             <span className="text-green-secondary-rgb"> Armonia Acedemy.</span>
           </div>
 
           <div className="~text-xs/lg ~max-w-36/5xl mb-2">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae incidunt !</p>
+            <p>Alege unul dintre cursurile noastre!</p>
           </div>
 
           <div className="flex flex-col lg:flex-row gap-1">
             <div className="flex ~gap-2/4 items-center bg-[#F3F5F5] ~w-36/72 ~px-2/4 rounded-lg ~py-1/3">
               <img src="./images/check.png" alt="" className="h-[17px] w-auto" />
-              <p className="text-[10px] md:~text-xs/lg text-nowrap text-[#191659] font-[500] tracking-wider">QUALITY MENTORS</p>
+              <p className="text-[10px] md:~text-xs/lg text-nowrap text-[#191659] font-[500] tracking-wider">MENTORI DE CALITATE</p>
             </div>
             <div className="flex ~gap-2/4 items-center bg-[#F3F5F5] ~w-40/72 ~px-2/4 rounded-lg ~py-1/3">
               <img src="./images/check.png" alt="" className="h-[17px] w-auto" />
-              <p className="text-[10px] md:~text-xs/lg text-[#191659] font-[500] tracking-wider text-nowrap">SAFETY AND SECURITY</p>
+              <p className="text-[10px] md:~text-xs/lg text-[#191659] font-[500] tracking-wider text-nowrap">SERVICII DE CALITATE</p>
             </div>
           </div>
         </div>
