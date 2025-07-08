@@ -115,7 +115,6 @@ export default function IntroDetails() {
           <div className="flex ~gap-3/5 ~mb-4/16 flex-wrap">
             <p className="~text-xs/lg bg-purple-primary text-white px-4 py-4 rounded-full" >Descriere</p>
             <p className="~text-xs/lg bg-gray-100 font-bold text-blue-text-primary px-4 py-4 rounded-full">Curicula</p>
-            <p className="~text-xs/lg bg-gray-100 font-bold text-blue-text-primary px-4 py-4 rounded-full">Testimoniale</p>
           </div>
           <div className="flex flex-col gap-6 ~mb-2/6">
             <p className="text-blue-text-primary text-xl font-saint">Descrierea cursului</p>

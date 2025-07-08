@@ -59,7 +59,7 @@ export default function Profesori() {
       <div className="md:container md:mx-auto flex flex-col gap-10 mx-4 mt-[50px]">
         {/* Banner */}
         <div className="~mb-6/10">
-          <img src="./images/profesori-banner.png" alt="" className="w-full" />
+          <img src="./images/profesori-banner.png" alt="" className=" h-1/2" />
         </div>
       </div>
       {/* Search bar */}

@@ -10,6 +10,7 @@ export type BlogPost = {
   title: string;
   date: string;
   author: string;
+  descriere?: {};
 };
 
 const blogs: BlogPost[] = [
@@ -18,7 +19,14 @@ const blogs: BlogPost[] = [
     photoUrl: "./images/blog-3.png",
     title: "X3 Our First Mockup",
     date: "Aprilie 21, 2025",
-    author: "Wiliam"
+    author: "Wiliam",
+    descriere: {
+      title: "",
+      continut1:"",
+      subtitlu1:"",
+      pozaDescriere: "./images/blog-3.png",
+      continut2:"",
+    }
   },
   {
     id: 2,
@@ -30,28 +38,32 @@ const blogs: BlogPost[] = [
     ],
     title: "Test Search",
     date: "Aprilie 21, 2025",
-    author: "Carol"
+    author: "Carol",
+    descriere: "",
   },
   {
     id: 3,
     photoUrl: "./images/blog-3.png",
     title: "Aenean nec aliquet enim. Donec at dapibus enim. Integer et tur is vel turpis",
     date: "Aprilie 21, 2025",
-    author: "Cajol"
+    author: "Cajol",
+    descriere: "",
   },
   {
     id: 4,
     photoUrl: "./images/blog-3.png",
     title: "Aenean nec aliquet enim. Donec at dapibus enim. Integer et tur is vel turpis",
     date: "Aprilie 21, 2025",
-    author: "Henri"
+    author: "Henri",
+    descriere: "",
   },
   {
     id: 5,
     photoUrl: "./images/blog-2.png",
     title: "X3 Our First Mockup",
     date: "Aprilie 21, 2025",
-    author: "Altair"
+    author: "Altair",
+    descriere: "",
   },
   {
     id: 6,

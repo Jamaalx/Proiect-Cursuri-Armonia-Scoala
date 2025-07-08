@@ -51,16 +51,15 @@ export default function Passion() {
             <p className="tracking-wider">Filozofia educațională</p>
           </div>
           <div className="font-saint ~text-xl/5xl text-[#0E2A46]">
-            It's Our Passion To Work With People At
+            Pasiunea noastră este să lucrăm cu oamenii la
             <span className="text-green-secondary-rgb"> Armonia Acedemy.</span>
           </div>
 
           <div className="~text-sm/lg">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud..Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud..Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud. veniam, quis nostrud..Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini veniam, quis nostrud..</p>
+            <p>La Armonia Academy, credem că educația este cea mai puternică forță transformatoare din viața oamenilor. Filozofia noastră se bazează pe convingerea că fiecare persoană are un potențial unic care merită să fie descoperit, cultivat și dezvoltat în toate aspectele vieții.
+Viziunea noastră depășește granițele educației tradiționale. Ne concentrăm pe dezvoltarea personală completă - de la competențele creative și artistice, până la abilitățile digitale și antreprenoriale de care viitorul are nevoie. Credem într-o abordare holistică care combină învățarea academică cu dezvoltarea emoțională și socială.
+Echipa noastră de mentori și educatori înțelege că lumea se schimbă rapid și că educația trebuie să se adapteze. De aceea, ne concentrăm pe dezvoltarea gândirii critice, creativității, colaborării și adaptabilității - competențele esențiale pentru succesul în orice domeniu.
+Pasiunea noastră se reflectă în tot ce facem: creăm experiențe de învățare personalizate, inspirăm încrederea în sine și motivăm fiecare persoană să-și atingă potențialul maxim. Fie că vorbim despre arte, tehnologie, leadership sau dezvoltare personală, misiunea noastră rămâne aceeași: să transformăm vieți prin educație de calitate.</p>
           </div>
         </div>
         <div className="hidden md:flex items-end">

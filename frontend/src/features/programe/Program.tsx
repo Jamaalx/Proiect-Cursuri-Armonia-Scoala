@@ -124,7 +124,7 @@ export default function Program() {
                   </div>
 
                   <div className="text-[#333931] text-sm max-w-[345px]">
-                    <p>Lorem ipsum dolor sit amet, consectetur elit, sed doeiusmod tempor</p>
+                    <p> tempor</p>
                   </div>
 
                   <div className="flex gap-2 mt-6">

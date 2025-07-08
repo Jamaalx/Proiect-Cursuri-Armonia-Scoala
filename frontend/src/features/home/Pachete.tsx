@@ -151,7 +151,7 @@ const Pachete = () => {
 
                 {/* DESCRIERE */}
                 <div className="text-sm text-gray-700 pr-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptate fuga nobis...
+                  Descoperă cursul perfect pentru tine și începe-ți călătoria muzicală alături de profesori experimentați.
                 </div>
 
                 {/* CTA + ICON */}

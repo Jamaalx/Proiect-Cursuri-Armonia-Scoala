@@ -105,7 +105,7 @@ export default function CursuriOferte() {
     <div>
       <div className="md:container flex mt-10 flex-col lg:flex-row relative md:mx-auto rounded-3xl mx-6 bg-green-secondary text-black mb-28">
         <div className="py-5 px-10 flex justify-center lg:block">
-          <p className="text-white ~text-3xl/5xl font-black">Capitole Curs</p>
+          <p className="text-white ~text-2xl/4xl font-black">Capitole Curs</p>
         </div>
         <div className="flex flex-col items-center lg:items-start text-center lg:text-start gap-2 md:py-5 flex-1">
           <div className="flex flex-col ~text-sm/2xl lg:flex-row text-white ~gap-2/10 w-full">
@@ -121,11 +121,6 @@ export default function CursuriOferte() {
               <p>✓ Primele melodii</p>
               <p>✓ Audiții și exerciții</p>
             </div>
-          </div>
-          <div className="mt-6 btn-click-effect cursor-pointer ~text-sm/2xl select-none mb-6 md:mb-3">
-            <span className="bg-white rounded-full text-green-secondary tracking-wider font-semibold px-6 py-3">
-              Descarcă programa
-            </span>
           </div>
         </div>
       </div>

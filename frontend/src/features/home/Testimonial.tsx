@@ -8,25 +8,25 @@ import { cn } from '../../lib/cn';
 
 const courses = [
   {
-    title: "“The best Webflow Templates“",
-    textBody: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum sapiente porro,sint nostrum harum laudantium quae laboriosam assumenda itaque, corrupti nisi eos pariatur consequuntur dolorum voluptatemarchitecto ut rerum blanditiis!",
+    title: "“Profesori extraordinari și atmosferă inspirantă“",
+    textBody: "Am început cursurile de pian la Armonia Academy acum 6 luni și progresul meu a depășit orice așteptare. Profesorii sunt nu doar foarte pricepuți, ci și extrem de răbdători și motivanți. Fiecare lecție este o bucurie și simt cum cresc ca muzician în fiecare zi.",
     userImage: "./images/poze-testimonial-1.png",
-    userName: "Sophia Moore",
-    profession: "CEO at Webflow Agency",
+    userName: "Ionela",
+    profession: "Avocat",
   },
   {
-    title: "“BRIX Templates is the #1”",
-    textBody: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum sapiente porro,sint nostrum harum laudantium quae laboriosam assumenda itaque, corrupti nisi eos pariatur consequuntur dolorum voluptatemarchitecto ut rerum blanditiis!",
+    title: "“O experiență care mi-a schimbat viața”",
+    textBody: "La 25 de ani am crezut că e prea târziu să învăț chitara, dar echipa de la Armonia Academy m-a convins de contrariul. Metodele lor sunt adaptate perfect pentru adulți, iar pasiunea profesorilor este contagioasă. Acum cânt pentru familia mea și mă simt împlinit!",
     userImage: "./images/poze-testimonial-2.png",
-    userName: "Adam Smith",
-    profession: "Webflower Developer",
+    userName: "Alex",
+    profession: "Freelancer",
   },
   {
-    title: "“flow is the best nocode tool“",
-    textBody: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum sapiente porro,sint nostrum harum laudantium quae laboriosam assumenda itaque, corrupti nisi eos pariatur consequuntur dolorum voluptatemarchitecto ut rerum blanditiis!",
+    title: "“Locul perfect pentru dezvoltarea talentului“",
+    textBody: "Fratele meu a început cursurile de vioară la 8 ani și de atunci a înflorit ca artist. Profesorii știu să motiveze copiii și să-i facă să iubească muzica. Mediul este profesional, dar totodată cald și primitor. Recomand cu încredere!",
     userImage: "./images/poze-testimonial-3.png",
-    userName: "Mike Warren",
-    profession: "Developer at Brix Templates",
+    userName: "Vlad",
+    profession: "Office Manager",
   },
   // adaugă restul cursurilor după acest model...
 ];

@@ -24,8 +24,8 @@ export default function Povestea() {
             </div>
 
             <div className="~text-sm/lg">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae incidunt magni quas doloribus, velit facilis beatae nobis consectetur nostrum
-                dolor in. Fugiat dolorum iste dolore consectetur laudantium eum modi! Mollitia!</p>
+              <p>Armonia Academy s-a născut din pasiunea comună pentru muzică și dorința de a crea un spațiu unde educația muzicală să devină o experiență transformatoare. Fondată de Mircea Codrin, un muzician dedicat cu viziunea de a redefini învățarea muzicală, școala și-a găsit în George Nedelcu un partener esențial care a contribuit la dezvoltarea și promovarea imaginii brandului.
+Împreună, ei au creat mai mult decât o școală de muzică - au construit o comunitate vibrantă unde fiecare cursant își poate descoperi potențialul artistic în armonie cu profesionalismul și căldura umană. Misiunea lor este simplă, dar profundă: să inspire creativitatea și să cultive talentele muzicale într-un mediu care îmbină libertatea artistică cu excelența educațională.</p>
             </div>
           </div>
         </div>
@@ -40,24 +40,10 @@ export default function Povestea() {
 
             <div className="flex flex-col justify-between">
               <div>
-                <p className="font-epilogue ~text-lg/3xl">3K +</p>
+                <p className="font-epilogue ~text-lg/3xl">500+</p>
               </div>
               <div>
-                <p className="text-sm">Successfully Trained</p>
-              </div>
-            </div>
-          </div>
-          <div className="flex gap-4">
-            <div>
-              <img src="./images/student-icon.png" alt="" />
-            </div>
-
-            <div className="flex flex-col justify-between">
-              <div>
-                <p className="font-epilogue ~text-lg/3xl">3K +</p>
-              </div>
-              <div>
-                <p className="text-sm">Successfully Trained</p>
+                <p className="text-sm"> Cursanți Activi</p>
               </div>
             </div>
           </div>
@@ -68,10 +54,10 @@ export default function Povestea() {
 
             <div className="flex flex-col justify-between">
               <div>
-                <p className="font-epilogue ~text-lg/3xl">3K +</p>
+                <p className="font-epilogue ~text-lg/3xl">15+</p>
               </div>
               <div>
-                <p className="text-sm">Successfully Trained</p>
+                <p className="text-sm">Profesori Experimentați</p>
               </div>
             </div>
           </div>
@@ -82,10 +68,24 @@ export default function Povestea() {
 
             <div className="flex flex-col justify-between">
               <div>
-                <p className="font-epilogue ~text-lg/3xl">3K +</p>
+                <p className="font-epilogue ~text-lg/3xl">5</p>
               </div>
               <div>
-                <p className="text-sm">Successfully Trained</p>
+                <p className="text-sm">Sedii în București</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex gap-4">
+            <div>
+              <img src="./images/student-icon.png" alt="" />
+            </div>
+
+            <div className="flex flex-col justify-between">
+              <div>
+                <p className="font-epilogue ~text-lg/3xl">8</p>
+              </div>
+              <div>
+                <p className="text-sm">Ani de Experiență</p>
               </div>
             </div>
           </div>

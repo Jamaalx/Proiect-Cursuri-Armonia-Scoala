@@ -14,104 +14,175 @@ const cardData = [
     humanIcon: "./images/green-human.png",
     buttonColor1: "bg-green-secondary",
     buttonColor2: "bg-teal-400",
+    customText: "Alege cursul perfect pentru tine și începe o călătorie de dezvoltare personală și profesională.",
+    pretFull : "750 RON",
+    pretDiscounted : "520 RON",
+    descriere:"Descoperă universul fascinant al pianului la Armonia Academy! Pianul este considerat regele instrumentelor și oferă cele mai complete fundamente muzicale. Cursurile noastre sunt adaptate pentru toate vârstele și nivelurile, de la primele melodii simple până la interpretări complexe ale marilor compozitori. Profesorii noștri experimentați te vor ghida în dezvoltarea tehnică, interpretativă și muzicalității necesare pentru a deveni un pianist acomplinit. Învață să explorezi întreaga gamă expresivă a pianului, de la delicatețea unei balade la puterea unei simfonii.",
+    ceOsaInveti:"Tehnica fundamentală: Poziția corectă, digitația și coordonarea mâinilor Citirea notelor: Cheia de SOL și FA, armuri, ritmuri complexe Repertoriu variat: Clasic (Bach, Chopin, Mozart), jazz, pop, muzică contemporană Pedalarea: Tehnici de utilizare a pedalelor pentru expresivitate Improvizația: Dezvoltarea creativității și spontaneității muzicale Acompaniamentul: Susținerea vocii sau a altor instrumente Teoria muzicală: Înțelegerea armoniei, scalelor și structurilor muzicale",
+
+    profesor: {
+      nume: "Maria",
+      experienta: "15 ani",
+      descriere: "Profesor de pian cu experienta in predarea la copii si adulti."
+    },
+    ceriinte: {
+      nivel: "Incepator",
+      varstaMinima: "7 ani",
+      echipamentNecesar: "Pian sau tastatura"
+    },
+    cuiISeadreseaza:{
+      tipuri: ["Incepatori", "Intermediari"],
+      varsta: "7 ani si peste",
+      scop: "Dezvoltarea abilitatilor muzicale si a creativitatii"
+    },
+    curicula: {
+      ceOSaInveti: "Tehnici de baza pentru interpretarea la pian, notiuni de teorie muzicala si dezvoltarea urechii muzicale."
+    },
+    sesiuni: "4-5 sesiuni",
+    capitoleCurs: {
+      capitole: [
+        "Introducere in pian",
+        "Tehnici de baza",
+        "Interpretare si creativitate",
+        "Teorie muzicala"
+      ]
+    },
+    optiuniDeplata: {
+      tipuri: 
+      {
+        integral:"Plata integrala",
+      },
+      optiuniDePlataInRate:{
+        opt1:{
+          descriere: "2 rate fara dobanda.",
+          pret:"111"
+        },
+        opt2:{
+          descriere: "12 rate fara dobanda.",
+          pret:"3212"
+        }
+      }
+    }
   },
   {
     id: 2,
-    name: "Chitară",
+    name: "Tobe",
     category: "sound",
-    instrumentImage: "./images/green-guitar.png",
+    instrumentImage: "./images/tobe.png",
     pin: "./images/green-pin.png",
     culoareText: "text-green-secondary-rgb",
     humanIcon: "./images/green-human.png",
     buttonColor1: "bg-green-secondary",
     buttonColor2: "bg-teal-400",
+    customText: "Alege cursul perfect pentru tine și începe o călătorie de dezvoltare personală și profesională.",
+    pretFull : "750 RON",
+    pretDiscounted : "520 RON",
+    descriere:"Eliberează-ți energia și descoperă puterea ritmului cu cursurile de tobe de la Armonia Academy! Tobele sunt inima oricărei formații muzicale și oferă una dintre cele mai captivante experiențe muzicale. De la beaturi simple la pattern-uri complexe, te invităm să explorezi universul percuției într-o sală special amenajată, alături de un profesor cu experiență bogată în interpretare și producție muzicală. Cursurile noastre acoperă toate stilurile - de la pop și rock la jazz și metal - și sunt adaptate pentru toate vârstele și nivelurile, oferind o experiență completă și interactivă.",
+    ceOsaInveti:"Tehnica fundamentală: Poziția corectă, ținerea băților, coordonarea membrelor Rudimente de bază: Paradiddle, flam, roll și alte tehnici esențiale Pattern-uri ritmice: Pentru toate stilurile muzicale (rock, pop, jazz, funk, latin) Citirea notației: Partituri pentru percuție și chart-uri Coordonarea: Independența membrelor și poliritmuri Dinamica și expresivitate: Control asupra volumului și intensității Acompaniament live: Integrarea cu alte instrumente (pian, chitară) Tehnici avansate: Ghost notes, fills creativi, subdiviziuni complexe",
+
+    profesor: {
+      nume: "Aurel Ciucur",
+      experienta: "peste 5 ani",
+      descriere: "Profesor pasionat și producător muzical cu peste 5 ani de experiență în predare și interpretare scenică. Aurel combină cunoștințele teoretice cu experiența practică în trupe, oferind o perspectivă completă asupra muzicii moderne și a producției muzicale."
+    },
+    ceriinte: {
+      nivel: "Incepator",
+      varstaMinima: "7 ani",
+      echipamentNecesar: "Pian sau tastatura"
+    },
+    cuiISeadreseaza:{
+      tipuri: ["Incepatori", "Intermediari"],
+      varsta: "7 ani si peste",
+      scop: "Dezvoltarea abilitatilor muzicale si a creativitatii"
+    },
+    curicula: {
+      ceOSaInveti: "Tehnici de baza pentru interpretarea la pian, notiuni de teorie muzicala si dezvoltarea urechii muzicale."
+    },
+    sesiuni: "4-5 sesiuni",
+    capitoleCurs: {
+      capitole: [
+        "Introducere in pian",
+        "Tehnici de baza",
+        "Interpretare si creativitate",
+        "Teorie muzicala"
+      ]
+    },
+    optiuniDeplata: {
+      tipuri: 
+      {
+        integral:"Plata integrala",
+      },
+      optiuniDePlataInRate:{
+        opt1:{
+          descriere: "2 rate fara dobanda.",
+          pret:"111"
+        },
+        opt2:{
+          descriere: "12 rate fara dobanda.",
+          pret:"3212"
+        }
+      }
+    }
   },
   {
     id: 3,
-    name: "Ukulele",
+    name: "Chitara",
     category: "sound",
-    instrumentImage: "./images/green-guitar.png",
+    instrumentImage: "./images/pian.png",
     pin: "./images/green-pin.png",
     culoareText: "text-green-secondary-rgb",
     humanIcon: "./images/green-human.png",
     buttonColor1: "bg-green-secondary",
     buttonColor2: "bg-teal-400",
-  },
-  {
-    id: 4,
-    name: "Mandolina",
-    category: "sound",
-    instrumentImage: "./images/green-guitar.png",
-    pin: "./images/green-pin.png",
-    culoareText: "text-green-secondary-rgb",
-    humanIcon: "./images/green-human.png",
-    buttonColor1: "bg-green-secondary",
-    buttonColor2: "bg-teal-400",
-  },
-  {
-    id: 5,
-    name: "Bass", category: "sound",
-    instrumentImage: "./images/green-guitar.png",
-    pin: "./images/green-pin.png",
-    culoareText: "text-green-secondary-rgb",
-    humanIcon: "./images/green-human.png",
-    buttonColor1: "bg-green-secondary",
-    buttonColor2: "bg-teal-400",
-  },
-  {
-    id: 6,
-    name: "Canto",
-    category: "sound",
-    instrumentImage: "./images/green-guitar.png",
-    pin: "./images/green-pin.png",
-    culoareText: "text-green-secondary-rgb",
-    humanIcon: "./images/green-human.png",
-    buttonColor1: "bg-green-secondary",
-    buttonColor2: "bg-teal-400",
-  },
-  {
-    id: 7,
-    name: "Vioara",
-    category: "sound",
-    instrumentImage: "./images/green-violin.png",
-    pin: "./images/green-pin.png",
-    culoareText: "text-green-secondary-rgb",
-    humanIcon: "./images/green-human.png",
-    buttonColor1: "bg-green-secondary",
-    buttonColor2: "bg-teal-400",
-  },
-  {
-    id: 8,
-    name: "Tobe",
-    category: "digital",
-    instrumentImage: "./images/tobe.png",
-    pin: "./images/yellow-pin.png",
-    culoareText: "text-purple-primary",
-    humanIcon: "./images/purple-human.png",
-    buttonColor1: "bg-purple-primary",
-    buttonColor2: "bg-purple-secondary",
-  },
-  {
-    id: 9,
-    name: "Teorie",
-    category: "sound",
-    instrumentImage: "./images/teorie.png",
-    pin: "./images/yellow-pin.png",
-    culoareText: "text-sky-primary",
-    humanIcon: "./images/sky-human.png",
-    buttonColor1: "bg-sky-primary",
-    buttonColor2: "bg-sky-secondary",
-  },
-  {
-    id: 10,
-    name: "Suflat",
-    category: "sound",
-    instrumentImage: "./images/yellow-flaut.png",
-    pin: "./images/yellow-pin.png",
-    culoareText: "text-yellow-primary",
-    humanIcon: "./images/yellow-human.png",
-    buttonColor1: "bg-yellow-primary",
-    buttonColor2: "bg-yellow-secondary",
+    customText: "chitara e smechera",
+    pretFull : "750 RON",
+    pretDiscounted : "520 RON",
+    descriere:"",
+    ceOsaInveti:"",
+
+    profesor: {
+      nume: "Ion Popescu",
+      experienta: "5 ani",
+      descriere: "Profesor de pian cu experienta in predarea la copii si adulti."
+    },
+    ceriinte: {
+      nivel: "Incepator",
+      varstaMinima: "7 ani",
+      echipamentNecesar: "Pian sau tastatura"
+    },
+    cuiISeadreseaza:{
+      tipuri: ["Incepatori", "Intermediari"],
+      varsta: "7 ani si peste",
+      scop: "Dezvoltarea abilitatilor muzicale si a creativitatii"
+    },
+    curicula: {
+      ceOSaInveti: "Tehnici de baza pentru interpretarea la pian, notiuni de teorie muzicala si dezvoltarea urechii muzicale."
+    },
+    sesiuni: "4-5 sesiuni",
+    capitoleCurs: {
+      capitole: [
+        "Introducere in pian",
+        "Tehnici de baza",
+        "Interpretare si creativitate",
+        "Teorie muzicala"
+      ]
+    },
+    optiuniDeplata: {
+      tipuri: 
+      {
+        integral:"Plata integrala",
+      },
+      optiuniDePlataInRate:{
+        opt1:{
+          descriere: "2 rate fara dobanda.",
+          pret:"111"
+        },
+        opt2:{
+          descriere: "12 rate fara dobanda.",
+          pret:"3212"
+        }
+      }
+    }
   },
 ];
 
@@ -224,7 +295,7 @@ export default function Programe() {
                   </div>
 
                   <div className="text-[#333931] text-sm max-w-64">
-                    <p>Lorem ipsum dolor sit amet, consectetur elit, sed doeiusmod tempor</p>
+                    <p>{card.customText}</p>
                   </div>
 
                   <div className="flex gap-2 mt-6">
@@ -232,10 +303,10 @@ export default function Programe() {
                       <div className="absolute">
                         <img src="./images/red-line.png" alt="" />
                       </div>
-                      <p className="text-xl font-bold font-epilogue">1420 €</p>
+                      <p className="text-xl font-bold font-epilogue">{card.pretFull}</p>
                     </div>
                     <div>
-                      <p className="text-xl font-bold font-epilogue text-green-secondary">1200 €</p>
+                      <p className="text-xl font-bold font-epilogue text-green-secondary">{card.pretDiscounted}</p>
                     </div>
                   </div>
 
