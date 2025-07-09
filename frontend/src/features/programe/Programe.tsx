@@ -22,18 +22,21 @@ const cardData = [
 
     profesor: {
       nume: "Maria",
-      experienta: "15 ani",
+      profesie: "Profesor de pian",
       descriere: "Profesor de pian cu experienta in predarea la copii si adulti."
     },
     ceriinte: {
-      nivel: "Incepator",
-      varstaMinima: "7 ani",
-      echipamentNecesar: "Pian sau tastatura"
+      val1 :"Nivel: Incepator",
+      val2 :"Nivel: Incepator",
+      val3 :"Nivel: Incepator",
+      val4 :"Nivel: Incepator",
+
     },
     cuiISeadreseaza:{
-      tipuri: ["Incepatori", "Intermediari"],
-      varsta: "7 ani si peste",
-      scop: "Dezvoltarea abilitatilor muzicale si a creativitatii"
+      val1 :"Nivel: Incepator",
+      val2 :"Nivel: Incepator",
+      val3 :"Nivel: Incepator",
+      val4 :"Nivel: Incepator",
     },
     curicula: {
       ceOSaInveti: "Tehnici de baza pentru interpretarea la pian, notiuni de teorie muzicala si dezvoltarea urechii muzicale."
@@ -85,15 +88,18 @@ const cardData = [
       experienta: "peste 5 ani",
       descriere: "Profesor pasionat și producător muzical cu peste 5 ani de experiență în predare și interpretare scenică. Aurel combină cunoștințele teoretice cu experiența practică în trupe, oferind o perspectivă completă asupra muzicii moderne și a producției muzicale."
     },
-    ceriinte: {
-      nivel: "Incepator",
-      varstaMinima: "7 ani",
-      echipamentNecesar: "Pian sau tastatura"
+       ceriinte: {
+      val1 :"Nivel: Incepator",
+      val2 :"Nivel: Incepator",
+      val3 :"Nivel: Incepator",
+      val4 :"Nivel: Incepator",
+
     },
     cuiISeadreseaza:{
-      tipuri: ["Incepatori", "Intermediari"],
-      varsta: "7 ani si peste",
-      scop: "Dezvoltarea abilitatilor muzicale si a creativitatii"
+      val1 :"Nivel: Incepator",
+      val2 :"Nivel: Incepator",
+      val3 :"Nivel: Incepator",
+      val4 :"Nivel: Incepator",
     },
     curicula: {
       ceOSaInveti: "Tehnici de baza pentru interpretarea la pian, notiuni de teorie muzicala si dezvoltarea urechii muzicale."
