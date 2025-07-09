@@ -89,17 +89,17 @@ const cardData = [
       descriere: "Profesor pasionat și producător muzical cu peste 5 ani de experiență în predare și interpretare scenică. Aurel combină cunoștințele teoretice cu experiența practică în trupe, oferind o perspectivă completă asupra muzicii moderne și a producției muzicale."
     },
        ceriinte: {
-      val1 :"Nivel: Incepator",
-      val2 :"Nivel: Incepator",
-      val3 :"Nivel: Incepator",
-      val4 :"Nivel: Incepator",
+      val1 :"Fără experiență necesară - începem cu fundamentele absolute",
+      val2 :"Vârsta minimă de 3 ani pentru dezvoltarea coordinării",
+      val3 :"Răbdarea pentru dezvoltarea treptată a tehnicii",
+      val4 :"Dedicare pentru exersare și progres",
 
     },
     cuiISeadreseaza:{
-      val1 :"Nivel: Incepator",
-      val2 :"Nivel: Incepator",
-      val3 :"Nivel: Incepator",
-      val4 :"Nivel: Incepator",
+      val1 :"Prima experiență muzicală - tobele dezvoltă ritmul natural",
+      val2 :"Copii cu energie în exces - canal perfect de exprimare",
+      val3 :"Pasionați de muzică modernă - rock, pop, hip-hop",
+      val4 :"Dezvoltarea disciplinei și a concentrării prin exercițiu",
     },
     curicula: {
       ceOSaInveti: "Tehnici de baza pentru interpretarea la pian, notiuni de teorie muzicala si dezvoltarea urechii muzicale."
