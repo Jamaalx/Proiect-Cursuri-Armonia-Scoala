@@ -27,7 +27,7 @@ export const router = createBrowserRouter([
       { path: "profesori", element: <Profesori /> },
 
       // this will be for the single profesor by id
-      { path: "profesor", element: <Profesor /> },
+      { path: "profesor/:id", element: <Profesor /> },
 
       { path: "blogs", element: <Blogs /> },
 

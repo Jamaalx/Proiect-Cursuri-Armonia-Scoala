@@ -5,45 +5,15 @@ import { FiArrowRight, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { useState, useRef } from 'react';
 import 'swiper/swiper-bundle.css';
 import { cn } from '../../lib/cn';
-
-const teachers = [
-  {
-    nume: "Micheal Hammond",
-    imagineTeacher: "/images/michel-hamond.png",
-  },
-  {
-    nume: "Cherly Curry",
-    imagineTeacher: "/images/chery-cury.png",
-  },
-  {
-    nume: "Willie Diaz",
-    imagineTeacher: "/images/whillie-diaz.png",
-  },
-  {
-    nume: "Jimmy Sifuentes",
-    imagineTeacher: "/images/jhimmy-siluete.png",
-  },
-  {
-    nume: "Justin Clark",
-    imagineTeacher: "/images/justin-clark.png",
-  },
-  {
-    nume: "Walter Skeete",
-    imagineTeacher: "/images/walter-skeete.png",
-  },
-  {
-    nume: "Willky Diaz",
-    imagineTeacher: "/images/w-diaz.png",
-  },
-  {
-    nume: "Ann Dooley",
-    imagineTeacher: "/images/ann-doley.png",
-  },
-];
+import { Link, useLocation } from 'react-router-dom';
+import { useGetTeachersStore } from '../../store/armoniaDataStore';
 
 export default function Profesor() {
+  const location = useLocation();
+  const teacher = location.state?.teacher;
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef<SwiperType | null>(null);
+  const teachers = useGetTeachersStore((state) => state.teachers);
   return (
     <div className="relative">
       <div className="absolute hidden 2xl:block top-[80px] sm:top-[150px] md:top-[200px] lg:top-[350px] xl:top-[450px] 2xl:top-[500px] 
@@ -58,7 +28,7 @@ export default function Profesor() {
       <div className='md:container rounded-xl shadow-xl p-6 gap-10 flex flex-col md:flex-row md:mx-auto'>
         <div className='flex flex-col items-center'>
           <div>
-            <img src="/images/ann-doley2.png" alt="" className='w-96 h-auto md:w-[243px] md:h-[243px]' />
+            <img src={`${teacher.imagineTeacher}`} alt="" className='w-96 h-auto md:w-[243px] md:h-[243px]' />
             <div className='flex justify-evenly items-center ~py-2/9'>
               <a href="">
                 <img src="/images/facebook2.png" alt="" className='scale-50' />
@@ -77,58 +47,53 @@ export default function Profesor() {
             <div className='my-9'>
               <div className='flex gap-2 flex-col'>
                 <div className='flex items-center gap-2 text-sm text-[#4D5756]'>
-                  <img src="/images/calling-phone.png" alt="" />
-                  <p>(568) 367-987-237</p>
-                </div>
-                <div className='flex items-center gap-2 text-sm text-[#4D5756]'>
                   <img src="/images/green-pin.png" alt="" />
-                  <p>Hudson, Wisconsin(WI), 54016</p>
+                  <p>{teacher.locatie}</p>
                 </div>
                 <div className='flex items-center gap-2 text-sm text-[#4D5756]'>
                   <img src="/images/green-mail.png" alt="" />
-                  <p>govillage@gmail.com</p>
+                  <p>{teacher.email}</p>
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-between mt-6">
-              <div
-                className={cn(
-                  'flex select-none items-center justify-center rounded-full gap-2 pl-4 text-white transition active:scale-[0.97] bg-purple-primary',
-                )}
-              >
-                <span className="text-sm font-sora">Contactează-ne</span>
-                <div className={cn("p-4 rounded-full bg-purple-secondary")}>
-                  <FiArrowRight className="~text-sm/xl" />
+            <Link to={"/contact"}>
+              <div className="flex items-center justify-between mt-6">
+                <div
+                  className={cn(
+                    'flex select-none bg-purple-primary items-center justify-center rounded-full gap-2 pl-4 text-white transition active:scale-[0.97]'
+                  )}
+                >
+                  <span className="text-sm font-medium">Vezi mai Mult</span>
+                  <div className={cn("p-4 rounded-full bg-purple-secondary")}>
+                    <FiArrowRight className="text-xl" />
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
         <div className="flex flex-col flex-1">
           <div className="flex flex-col gap-4 mb-6">
-            <p className="text-blue-text-primary ~text-lg/2xl font-saint">MELVIN WARNER</p>
-            <p className='text-green-secondary text-sm'>Teacher</p>
-            <p className="text-[#333931] ~text-xs/lg ~leading-2/9">Tempor orci dapibus ultrices in iaculis nunc sed augue. Feugiat in ante metus dictum at
-              tempor commodo. Venenatis lectus magna fringilla urna porttitor rhoncus dolor. Arcu
-              dictum varius duis at consectetur lorem donec massa.
-            </p>
-            <p className="text-[#333931] ~text-xs/lg ~leading-2/9">Tempor orci dapibus ultrices in iaculis nunc sed augue. Feugiat in ante metus dictum at
-              tempor commodo lectus magna fringilla.
-            </p>
-            <p className="text-blue-text-primary text-xl font-saint">Education:</p>
+            <p className="text-blue-text-primary ~text-lg/2xl font-saint">{teacher.name}</p>
+            <p className='text-green-secondary text-sm'>Profesor</p>
+            <p className="text-[#333931] ~text-xs/lg ~leading-2/9">{teacher.descriereScurta}</p>
+            <p className="text-[#333931] ~text-xs/lg ~leading-2/9">{teacher.descriereCompleta}</p>
+
+            <p className="text-blue-text-primary text-xl font-saint">Educatie:</p>
             <p className='~text-xs/lg ~leading-2/9'>
-              I’ve spent years figuring out the “formula” to teaching technical skills in a classNameroom
-              environment, and I’m really excited to finally share my expertise with you. I can
-              confidently say that my online courses are without a doubt the most comprehensive ones
-              on the market.
+              {teacher.educatie}
             </p>
             <p className="text-blue-text-primary ~text-lg/2xl font-saint">Expertise & Skills:</p>
-            <p className="text-blue-text-primary">Lectures</p>
+            <p className="text-blue-text-primary">{teacher.expertiza[0]}</p>
             <div className='h-1 w-full bg-[#09B289]/30'></div>
-            <p className="text-blue-text-primary">My Skills</p>
+            <p className="text-blue-text-primary">{teacher.expertiza[1]}s</p>
             <div className='h-2 w-full bg-[#09B289]/30'></div>
-            <p className="text-blue-text-primary">Consulting</p>
-            <div className='h-2 w-full bg-[#09B289]/30'></div>
+            <p className="text-blue-text-primary">{teacher.expertiza[2]}</p>
+            <div className='h-3 w-full bg-[#09B289]/30'></div>
+            <p className="text-blue-text-primary">{teacher.expertiza[3]}</p>
+            <div className='h-4 w-full bg-[#09B289]/30'></div>
+            <p className="text-blue-text-primary">{teacher.expertiza[4]}</p>
+            <div className='h-5 w-full bg-[#09B289]/30'></div>
           </div>
 
         </div>
@@ -231,10 +196,10 @@ export default function Profesor() {
 
         {/* Fade Right */}
         <div className="pointer-events-none absolute top-0 right-0 md:w-[100px] lg:w-[250px] xl:w-[350px] 2xl:w-[500px] h-full z-20 bg-gradient-to-l from-white via-white/80 to-transparent" />
-      </div>
+      </div>;
 
       {/* PAGINATION */}
-      <div className="custom-pagination-pachete flex justify-center gap-2" />
+      <div className="custom-pagination-pachete flex justify-center gap-2" />;
 
       {/* Bullet customization */}
       <style>{`
@@ -255,6 +220,6 @@ export default function Profesor() {
                 opacity: 1;
               }
             `}</style>
-    </div>
+    </div >
   );
 }

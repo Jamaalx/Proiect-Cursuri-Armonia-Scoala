@@ -11,7 +11,6 @@ export default function Profesori() {
   const filteredCards = teachers.filter((teacher) => {
     const matchesSearch = teacher.name.toLowerCase().includes(searchTerm);
     return matchesSearch;
-
   });
   return (
     <div className="relative">
@@ -50,11 +49,11 @@ export default function Profesori() {
           </button>
         </form>
         {/* Profesori carduri */}
-        <Link to={"/profesor"}>
-          <div className="px-4 py-8 md:container md:mx-auto gap-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-            {filteredCards.length > 0 ? (
-              filteredCards.map((teacher, index) => (
+        <div className="px-4 py-8 md:container md:mx-auto gap-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          {filteredCards.length > 0 ? (
+            filteredCards.map((teacher, index) => (
 
+              <Link key={teacher.id} to={`/profesor/${teacher.id}`} state={{ teacher }}>
                 <div key={index} className="p-2 shadow-lg rounded-lg flex flex-col">
                   <img src={teacher.imagineTeacher} alt="" />
                   <div className="m-4">
@@ -62,12 +61,12 @@ export default function Profesori() {
                     <p className="text-sm text-green-secondary">Trainer</p>
                   </div>
                 </div>
-              ))
-            ) : (
-              <p className="text-center col-span-full text-gray-300">Nicio potrivire</p>
-            )}
-          </div>
-        </Link>
+              </Link>
+            ))
+          ) : (
+            <p className="text-center col-span-full text-gray-300">Nicio potrivire</p>
+          )}
+        </div>
       </div >
       <div className="hidden md:flex container flex-col md:flex-row relative md:mx-auto rounded-3xl mx-6 bg-yellow-secondary text-black mb-20">
         <div className="py-5 px-10 flex justify-center md:block">
