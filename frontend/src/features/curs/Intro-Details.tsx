@@ -136,19 +136,20 @@ export default function IntroDetails({ card }: { card: any; }) {
                 <p className="font-hind text-[#191B1E] ~text-lg/xl font-semibold">Cerințe</p>
               </div>
               <div className="pl-3 flex flex-col ~text-sm/lg">
-                <p>{card.ceriinte.nivel}</p>
-                <p>{card.ceriinte.varstaMinima}</p>
-                <p>{card.ceriinte.echipamentNecesar}</p>
+                <p>{card.ceriinte.val1}</p>
+                <p>{card.ceriinte.val2}</p>
+                <p>{card.ceriinte.val3}</p>
+                <p>{card.ceriinte.val4}</p>
               </div>
               <div className="flex">
                 <img src="/images/vertical-divider.png" alt="" />
                 <p className="font-hind text-[#191B1E] ~text-lg/xl font-semibold">Cui i se adresează</p>
               </div>
               <div className="pl-3 flex flex-col ~text-sm/lg">
-                <p>{card.cuiISeadreseaza.tipuri[0]}</p>
-                <p>{card.cuiISeadreseaza.tipuri[1]}</p>
-                <p>{card.cuiISeadreseaza.varsta}</p>
-                <p>{card.cuiISeadreseaza.scop}</p>
+                <p>{card.cuiISeadreseaza.val1}</p>
+                <p>{card.cuiISeadreseaza.val2}</p>
+                <p>{card.cuiISeadreseaza.val3}</p>
+                <p>{card.cuiISeadreseaza.val4}</p>
               </div>
               <div className="btn-click-effect cursor-pointer self-center
                 bg-purple-primary text-white ~py-2/4 ~px-10/20 text-nowrap rounded-full ~text-xs/lg">

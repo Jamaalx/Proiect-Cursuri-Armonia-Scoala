@@ -60,7 +60,7 @@ export default function Navbar() {
           className={`menu absolute -z-40 menu-lg dropdown-content -top-0 pt-24
               shadow rounded-[40px] w-full bg-green-secondary/90 flex flex-col items-center justify-center
             text-white ${menuOpen ? "" : "hidden"}`}>
-          <li><Link to="/programe" onClick={handleItemClick}>Programe</Link></li>
+          <li><Link to="/programe" onClick={handleItemClick}>Cursuri</Link></li>
           <li><Link to="/profesori" onClick={handleItemClick}>Profesori</Link></li>
           <li><Link to="/despre-noi" onClick={handleItemClick}>Despre Noi</Link></li>
           <li><Link to="/blogs" onClick={handleItemClick}>Blog</Link></li>
@@ -72,7 +72,7 @@ export default function Navbar() {
       {/* Desktop Left Menu */}
       <div className="hidden lg:flex z-20">
         <ul className="menu menu-horizontal px-1 text-lg xl:gap-8">
-          <li><Link to="/programe">Programe</Link></li>
+          <li><Link to="/programe">Cursuri</Link></li>
           <li><Link to="/profesori">Profesori</Link></li>
           <li><Link to="/despre-noi">Despre Noi</Link></li>
         </ul>

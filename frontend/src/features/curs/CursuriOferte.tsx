@@ -6,101 +6,10 @@ import { useState, useRef } from 'react';
 import 'swiper/swiper-bundle.css';
 import { cn } from '../../lib/cn';
 import { Link } from 'react-router-dom';
-
-const cardData = [
-  {
-    id: 1,
-    name: "Teorie",
-    category: "sound",
-    instrumentImage: "/images/teorie.png",
-    pin: "/images/yellow-pin.png",
-    culoareText: "text-sky-primary",
-    humanIcon: "/images/sky-human.png",
-    buttonColor1: "bg-sky-primary",
-    buttonColor2: "bg-sky-secondary",
-  },
-  {
-    id: 2,
-    name: "Suflat",
-    category: "sound",
-    instrumentImage: "/images/yellow-flaut.png",
-    pin: "/images/yellow-pin.png",
-    culoareText: "text-yellow-primary",
-    humanIcon: "/images/yellow-human.png",
-    buttonColor1: "bg-yellow-primary",
-    buttonColor2: "bg-yellow-secondary",
-  },
-  {
-    id: 3,
-    name: "Pian",
-    category: "sound",
-    instrumentImage: "/images/pian.png",
-    pin: "/images/green-pin.png",
-    culoareText: "text-green-secondary-rgb",
-    humanIcon: "/images/green-human.png",
-    buttonColor1: "bg-green-secondary",
-    buttonColor2: "bg-teal-400",
-  },
-  {
-    id: 4,
-    name: "Chitară",
-    category: "sound",
-    instrumentImage: "/images/green-guitar.png",
-    pin: "/images/green-pin.png",
-    culoareText: "text-green-secondary-rgb",
-    humanIcon: "/images/green-human.png",
-    buttonColor1: "bg-green-secondary",
-    buttonColor2: "bg-teal-400",
-  },
-  {
-    id: 5,
-    name: "Ukulele",
-    category: "sound",
-    instrumentImage: "/images/green-guitar.png",
-    pin: "/images/green-pin.png",
-    culoareText: "text-green-secondary-rgb",
-    humanIcon: "/images/green-human.png",
-    buttonColor1: "bg-green-secondary",
-    buttonColor2: "bg-teal-400",
-  },
-  {
-    id: 6,
-    name: "Mandolina",
-    category: "sound",
-    instrumentImage: "/images/green-guitar.png",
-    pin: "/images/green-pin.png",
-    culoareText: "text-green-secondary-rgb",
-    humanIcon: "/images/green-human.png",
-    buttonColor1: "bg-green-secondary",
-    buttonColor2: "bg-teal-400",
-  },
-  {
-    id: 7,
-    name: "Bass", category: "sound",
-    instrumentImage: "/images/green-guitar.png",
-    pin: "/images/green-pin.png",
-    culoareText: "text-green-secondary-rgb",
-    humanIcon: "/images/green-human.png",
-    buttonColor1: "bg-green-secondary",
-    buttonColor2: "bg-teal-400",
-  },
-  {
-    id: 8,
-    name: "Canto",
-    category: "sound",
-    instrumentImage: "/images/green-guitar.png",
-    pin: "/images/green-pin.png",
-    culoareText: "text-green-secondary-rgb",
-    humanIcon: "/images/green-human.png",
-    buttonColor1: "bg-green-secondary",
-    buttonColor2: "bg-teal-400",
-  },
-];
-
-
-
+import { useGetCoursesStore } from '../../store/armoniaDataStore';
 
 export default function CursuriOferte({ card }: { card: any; }) {
+  const cardData = useGetCoursesStore((state) => state.courses);
   const [_, setActiveIndex] = useState(0);
   const swiperRef = useRef<SwiperType | null>(null);
   return (
@@ -156,67 +65,67 @@ export default function CursuriOferte({ card }: { card: any; }) {
                 key={index}
                 className="w-full md:w-auto !max-w-[540px] flex justify-center"
               >
-                <Link to="/program">
-                  <div
-                    key={card.id}
+                <div
+                  key={card.id}
 
-                    className="bg-white text-black hover:scale-105 rounded-xl mx-6 py-6 shadow-xl hover:shadow-xl transition"
-                  >
-                    <div className="flex items-center ~gap-4/8">
-                      <div>
-                        <img src={card.instrumentImage} alt="" className='~w-10/60 h-auto mx-4' />
+                  className="bg-white text-black hover:scale-105 rounded-xl mx-6 py-6 shadow-xl hover:shadow-xl transition"
+                >
+                  <div className="flex items-center ~gap-4/8">
+                    <div>
+                      <img src={card.instrumentImage} alt="" className='~w-10/60 h-auto mx-4' />
+                    </div>
+
+                    <div className="flex flex-col">
+                      <div className='flex w-fit mb-6 gap-3 bg-green-secondary-rgb/10 items-center py-2 px-2 rounded-lg'>
+                        <div className="h-3 w-3 rounded-full bg-green-400" />
+                        <p className="text-sm font-medium text-green-secondary-rgb">ARMONIA Academy</p>
                       </div>
 
-                      <div className="flex flex-col">
-                        <div className='flex w-fit mb-6 gap-3 bg-green-secondary-rgb/10 items-center py-2 px-2 rounded-lg'>
-                          <div className="h-3 w-3 rounded-full bg-green-400" />
-                          <p className="text-sm font-medium text-green-secondary-rgb">ARMONIA Academy</p>
-                        </div>
+                      <div className="flex gap-2">
+                        <img src={card.pin} alt="" className="w-5 aspect-square object-contain" />
+                        <p className="m-0 text-sm tracking-wider text-[#4D5756]">Bucuresti</p>
+                      </div>
 
-                        <div className="flex gap-2">
-                          <img src={card.pin} alt="" className="w-5 aspect-square object-contain" />
-                          <p className="m-0 text-sm tracking-wider text-[#4D5756]">Bucuresti</p>
-                        </div>
+                      <div className={`~text-4xl/6xl mt-2 font-saint ${card.culoareText}`}>
+                        <p>{card.name}</p>
+                      </div>
 
-                        <div className={`~text-4xl/6xl mt-2 font-saint ${card.culoareText}`}>
-                          <p>{card.name}</p>
-                        </div>
+                      <div className="text-[#333931] text-sm ~max-w-52/96">
+                        <p>Lorem ipsum dolor sit amet, consectetur elit, sed doeiusmod tempor</p>
+                      </div>
 
-                        <div className="text-[#333931] text-sm ~max-w-52/96">
-                          <p>Lorem ipsum dolor sit amet, consectetur elit, sed doeiusmod tempor</p>
-                        </div>
-
-                        <div className="flex gap-2 mt-6">
-                          <div className="relative text-[#E6E6E6]">
-                            <div className="absolute">
-                              <img src="/images/red-line.png" alt="" />
-                            </div>
-                            <p className="text-xl font-bold font-epilogue">1420 €</p>
+                      <div className="flex gap-2 mt-6">
+                        <div className="relative text-[#E6E6E6]">
+                          <div className="absolute">
+                            <img src="/images/red-line.png" alt="" />
                           </div>
-                          <div>
-                            <p className="text-xl font-bold font-epilogue text-green-secondary">1200 €</p>
-                          </div>
+                          <p className="text-xl font-bold font-epilogue">1420 €</p>
                         </div>
+                        <div>
+                          <p className="text-xl font-bold font-epilogue text-green-secondary">1200 €</p>
+                        </div>
+                      </div>
 
-                        <div className="flex items-center justify-between mt-6">
-                          <div
-                            className={cn(
-                              'flex select-none items-center justify-center rounded-full gap-2 pl-4 text-white transition active:scale-[0.97]', card.buttonColor1
-                            )}
-                          >
+                      <div className="flex items-center justify-between mt-6">
+                        <div
+                          className={cn(
+                            'flex select-none items-center justify-center rounded-full gap-2 pl-4 text-white transition active:scale-[0.97]', card.buttonColor1
+                          )}
+                        >
+                          <Link key={card.id} to={`/curs/${card.id}`} state={{ card }}>
                             <span className="text-sm font-medium">Vezi mai Mult</span>
-                            <div className={cn("p-4 rounded-full", card.buttonColor2)}>
-                              <FiArrowRight className="text-xl" />
-                            </div>
+                          </Link>
+                          <div className={cn("p-4 rounded-full", card.buttonColor2)}>
+                            <FiArrowRight className="text-xl" />
                           </div>
-                          <div className="flex items-end">
-                            <img src={card.humanIcon} alt="" className="w-5 h-10" />
-                          </div>
+                        </div>
+                        <div className="flex items-end">
+                          <img src={card.humanIcon} alt="" className="w-5 h-10" />
                         </div>
                       </div>
                     </div>
                   </div>
-                </Link>
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
