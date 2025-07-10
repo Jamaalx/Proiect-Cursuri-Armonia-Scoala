@@ -4,26 +4,26 @@ export default function Blog() {
       {/* floating elements are here */}
       <div className="absolute top-[80px] sm:top-[150px] md:top-[200px] lg:top-[350px] xl:top-[450px] 2xl:top-[500px] 
       scale-75 xl:scale-100 -left-5 opacity-40 hidden lg:block">
-        <img src="./images/right-half-circle.png" alt="" />
+        <img src="/images/right-half-circle.png" alt="" />
       </div>
       <div className="absolute hidden 2xl:block right-0 2xl:top-[500px] ">
-        <img src="./images/footer-air-scaleddown.png" alt="" />
+        <img src="/images/footer-air-scaleddown.png" alt="" />
       </div>
       <div className="absolute hidden 2xl:block right-0 2xl:top-[1850px] ">
-        <img src="./images/green-right-gear.png" alt="" />
+        <img src="/images/green-right-gear.png" alt="" />
       </div>
 
       {/* content start here */}
       <div className="md:container md:mx-auto mt-12">
         <div className="mx-5 xl:mx-10 flex flex-col ~gap-4/8">
-          <img className="w-full" src="./images/blog-image-main.png" alt="" />
+          <img className="w-full" src="/images/blog-image-main.png" alt="" />
           <div className="flex gap-4">
             <div className="flex items-center gap-2">
-              <img src="./images/green-calendar.png" alt="" />
+              <img src="/images/green-calendar.png" alt="" />
               <p className="text-[#888888] font-bold">14 iunie 2025</p>
             </div>
             <div className="flex items-center gap-2">
-              <img src="./images/comment.png" alt="" />
+              <img src="/images/comment.png" alt="" />
               <p className="text-[#888888] font-bold">Comment (06)</p>
             </div>
           </div>
@@ -32,7 +32,7 @@ export default function Blog() {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor in reprehenderit.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor in reprehenderit.</p>
           <div className="flex justify-center flex-col lg:flex-row gap-4">
-            <img src="./images/blog-img1.png" alt="" />
+            <img src="/images/blog-img1.png" alt="" />
           </div>
           <p className="text-blue-text-primary font-epilogue font-semibold ~text-lg/4xl">
             Latest Articles Uldated Daily
@@ -54,9 +54,9 @@ export default function Blog() {
             </div>
             <div className="flex gap-3 items-center">
               <p className="text-blue-text-primary text-[#17px] font-bold mr-4">Share:</p>
-              <img src="./images/facebook-green.png" alt="" />
-              <img src="./images/instagram-green.png" alt="" />
-              <img src="./images/twitter-green.png" alt="" />
+              <img src="/images/facebook-green.png" alt="" />
+              <img src="/images/instagram-green.png" alt="" />
+              <img src="/images/twitter-green.png" alt="" />
             </div>
           </div>
           <div className="p-4 md:p-16 lg:mx-40 flex flex-col gap-4 shadow-xl rounded-xl">

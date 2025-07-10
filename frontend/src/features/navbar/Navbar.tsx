@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const dropdownRef = useRef<HTMLUListElement>(null);
@@ -62,15 +62,7 @@ export default function Navbar() {
             text-white ${menuOpen ? "" : "hidden"}`}>
           <li><Link to="/programe" onClick={handleItemClick}>Programe</Link></li>
           <li><Link to="/profesori" onClick={handleItemClick}>Profesori</Link></li>
-          <li>
-            <details>
-              <summary>Despre Noi</summary>
-              <ul className="p-2">
-                <li><Link to="/despre-noi" onClick={handleItemClick}>Despre Noi</Link></li>
-                <li><Link to="/cursuri" onClick={handleItemClick}>Cursuri</Link></li>
-              </ul>
-            </details>
-          </li>
+          <li><Link to="/despre-noi" onClick={handleItemClick}>Despre Noi</Link></li>
           <li><Link to="/blogs" onClick={handleItemClick}>Blog</Link></li>
           <li><Link to="/Contact" onClick={handleItemClick}>Contact</Link></li>
           <li><Link to="/signup" onClick={handleItemClick}>Înregistrează-Te</Link></li>
@@ -82,22 +74,14 @@ export default function Navbar() {
         <ul className="menu menu-horizontal px-1 text-lg xl:gap-8">
           <li><Link to="/programe">Programe</Link></li>
           <li><Link to="/profesori">Profesori</Link></li>
-          <li>
-            <details ref={detailsRef}>
-              <summary>Despre Noi</summary>
-              <ul className="p-2 bg-green-secondary">
-                <li><Link to="/despre-noi" onClick={() => detailsRef.current && (detailsRef.current.open = false)}>Despre Noi</Link></li>
-                <li><Link to="/cursuri" onClick={() => detailsRef.current && (detailsRef.current.open = false)}>Cursuri</Link></li>
-              </ul>
-            </details>
-          </li>
+          <li><Link to="/despre-noi">Despre Noi</Link></li>
         </ul>
       </div>
 
       {/* Logo center */}
       <div className="navbar-center pr-7 xl:px-10">
         <Link to="/" className="btn btn-ghost hover:bg-transparent p-0 mb-4">
-          <img src="./images/armonia.png" alt="Armonia Logo" className="h-10" />
+          <img src="/images/armonia.png" alt="Armonia Logo" className="h-10" />
         </Link>
       </div>
 
@@ -108,7 +92,7 @@ export default function Navbar() {
           <li><Link to="/Contact">Contact</Link></li>
         </ul>
         <Link to="/signup" className="btn btn-ghost hover:bg-transparent text-base font-normal px-0 pb-2 mr-4 relative">
-          <img src="./images/inregistreaza-te.png" alt="" />
+          <img src="/images/inregistreaza-te.png" alt="" />
           <div className="absolute mr-6 mt-2">Înregistrează-Te</div>
         </Link>
       </div>

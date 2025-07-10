@@ -1,12 +1,12 @@
 import { FiArrowLeft } from "react-icons/fi";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { cn } from "../../lib/cn";
 
 export default function NotFound() {
   return (
     <div className="md:container md:mx-auto flex flex-col lg:flex-row md:mt-16">
       <div className="flex flex-col relative items-center gap-10 ml-6 md:ml-20">
-        <img src="./images/green-gear.png" alt="" className="max-w-40" />
+        <img src="/images/green-gear.png" alt="" className="max-w-40" />
         <p className="text-blue-text-primary ~text-3xl/5xl font-bold">Sorry, Page Not Found!</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
           tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -26,7 +26,7 @@ export default function NotFound() {
         </div>
       </div>
       <div className="flex relative mx-6 md:mx-20 mt-10">
-        <img className="aspect-square object-contain" src="./images/not-found.png" alt="" />
+        <img className="aspect-square object-contain" src="/images/not-found.png" alt="" />
       </div>
     </div>
   );

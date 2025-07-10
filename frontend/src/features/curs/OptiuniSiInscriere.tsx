@@ -1,11 +1,12 @@
-export default function OptiuniSiInscriere() {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function OptiuniSiInscriere({ card }: { card: any; }) {
   return (
     <div className="">
       <div className="md:container relative top-24 z-10 md:mx-auto ~text-lg/3xl font-bold">
         <p className="text-center font-saint ~text-3xl/5xl mb-4">Optiuni de plata</p>
         <div className="bg-yellow-secondary p-8 rounded-2xl flex flex-col gap-4 mx-6">
           <div className="flex justify-between text-center flex-col md:flex-row items-center bg-white rounded-full px-6 py-2 mb-4">
-            <p>Pret intreg</p>
+            <p>{card.optiuniDeplata.tipuri.integral}</p>
             <p>1234 Lei</p>
           </div>
           <p className="pl-4 text-[#333931] font-saint">Optiuni de plata in rate</p>

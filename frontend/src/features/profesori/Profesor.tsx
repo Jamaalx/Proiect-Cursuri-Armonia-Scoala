@@ -9,35 +9,35 @@ import { cn } from '../../lib/cn';
 const teachers = [
   {
     nume: "Micheal Hammond",
-    imagineTeacher: "./images/michel-hamond.png",
+    imagineTeacher: "/images/michel-hamond.png",
   },
   {
     nume: "Cherly Curry",
-    imagineTeacher: "./images/chery-cury.png",
+    imagineTeacher: "/images/chery-cury.png",
   },
   {
     nume: "Willie Diaz",
-    imagineTeacher: "./images/whillie-diaz.png",
+    imagineTeacher: "/images/whillie-diaz.png",
   },
   {
     nume: "Jimmy Sifuentes",
-    imagineTeacher: "./images/jhimmy-siluete.png",
+    imagineTeacher: "/images/jhimmy-siluete.png",
   },
   {
     nume: "Justin Clark",
-    imagineTeacher: "./images/justin-clark.png",
+    imagineTeacher: "/images/justin-clark.png",
   },
   {
     nume: "Walter Skeete",
-    imagineTeacher: "./images/walter-skeete.png",
+    imagineTeacher: "/images/walter-skeete.png",
   },
   {
     nume: "Willky Diaz",
-    imagineTeacher: "./images/w-diaz.png",
+    imagineTeacher: "/images/w-diaz.png",
   },
   {
     nume: "Ann Dooley",
-    imagineTeacher: "./images/ann-doley.png",
+    imagineTeacher: "/images/ann-doley.png",
   },
 ];
 
@@ -48,44 +48,44 @@ export default function Profesor() {
     <div className="relative">
       <div className="absolute hidden 2xl:block top-[80px] sm:top-[150px] md:top-[200px] lg:top-[350px] xl:top-[450px] 2xl:top-[500px] 
       scale-75 xl:scale-100 -left-5 opacity-20 2xl:opacity-100">
-        <img src="./images/right-half-circle.png" alt="" />
+        <img src="/images/right-half-circle.png" alt="" />
       </div>
       <div className="absolute hidden 2xl:block right-0 top-[80px] sm:top-[150px] md:top-[200px] lg:top-[350px] xl:top-[450px] 2xl:top-[500px] 
       scale-75 xl:scale-100 opacity-20 lg:opacity-100">
-        <img src="./images/footer-air-scaleddown.png" alt="" />
+        <img src="/images/footer-air-scaleddown.png" alt="" />
       </div>
 
       <div className='md:container rounded-xl shadow-xl p-6 gap-10 flex flex-col md:flex-row md:mx-auto'>
         <div className='flex flex-col items-center'>
           <div>
-            <img src="./images/ann-doley2.png" alt="" className='w-96 h-auto md:w-[243px] md:h-[243px]' />
+            <img src="/images/ann-doley2.png" alt="" className='w-96 h-auto md:w-[243px] md:h-[243px]' />
             <div className='flex justify-evenly items-center ~py-2/9'>
               <a href="">
-                <img src="./images/facebook2.png" alt="" className='scale-50' />
+                <img src="/images/facebook2.png" alt="" className='scale-50' />
               </a>
               <a href="">
-                <img src="./images/twitter2.png" alt="" className='scale-50' />
+                <img src="/images/twitter2.png" alt="" className='scale-50' />
               </a>
               <a href="">
-                <img src="./images/skype.png" alt="" className='scale-50' />
+                <img src="/images/skype.png" alt="" className='scale-50' />
               </a>
               <a href="">
-                <img src="./images/linkedin.png" alt="" className='scale-50' />
+                <img src="/images/linkedin.png" alt="" className='scale-50' />
               </a>
             </div>
             <div className='h-[2px] w-full bg-gray-100'></div>
             <div className='my-9'>
               <div className='flex gap-2 flex-col'>
                 <div className='flex items-center gap-2 text-sm text-[#4D5756]'>
-                  <img src="./images/calling-phone.png" alt="" />
+                  <img src="/images/calling-phone.png" alt="" />
                   <p>(568) 367-987-237</p>
                 </div>
                 <div className='flex items-center gap-2 text-sm text-[#4D5756]'>
-                  <img src="./images/green-pin.png" alt="" />
+                  <img src="/images/green-pin.png" alt="" />
                   <p>Hudson, Wisconsin(WI), 54016</p>
                 </div>
                 <div className='flex items-center gap-2 text-sm text-[#4D5756]'>
-                  <img src="./images/green-mail.png" alt="" />
+                  <img src="/images/green-mail.png" alt="" />
                   <p>govillage@gmail.com</p>
                 </div>
               </div>
@@ -137,12 +137,12 @@ export default function Profesor() {
       {/* purple ai nevoie de ajutor */}
       <div className="mt-16 relative">
         <div className="absolute -top-40 left-0">
-          <img className="w-1/2 md:w-full" src="./images/cercuri-purple.png" alt="" />
+          <img className="w-1/2 md:w-full" src="/images/cercuri-purple.png" alt="" />
         </div>
         <div className="md:container flex relative md:mx-auto rounded-3xl mx-6 bg-purple-primary text-white">
           <div className="py-5 ~px-2/10 flex justify-center md:block">
-            <img src="./images/intrebare.png" alt="" className="w-80 h-20 sm:hidden" />
-            <img src="./images/intrebare.png" alt="" className="hidden sm:block" />
+            <img src="/images/intrebare.png" alt="" className="w-80 h-20 sm:hidden" />
+            <img src="/images/intrebare.png" alt="" className="hidden sm:block" />
           </div>
           <div className="flex flex-col pr-4 items-center md:items-start text-center md:text-start gap-2 py-5 max-w-4xl">
             <div className="font-saint ~text-2xl/3xl">
@@ -160,8 +160,8 @@ export default function Profesor() {
           </div>
         </div>
         <div className='mb-8'>
-          <img className="mt-16 hidden lg:block w-full relative" src="./images/yellow-banner.png" alt="" />
-          <img className="mt-16 lg:hidden w-full relative" src="./images/yellow-banner-small.png" alt="" />
+          <img className="mt-16 hidden lg:block w-full relative" src="/images/yellow-banner.png" alt="" />
+          <img className="mt-16 lg:hidden w-full relative" src="/images/yellow-banner-small.png" alt="" />
         </div>
       </div>
 

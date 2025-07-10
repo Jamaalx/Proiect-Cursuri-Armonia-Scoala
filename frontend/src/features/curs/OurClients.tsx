@@ -7,34 +7,29 @@ import 'swiper/swiper-bundle.css';
 
 const videos = [
   {
-    videoUrl: "./videos/video-1.mp4",
+    videoUrl: "/videos/video-1.mp4",
   },
   {
-    videoUrl: "./videos/video-2.mp4",
+    videoUrl: "/videos/video-2.mp4",
   },
   {
-    videoUrl: "./videos/video-3.mp4",
+    videoUrl: "/videos/video-3.mp4",
   },
 ];
-
-const OurClients = () => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const OurClients = ({ card }: { card: any; }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
   const swiperRef = useRef<SwiperType | null>(null);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   useEffect(() => {
-    videoRefs.current.forEach((video, index) => {
+    videoRefs.current.forEach((video) => {
       if (!video) return;
-
-      if (index === activeIndex) {
-        video.play();
-        setPlayingIndex(index);
-      } else {
-        video.pause();
-        video.currentTime = 0;
-      }
+      video.pause();
+      video.currentTime = 0;
     });
+    setPlayingIndex(null);
   }, [activeIndex]);
 
   const togglePlay = (index: number) => {
@@ -176,7 +171,8 @@ const OurClients = () => {
 
       {/* Pink Banner */}
       <div>
-        <img className="w-full relative" src="./images/purple-banner-small.png" alt="" />
+        <img className="w-full lg:hidden" src="/images/purple-banner-small.png" alt="" />
+        <img className="w-full hidden lg:block" src="/images/purple-banner.png" alt="" />
       </div>
 
     </div>

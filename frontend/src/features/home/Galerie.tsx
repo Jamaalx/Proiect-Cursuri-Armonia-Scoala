@@ -8,16 +8,16 @@ import { cn } from '../../lib/cn';
 
 const courses = [
   {
-    image: "./images/galerie-2.jpg",
+    image: "/images/galerie-2.jpg",
   },
   {
-    image: "./images/galerie-3.jpg",
+    image: "/images/galerie-3.jpg",
   },
   {
-    image: "./images/galerie-4.jpg",
+    image: "/images/galerie-4.jpg",
   },
-   {
-    image: "./images/galerie-5.jpg",
+  {
+    image: "/images/galerie-5.jpg",
   },
   // adaugă restul cursurilor după acest model...
 ];

@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { cn } from "../../lib/cn";
 import { FiArrowRight } from "react-icons/fi";
 
@@ -6,8 +6,8 @@ export default function Hero() {
   return (
     <>
       <div className="flex justify-center">
-        <img className="hidden md:block xl:w-[81%]" src="./images/hero.png" alt="" />
-        <img className="md:hidden w-full" src="./images/hero-mini.png" alt="" />
+        <img className="hidden md:block xl:w-[81%]" src="/images/hero.png" alt="" />
+        <img className="md:hidden w-full" src="/images/hero-mini.png" alt="" />
       </div>
       <div>
         <div className="flex justify-center relative -top-16 z-10">
@@ -28,12 +28,12 @@ export default function Hero() {
         </div>
         <div className="flex justify-end relative bottom-40">
           <a className="btn btn-ghost hover:bg-transparent text-base font-normal px-0 pb-2 mt-10 relative z-10">
-            <img className="scale-50 md:scale-90 lg:scale-100" src="./images/chat_bot.png" alt="" />
+            <img className="scale-50 md:scale-90 lg:scale-100" src="/images/chat_bot.png" alt="" />
           </a>
         </div>
         <div className="flex justify-center relative bottom-32 md:bottom-0 scale-50 md:scale-100">
           <a className="btn btn-ghost hover:bg-transparent text-base font-normal px-0 pb-2 relative">
-            <img className="scale-90 lg:scale-100" src="./images/scroll.png" alt="" />
+            <img className="scale-90 lg:scale-100" src="/images/scroll.png" alt="" />
           </a>
         </div>
       </div>

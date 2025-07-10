@@ -4,15 +4,15 @@ export default function Intro() {
       <div className="xl:container md:mx-auto px-8 ~gap-2/6 flex mb-10">
         <div className="hidden lg:flex items-end">
           <div className="">
-            <img src="./images/pink-hamburger.png" alt="" />
+            <img src="/images/pink-hamburger.png" alt="" />
           </div>
           <div className="-translate-x-1/2 -mb-3">
-            <img src="./images/yellow-human-big.png" alt="" />
+            <img src="/images/yellow-human-big.png" alt="" />
           </div>
         </div>
 
         <div className="flex lg:hidden items-end">
-          <img src="./images/human-hamburger.png" alt="" className="flex-shrink-0 ~w-28/64 h-auto" />
+          <img src="/images/human-hamburger.png" alt="" className="flex-shrink-0 ~w-28/64 h-auto" />
         </div>
 
         <div className="flex flex-col gap-1 justify-center">
@@ -30,21 +30,21 @@ export default function Intro() {
 
           <div className="flex flex-col lg:flex-row gap-1">
             <div className="flex ~gap-2/4 items-center bg-[#F3F5F5] ~w-36/72 ~px-2/4 rounded-lg ~py-1/3">
-              <img src="./images/check.png" alt="" className="h-[17px] w-auto" />
+              <img src="/images/check.png" alt="" className="h-[17px] w-auto" />
               <p className="text-[10px] md:~text-xs/lg text-nowrap text-[#191659] font-[500] tracking-wider">MENTORI DE CALITATE</p>
             </div>
             <div className="flex ~gap-2/4 items-center bg-[#F3F5F5] ~w-40/72 ~px-2/4 rounded-lg ~py-1/3">
-              <img src="./images/check.png" alt="" className="h-[17px] w-auto" />
+              <img src="/images/check.png" alt="" className="h-[17px] w-auto" />
               <p className="text-[10px] md:~text-xs/lg text-[#191659] font-[500] tracking-wider text-nowrap">SERVICII DE CALITATE</p>
             </div>
           </div>
         </div>
       </div>
       <div className="absolute -top-10 lg:top-48 -right-14 xl:-right-10 hidden sm:block -bottom-40  xl:-bottom-20 scale-50 2xl:scale-75">
-        <img src="./images/half-yellow-circle.png" alt="" />
+        <img src="/images/half-yellow-circle.png" alt="" />
       </div>
       <div className="absolute top-32 right-0 sm:hidden -bottom-40  xl:-bottom-20">
-        <img src="./images/half-yellow-circle-small.png" alt="" />
+        <img src="/images/half-yellow-circle-small.png" alt="" />
       </div>
     </div>
   );
