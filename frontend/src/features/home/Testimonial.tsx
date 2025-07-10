@@ -10,21 +10,21 @@ const courses = [
   {
     title: "“Profesori extraordinari și atmosferă inspirantă“",
     textBody: "Am început cursurile de pian la Armonia Academy acum 6 luni și progresul meu a depășit orice așteptare. Profesorii sunt nu doar foarte pricepuți, ci și extrem de răbdători și motivanți. Fiecare lecție este o bucurie și simt cum cresc ca muzician în fiecare zi.",
-    userImage: "./images/poze-testimonial-1.png",
+    userImage: "/images/poze-testimonial-1.png",
     userName: "Ionela",
     profession: "Avocat",
   },
   {
     title: "“O experiență care mi-a schimbat viața”",
     textBody: "La 25 de ani am crezut că e prea târziu să învăț chitara, dar echipa de la Armonia Academy m-a convins de contrariul. Metodele lor sunt adaptate perfect pentru adulți, iar pasiunea profesorilor este contagioasă. Acum cânt pentru familia mea și mă simt împlinit!",
-    userImage: "./images/poze-testimonial-2.png",
+    userImage: "/images/poze-testimonial-2.png",
     userName: "Alex",
     profession: "Freelancer",
   },
   {
     title: "“Locul perfect pentru dezvoltarea talentului“",
     textBody: "Fratele meu a început cursurile de vioară la 8 ani și de atunci a înflorit ca artist. Profesorii știu să motiveze copiii și să-i facă să iubească muzica. Mediul este profesional, dar totodată cald și primitor. Recomand cu încredere!",
-    userImage: "./images/poze-testimonial-3.png",
+    userImage: "/images/poze-testimonial-3.png",
     userName: "Vlad",
     profession: "Office Manager",
   },
@@ -149,8 +149,8 @@ const Testimonial = () => {
       `}</style>
       </div>
       <div>
-        <img className="hidden lg:block w-full relative" src="./images/purple-banner.png" alt="" />
-        <img className="lg:hidden w-full relative" src="./images/purple-banner-small.png" alt="" />
+        <img className="hidden lg:block w-full relative" src="/images/purple-banner.png" alt="" />
+        <img className="lg:hidden w-full relative" src="/images/purple-banner-small.png" alt="" />
       </div>
     </div>
   );

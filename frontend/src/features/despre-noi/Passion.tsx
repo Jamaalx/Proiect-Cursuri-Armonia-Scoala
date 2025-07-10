@@ -8,35 +8,35 @@ import { useRef, useState } from 'react';
 const teachers = [
   {
     nume: "Micheal Hammond",
-    imagineTeacher: "./images/michel-hamond.png",
+    imagineTeacher: "/images/michel-hamond.png",
   },
   {
     nume: "Cherly Curry",
-    imagineTeacher: "./images/chery-cury.png",
+    imagineTeacher: "/images/chery-cury.png",
   },
   {
     nume: "Willie Diaz",
-    imagineTeacher: "./images/whillie-diaz.png",
+    imagineTeacher: "/images/whillie-diaz.png",
   },
   {
     nume: "Jimmy Sifuentes",
-    imagineTeacher: "./images/jhimmy-siluete.png",
+    imagineTeacher: "/images/jhimmy-siluete.png",
   },
   {
     nume: "Justin Clark",
-    imagineTeacher: "./images/justin-clark.png",
+    imagineTeacher: "/images/justin-clark.png",
   },
   {
     nume: "Walter Skeete",
-    imagineTeacher: "./images/walter-skeete.png",
+    imagineTeacher: "/images/walter-skeete.png",
   },
   {
     nume: "Willky Diaz",
-    imagineTeacher: "./images/w-diaz.png",
+    imagineTeacher: "/images/w-diaz.png",
   },
   {
     nume: "Ann Dooley",
-    imagineTeacher: "./images/ann-doley.png",
+    imagineTeacher: "/images/ann-doley.png",
   },
 ];
 
@@ -57,20 +57,20 @@ export default function Passion() {
 
           <div className="~text-sm/lg">
             <p>La Armonia Academy, credem că educația este cea mai puternică forță transformatoare din viața oamenilor. Filozofia noastră se bazează pe convingerea că fiecare persoană are un potențial unic care merită să fie descoperit, cultivat și dezvoltat în toate aspectele vieții.
-Viziunea noastră depășește granițele educației tradiționale. Ne concentrăm pe dezvoltarea personală completă - de la competențele creative și artistice, până la abilitățile digitale și antreprenoriale de care viitorul are nevoie. Credem într-o abordare holistică care combină învățarea academică cu dezvoltarea emoțională și socială.
-Echipa noastră de mentori și educatori înțelege că lumea se schimbă rapid și că educația trebuie să se adapteze. De aceea, ne concentrăm pe dezvoltarea gândirii critice, creativității, colaborării și adaptabilității - competențele esențiale pentru succesul în orice domeniu.
-Pasiunea noastră se reflectă în tot ce facem: creăm experiențe de învățare personalizate, inspirăm încrederea în sine și motivăm fiecare persoană să-și atingă potențialul maxim. Fie că vorbim despre arte, tehnologie, leadership sau dezvoltare personală, misiunea noastră rămâne aceeași: să transformăm vieți prin educație de calitate.</p>
+              Viziunea noastră depășește granițele educației tradiționale. Ne concentrăm pe dezvoltarea personală completă - de la competențele creative și artistice, până la abilitățile digitale și antreprenoriale de care viitorul are nevoie. Credem într-o abordare holistică care combină învățarea academică cu dezvoltarea emoțională și socială.
+              Echipa noastră de mentori și educatori înțelege că lumea se schimbă rapid și că educația trebuie să se adapteze. De aceea, ne concentrăm pe dezvoltarea gândirii critice, creativității, colaborării și adaptabilității - competențele esențiale pentru succesul în orice domeniu.
+              Pasiunea noastră se reflectă în tot ce facem: creăm experiențe de învățare personalizate, inspirăm încrederea în sine și motivăm fiecare persoană să-și atingă potențialul maxim. Fie că vorbim despre arte, tehnologie, leadership sau dezvoltare personală, misiunea noastră rămâne aceeași: să transformăm vieți prin educație de calitate.</p>
           </div>
         </div>
         <div className="hidden md:flex items-end">
           <div className="scale-100">
-            <img src="./images/purple-human-big.png" alt="" />
+            <img src="/images/purple-human-big.png" alt="" />
           </div>
         </div>
       </div>
       <div>
-        <img className="w-full lg:hidden" src="./images/purple-banner-small.png" alt="" />
-        <img className="w-full hidden lg:block" src="./images/purple-banner.png" alt="" />
+        <img className="w-full lg:hidden" src="/images/purple-banner-small.png" alt="" />
+        <img className="w-full hidden lg:block" src="/images/purple-banner.png" alt="" />
       </div>
 
       <div className="md:container md:mx-auto mt-10">
@@ -174,8 +174,8 @@ Pasiunea noastră se reflectă în tot ce facem: creăm experiențe de învăța
 
       <div className="md:container mb-10 flex mt-10 relative md:mx-auto rounded-3xl mx-6 bg-yellow-secondary text-black">
         <div className="py-5 ~px-2/10 flex justify-center md:block">
-          <img src="./images/intrebare-black.png" alt="" className="w-80 h-20 sm:hidden" />
-          <img src="./images/intrebare-black.png" alt="" className="hidden sm:block" />
+          <img src="/images/intrebare-black.png" alt="" className="w-80 h-20 sm:hidden" />
+          <img src="/images/intrebare-black.png" alt="" className="hidden sm:block" />
         </div>
         <div className="flex flex-col pr-4 items-center md:items-start text-center md:text-start gap-2 py-5 max-w-4xl">
           <div className="font-saint ~text-2xl/3xl">

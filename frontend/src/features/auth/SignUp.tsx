@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { cn } from "../../lib/cn";
 import { FiArrowRight } from "react-icons/fi";
 
@@ -63,7 +63,7 @@ export default function SignUp() {
               </div>
               <div className="flex gap-4 items-center">
                 <p>or sign up with</p>
-                <img src="./images/signup-icons.png" alt="" />
+                <img src="/images/signup-icons.png" alt="" />
               </div>
             </div>
             <div className="flex gap-4">
@@ -72,7 +72,7 @@ export default function SignUp() {
             </div>
           </form>
           <div className="hidden md:block">
-            <img className="" src="./images/signup.png" alt="" />
+            <img className="" src="/images/signup.png" alt="" />
           </div>
         </div>
       </div>

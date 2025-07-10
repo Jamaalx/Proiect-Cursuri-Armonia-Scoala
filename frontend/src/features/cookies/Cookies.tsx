@@ -7,7 +7,7 @@ export default function Cookies() {
   return (
     <div className="fixed bottom-10 left-1/2 transform -translate-x-1/2 bg-white w-[90%] max-w-sm p-6 rounded-2xl shadow-2xl border text-center z-50">
       <div className="flex justify-center mb-4">
-        <img src="./images/cookie.png" alt="Cookie" className="w-20 h-20" />
+        <img src="/images/cookie.png" alt="Cookie" className="w-20 h-20" />
       </div>
       <h2 className="text-xl font-semibold text-gray-900 mb-2">Our website uses cookies</h2>
       <p className="text-gray-600 text-sm mb-4">

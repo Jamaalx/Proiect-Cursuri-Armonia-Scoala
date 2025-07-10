@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter } from "react-router-dom";
 import App from "../layout/App";
 import HomePage from "../../features/home/HomePage";
 import Programe from "../../features/programe/Programe";
@@ -27,7 +27,7 @@ export const router = createBrowserRouter([
       { path: "program", element: <Program /> },
 
       { path: "despre-noi", element: <DespreNoi /> },
-      { path: "cursuri", element: <CursMain /> },
+      { path: "curs/:id", element: <CursMain /> },
       { path: "profesori", element: <Profesori /> },
 
       // this will be for the single profesor by id

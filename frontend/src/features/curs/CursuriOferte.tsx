@@ -5,17 +5,17 @@ import { FiChevronLeft, FiChevronRight, FiArrowRight } from 'react-icons/fi';
 import { useState, useRef } from 'react';
 import 'swiper/swiper-bundle.css';
 import { cn } from '../../lib/cn';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const cardData = [
   {
     id: 1,
     name: "Teorie",
     category: "sound",
-    instrumentImage: "./images/teorie.png",
-    pin: "./images/yellow-pin.png",
+    instrumentImage: "/images/teorie.png",
+    pin: "/images/yellow-pin.png",
     culoareText: "text-sky-primary",
-    humanIcon: "./images/sky-human.png",
+    humanIcon: "/images/sky-human.png",
     buttonColor1: "bg-sky-primary",
     buttonColor2: "bg-sky-secondary",
   },
@@ -23,10 +23,10 @@ const cardData = [
     id: 2,
     name: "Suflat",
     category: "sound",
-    instrumentImage: "./images/yellow-flaut.png",
-    pin: "./images/yellow-pin.png",
+    instrumentImage: "/images/yellow-flaut.png",
+    pin: "/images/yellow-pin.png",
     culoareText: "text-yellow-primary",
-    humanIcon: "./images/yellow-human.png",
+    humanIcon: "/images/yellow-human.png",
     buttonColor1: "bg-yellow-primary",
     buttonColor2: "bg-yellow-secondary",
   },
@@ -34,10 +34,10 @@ const cardData = [
     id: 3,
     name: "Pian",
     category: "sound",
-    instrumentImage: "./images/pian.png",
-    pin: "./images/green-pin.png",
+    instrumentImage: "/images/pian.png",
+    pin: "/images/green-pin.png",
     culoareText: "text-green-secondary-rgb",
-    humanIcon: "./images/green-human.png",
+    humanIcon: "/images/green-human.png",
     buttonColor1: "bg-green-secondary",
     buttonColor2: "bg-teal-400",
   },
@@ -45,10 +45,10 @@ const cardData = [
     id: 4,
     name: "Chitară",
     category: "sound",
-    instrumentImage: "./images/green-guitar.png",
-    pin: "./images/green-pin.png",
+    instrumentImage: "/images/green-guitar.png",
+    pin: "/images/green-pin.png",
     culoareText: "text-green-secondary-rgb",
-    humanIcon: "./images/green-human.png",
+    humanIcon: "/images/green-human.png",
     buttonColor1: "bg-green-secondary",
     buttonColor2: "bg-teal-400",
   },
@@ -56,10 +56,10 @@ const cardData = [
     id: 5,
     name: "Ukulele",
     category: "sound",
-    instrumentImage: "./images/green-guitar.png",
-    pin: "./images/green-pin.png",
+    instrumentImage: "/images/green-guitar.png",
+    pin: "/images/green-pin.png",
     culoareText: "text-green-secondary-rgb",
-    humanIcon: "./images/green-human.png",
+    humanIcon: "/images/green-human.png",
     buttonColor1: "bg-green-secondary",
     buttonColor2: "bg-teal-400",
   },
@@ -67,20 +67,20 @@ const cardData = [
     id: 6,
     name: "Mandolina",
     category: "sound",
-    instrumentImage: "./images/green-guitar.png",
-    pin: "./images/green-pin.png",
+    instrumentImage: "/images/green-guitar.png",
+    pin: "/images/green-pin.png",
     culoareText: "text-green-secondary-rgb",
-    humanIcon: "./images/green-human.png",
+    humanIcon: "/images/green-human.png",
     buttonColor1: "bg-green-secondary",
     buttonColor2: "bg-teal-400",
   },
   {
     id: 7,
     name: "Bass", category: "sound",
-    instrumentImage: "./images/green-guitar.png",
-    pin: "./images/green-pin.png",
+    instrumentImage: "/images/green-guitar.png",
+    pin: "/images/green-pin.png",
     culoareText: "text-green-secondary-rgb",
-    humanIcon: "./images/green-human.png",
+    humanIcon: "/images/green-human.png",
     buttonColor1: "bg-green-secondary",
     buttonColor2: "bg-teal-400",
   },
@@ -88,17 +88,19 @@ const cardData = [
     id: 8,
     name: "Canto",
     category: "sound",
-    instrumentImage: "./images/green-guitar.png",
-    pin: "./images/green-pin.png",
+    instrumentImage: "/images/green-guitar.png",
+    pin: "/images/green-pin.png",
     culoareText: "text-green-secondary-rgb",
-    humanIcon: "./images/green-human.png",
+    humanIcon: "/images/green-human.png",
     buttonColor1: "bg-green-secondary",
     buttonColor2: "bg-teal-400",
   },
 ];
 
-export default function CursuriOferte() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+
+
+
+export default function CursuriOferte({ card }: { card: any; }) {
   const [_, setActiveIndex] = useState(0);
   const swiperRef = useRef<SwiperType | null>(null);
   return (
@@ -187,7 +189,7 @@ export default function CursuriOferte() {
                         <div className="flex gap-2 mt-6">
                           <div className="relative text-[#E6E6E6]">
                             <div className="absolute">
-                              <img src="./images/red-line.png" alt="" />
+                              <img src="/images/red-line.png" alt="" />
                             </div>
                             <p className="text-xl font-bold font-epilogue">1420 €</p>
                           </div>
@@ -263,12 +265,12 @@ export default function CursuriOferte() {
       {/* purple ai nevoie de ajutor */}
       <div className="mt-16 relative">
         <div className="absolute -top-40 left-0">
-          <img className="w-1/2 md:w-full" src="./images/cercuri-purple.png" alt="" />
+          <img className="w-1/2 md:w-full" src="/images/cercuri-purple.png" alt="" />
         </div>
         <div className="md:container flex relative md:mx-auto rounded-3xl mx-6 bg-purple-primary text-white">
           <div className="py-5 ~px-2/10 flex justify-center md:block">
-            <img src="./images/intrebare.png" alt="" className="w-80 h-20 sm:hidden" />
-            <img src="./images/intrebare.png" alt="" className="hidden sm:block" />
+            <img src="/images/intrebare.png" alt="" className="w-80 h-20 sm:hidden" />
+            <img src="/images/intrebare.png" alt="" className="hidden sm:block" />
           </div>
           <div className="flex flex-col pr-4 items-center md:items-start text-center md:text-start gap-2 py-5 max-w-4xl">
             <div className="font-saint ~text-2xl/3xl">
@@ -286,8 +288,8 @@ export default function CursuriOferte() {
           </div>
         </div>
         <div className='mb-8'>
-          <img className="mt-16 hidden lg:block w-full relative" src="./images/yellow-banner.png" alt="" />
-          <img className="mt-16 lg:hidden w-full relative" src="./images/yellow-banner-small.png" alt="" />
+          <img className="mt-16 hidden lg:block w-full relative" src="/images/yellow-banner.png" alt="" />
+          <img className="mt-16 lg:hidden w-full relative" src="/images/yellow-banner-small.png" alt="" />
         </div>
       </div>
     </div>

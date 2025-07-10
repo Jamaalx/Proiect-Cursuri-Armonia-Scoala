@@ -5,56 +5,56 @@ import { FiChevronLeft, FiChevronRight, FiArrowRight } from 'react-icons/fi';
 import { useState, useRef } from 'react';
 import 'swiper/swiper-bundle.css';
 import { cn } from '../../lib/cn';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const courses = [
   {
-    instrumentImage: "./images/vioara.png",
-    calendar: "./images/yellow-calendar.png",
+    instrumentImage: "/images/vioara.png",
+    calendar: "/images/yellow-calendar.png",
     date: "Martie 28, 2025",
-    pin: "./images/green-pin.png",
+    pin: "/images/green-pin.png",
     localitate: "Bucuresti",
     type: "Vioara",
     colorText: "text-green-secondary",
     buttonColor1: "bg-green-secondary",
     buttonColor2: "bg-teal-400",
-    icon: "./images/green-human.png"
+    icon: "/images/green-human.png"
   },
   {
-    instrumentImage: "./images/yellow-guitar.png",
-    calendar: "./images/yellow-calendar.png",
+    instrumentImage: "/images/yellow-guitar.png",
+    calendar: "/images/yellow-calendar.png",
     date: "Martie 28, 2025",
-    pin: "./images/yellow-pin.png",
+    pin: "/images/yellow-pin.png",
     localitate: "Bucuresti",
     type: "Chitară",
     colorText: "text-[#FFD46C]",
     buttonColor1: "bg-yellow-200",
     buttonColor2: "bg-yellow-300",
-    icon: "./images/yellow-human.png"
+    icon: "/images/yellow-human.png"
   },
   {
-    instrumentImage: "./images/flaut.png",
-    calendar: "./images/yellow-calendar.png",
+    instrumentImage: "/images/flaut.png",
+    calendar: "/images/yellow-calendar.png",
     date: "Martie 28, 2025",
-    pin: "./images/green-pin.png",
+    pin: "/images/green-pin.png",
     localitate: "Bucuresti",
     type: "Flaut",
     colorText: "text-green-secondary",
     buttonColor1: "bg-green-secondary",
     buttonColor2: "bg-teal-400",
-    icon: "./images/green-human.png"
+    icon: "/images/green-human.png"
   },
   {
-    instrumentImage: "./images/pian.png",
-    calendar: "./images/yellow-calendar.png",
+    instrumentImage: "/images/pian.png",
+    calendar: "/images/yellow-calendar.png",
     date: "Martie 28, 2025",
-    pin: "./images/green-pin.png",
+    pin: "/images/green-pin.png",
     localitate: "Bucuresti",
     type: "Pian",
     colorText: "text-green-secondary",
     buttonColor1: "bg-green-secondary",
     buttonColor2: "bg-teal-400",
-    icon: "./images/green-human.png"
+    icon: "/images/green-human.png"
   },
 
 ];

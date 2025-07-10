@@ -3,14 +3,13 @@ import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperType } from 'swiper/types';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-import { Link } from 'react-router';
 
 export default function Sediile() {
   const sediiData = [
     {
       nume: "Obor-Fainari ",
-      imagineSediu: "./images/sediu-green.png",
-      pin: "./images/green-pin.png",
+      imagineSediu: "/images/sediu-green.png",
+      pin: "/images/green-pin.png",
       culoareText: "text-green-secondary-rgb",
       telefon: "+ 40738318373",
       email: "obor@armoniaacademy.ro",
@@ -21,13 +20,13 @@ export default function Sediile() {
         "Sambata: 09:00 - 21:00",
         "Duminica: 09:00 - 16:00"
       ],
-      icon: "./images/green-human.png",
-      link:"https://www.google.com/maps/dir/44.4435846,26.1267148/Strada+Episcopul+Radu+63,+Bucure%C8%99ti/@44.4460768,26.1197233,1184m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40b1f8cb8e874d85:0xe579d312fd836658!2m2!1d26.12188!2d44.4476593?hl=en&entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
+      icon: "/images/green-human.png",
+      link: "https://www.google.com/maps/dir/44.4435846,26.1267148/Strada+Episcopul+Radu+63,+Bucure%C8%99ti/@44.4460768,26.1197233,1184m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40b1f8cb8e874d85:0xe579d312fd836658!2m2!1d26.12188!2d44.4476593?hl=en&entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
     },
     {
       nume: "Sediul Gara\nde Nord",
-      imagineSediu: "./images/sediu-green.png",
-      pin: "./images/green-pin.png",
+      imagineSediu: "/images/sediu-green.png",
+      pin: "/images/green-pin.png",
       culoareText: "text-green-secondary-rgb",
       telefon: "+ 40273092740",
       email: "contact@scoalaarmona.ro",
@@ -38,13 +37,13 @@ export default function Sediile() {
         "Sambata: 09:00 - 21:00",
         "Duminica: 09:00 - 16:00"
       ],
-      icon: "./images/green-human.png",
-      link:"https://www.google.com/maps/dir/44.451156,26.1338887/Strada+Vespasian+34,+Bucure%C8%99ti+010921/@44.4437844,26.0641663,9471m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40b201e4eb47ade1:0x8edda206e49b9180!2m2!1d26.0714761!2d44.4453017?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
+      icon: "/images/green-human.png",
+      link: "https://www.google.com/maps/dir/44.451156,26.1338887/Strada+Vespasian+34,+Bucure%C8%99ti+010921/@44.4437844,26.0641663,9471m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40b201e4eb47ade1:0x8edda206e49b9180!2m2!1d26.0714761!2d44.4453017?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
     },
     {
       nume: "Sediul Mihai Bravu",
-      imagineSediu: "./images/isolation_mode.png",
-      pin: "./images/yellow-pin.png",
+      imagineSediu: "/images/isolation_mode.png",
+      pin: "/images/yellow-pin.png",
       culoareText: "text-[#FFD46C]",
       telefon: "+ 40723092740",
       email: "mihaibravu@scoalaarmona.ro",
@@ -55,13 +54,13 @@ export default function Sediile() {
         "Sambata: 09:00 - 21:00",
         "Duminica: 09:00 - 16:00"
       ],
-      icon: "./images/yellow-human.png",
-      link:"https://www.google.com/maps/dir/44.451156,26.1338887/Strada+%C8%98tirului+14,+Bucure%C8%99ti/@44.4319086,26.1096394,4737m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40b1feee4adf3005:0x105915c8e42dee1!2m2!1d26.1320982!2d44.4135867?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
+      icon: "/images/yellow-human.png",
+      link: "https://www.google.com/maps/dir/44.451156,26.1338887/Strada+%C8%98tirului+14,+Bucure%C8%99ti/@44.4319086,26.1096394,4737m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40b1feee4adf3005:0x105915c8e42dee1!2m2!1d26.1320982!2d44.4135867?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
     },
     {
       nume: "Sediul Piata\nProgresul",
-      imagineSediu: "./images/purple-hamburger.png",
-      pin: "./images/purple-pin.png",
+      imagineSediu: "/images/purple-hamburger.png",
+      pin: "/images/purple-pin.png",
       culoareText: "text-purple-primary",
       telefon: "+ 40741231234",
       email: "progresul@scoalaarmona.ro",
@@ -72,14 +71,14 @@ export default function Sediile() {
         "Sambata: 09:00 - 21:00",
         "Duminica: 09:00 - 16:00"
       ],
-      icon: "./images/purple-human.png",
-      link:"https://www.google.com/maps/dir/44.451156,26.1338887/USR+Sector+4,+Strada+L%C3%A2n%C4%83riei+99,+Bucure%C8%99ti+040321/@44.4327556,26.0996873,4736m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40b1ff7cc579647d:0x5cbe9c6547bcdae1!2m2!1d26.1028006!2d44.4152935?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
+      icon: "/images/purple-human.png",
+      link: "https://www.google.com/maps/dir/44.451156,26.1338887/USR+Sector+4,+Strada+L%C3%A2n%C4%83riei+99,+Bucure%C8%99ti+040321/@44.4327556,26.0996873,4736m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40b1ff7cc579647d:0x5cbe9c6547bcdae1!2m2!1d26.1028006!2d44.4152935?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
     },
     {
       nume: "Sediul Premium Atomic Academy",
       customText: "",
-      imagineSediu: "./images/purple-hat.png",
-      pin: "./images/purple-pin.png",
+      imagineSediu: "/images/purple-hat.png",
+      pin: "/images/purple-pin.png",
       culoareText: "text-purple-primary",
       telefon: "+ 40736924645",
       adresa: "Cladirea Cocor, Bdul Ion C. Bratianu nr.29-33",
@@ -88,8 +87,8 @@ export default function Sediile() {
         "Sambata: 09:00 - 21:00",
         "Duminica: 09:00 - 16:00"
       ],
-      icon: "./images/purple-human.png",
-      link:"https://www.google.com/maps/dir/44.451156,26.1338887/Cocor,+Bulevardul+Ion+C.+Br%C4%83tianu+29-33,+Bucure%C8%99ti+030167/@44.4405521,26.1016744,4736m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40b1ff3e6b6b9f2d:0x70a781d665a6dc87!2m2!1d26.1041419!2d44.4303647?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
+      icon: "/images/purple-human.png",
+      link: "https://www.google.com/maps/dir/44.451156,26.1338887/Cocor,+Bulevardul+Ion+C.+Br%C4%83tianu+29-33,+Bucure%C8%99ti+030167/@44.4405521,26.1016744,4736m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40b1ff3e6b6b9f2d:0x70a781d665a6dc87!2m2!1d26.1041419!2d44.4303647?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
     },
   ];
   const [, setActiveIndex] = useState(0);
@@ -97,7 +96,7 @@ export default function Sediile() {
   return (
     <div className="relative">
       <div className="absolute right-0 -top-40">
-        <img src="./images/cercuri.png" alt="" />
+        <img src="/images/cercuri.png" alt="" />
       </div>
       <div className="ml-8 relative container md:mx-auto md:mt-24 flex md:justify-center">
         <a className="bg-green-secondary font-normal ~px-6/16 rounded-full btn btn-ghost hover:bg-green-secondary-rgb text-white ~text-sm/lg">
@@ -116,7 +115,7 @@ export default function Sediile() {
               </div>
               <div className="flex gap-2 border rounded-full items-center py-3 px-4">
                 <div>
-                  <img src="./images/google-pin.png" alt="" />
+                  <img src="/images/google-pin.png" alt="" />
                 </div>
                 <a href={sediu.link} target="_blank" rel="noopener noreferrer">
                   <p className="m-0 text-blue-500 cursor-pointer font-semibold tracking-wider">Direction</p>
@@ -207,7 +206,7 @@ export default function Sediile() {
                   </div>
                   <div className="flex gap-2 border rounded-full items-center ~py-1/3 px-2">
                     <div>
-                      <img src="./images/google-pin.png" alt="" />
+                      <img src="/images/google-pin.png" alt="" />
                     </div>
                     <p className="m-0 text-blue-500 font-semibold ~text-xs/sm tracking-wider">Direction</p>
                   </div>

@@ -7,10 +7,10 @@ const cardData = [
     id: 1,
     name: "Pian",
     category: "sound",
-    instrumentImage: "./images/pian.png",
-    pin: "./images/green-pin.png",
+    instrumentImage: "/images/pian.png",
+    pin: "/images/green-pin.png",
     culoareText: "text-green-secondary-rgb",
-    humanIcon: "./images/green-human.png",
+    humanIcon: "/images/green-human.png",
     buttonColor1: "bg-green-secondary",
     buttonColor2: "bg-teal-400",
   },
@@ -37,7 +37,7 @@ export default function Program() {
     <div className="md:container md:mx-auto flex flex-col gap-10 mt-[50px]">
       {/* Banner */}
       <div className="mb-[70px]">
-        <img src="./images/banner.png" alt="" className="w-full" />
+        <img src="/images/banner.png" alt="" className="w-full" />
       </div>
 
       {/* Buttons and search bar */}
@@ -81,7 +81,7 @@ export default function Program() {
             type="submit"
             className="bg-teal-500 rounded-full hover:bg-teal-400 text-white px-5 py-4 transition"
           >
-            <img src="./images/search.png" alt="Search" className="w-6 h-6" />
+            <img src="/images/search.png" alt="Search" className="w-6 h-6" />
           </button>
         </form>
       </div>
@@ -89,7 +89,7 @@ export default function Program() {
       {/* Chat Buble */}
       <div className="hidden xl:flex justify-end absolute -bottom-60 right-10">
         <a className="btn btn-ghost hover:bg-transparent text-base font-normal px-0 pb-2 relative z-10">
-          <img className="scale-50 md:scale-90 lg:scale-100" src="./images/chat_bot.png" alt="" />
+          <img className="scale-50 md:scale-90 lg:scale-100" src="/images/chat_bot.png" alt="" />
         </a>
       </div>
 
@@ -130,7 +130,7 @@ export default function Program() {
                   <div className="flex gap-2 mt-6">
                     <div className="relative text-[#E6E6E6]">
                       <div className="absolute">
-                        <img src="./images/red-line.png" alt="" />
+                        <img src="/images/red-line.png" alt="" />
                       </div>
                       <p className="text-xl font-bold font-epilogue">1420 €</p>
                     </div>
@@ -171,8 +171,8 @@ export default function Program() {
       {/* Banner */}
       <div className="md:container flex relative md:mx-auto rounded-3xl mx-6 bg-yellow-secondary text-black">
         <div className="py-5 ~px-2/10 flex justify-center md:block">
-          <img src="./images/intrebare-black.png" alt="" className="w-80 h-20 sm:hidden" />
-          <img src="./images/intrebare-black.png" alt="" className="hidden sm:block" />
+          <img src="/images/intrebare-black.png" alt="" className="w-80 h-20 sm:hidden" />
+          <img src="/images/intrebare-black.png" alt="" className="hidden sm:block" />
         </div>
         <div className="flex flex-col pr-4 items-center md:items-start text-center md:text-start gap-2 py-5 max-w-4xl">
           <div className="font-saint ~text-2xl/3xl">

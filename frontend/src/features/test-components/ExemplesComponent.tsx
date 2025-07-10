@@ -194,10 +194,10 @@ export default function ExemplesComponent() {
       </div>
 
       <div className="bg-black mt-[100px] ml-[100px] w-[70%] h-[450px] flex justify-center gap-[10px]">
-        <img src="./images/example1.jfif" alt="" className="w-[10%] h-[100%] object-cover rounded-[10px] border-2 transition-all ease-in-out hover:w-[25%]" />
-        <img src="./images/example2.jfif" alt="" className="w-[10%] h-[100%] object-cover rounded-[10px] border-2 transition-all ease-in-out hover:w-[25%]" />
-        <img src="./images/example3.jfif" alt="" className="w-[10%] h-[100%] object-cover rounded-[10px] border-2 transition-all ease-in-out hover:w-[25%]" />
-        <img src="./images/example4.jfif" alt="" className="w-[10%] h-[100%] object-cover rounded-[10px] border-2 transition-all ease-in-out hover:w-[25%]" />
+        <img src="/images/example1.jfif" alt="" className="w-[10%] h-[100%] object-cover rounded-[10px] border-2 transition-all ease-in-out hover:w-[25%]" />
+        <img src="/images/example2.jfif" alt="" className="w-[10%] h-[100%] object-cover rounded-[10px] border-2 transition-all ease-in-out hover:w-[25%]" />
+        <img src="/images/example3.jfif" alt="" className="w-[10%] h-[100%] object-cover rounded-[10px] border-2 transition-all ease-in-out hover:w-[25%]" />
+        <img src="/images/example4.jfif" alt="" className="w-[10%] h-[100%] object-cover rounded-[10px] border-2 transition-all ease-in-out hover:w-[25%]" />
       </div>
 
       <div>

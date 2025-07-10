@@ -1,24 +1,25 @@
 import { useState } from "react";
 import { cn } from "../../lib/cn";
 import { FiArrowRight } from "react-icons/fi";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 const cardData = [
   {
     id: 1,
     name: "Pian",
     category: "sound",
-    instrumentImage: "./images/pian.png",
-     pin: "./images/green-pin.png",
+    instrumentImage: "/images/pian.png",
+    pin: "/images/green-pin.png",
     culoareText: "text-green-secondary-rgb",
-    humanIcon: "./images/green-human.png",
+    humanIcon: "/images/green-human.png",
     buttonColor1: "bg-green-secondary",
     buttonColor2: "bg-teal-400",
     customText: "Alege cursul perfect pentru tine și începe o călătorie de dezvoltare personală și profesională.",
     pretFull: "750 RON",
     pretDiscounted: "520 RON",
-    descriere: "Descoperă universul fascinant al pianului la Armonia Academy! Pianul este considerat regele instrumentelor și oferă cele mai complete fundamente muzicale. Cursurile noastre sunt adaptate pentru toate vârstele și nivelurile, de la primele melodii simple până la interpretări complexe ale marilor compozitori. Profesorii noștri experimentați te vor ghida în dezvoltarea tehnică, interpretativă și muzicalității necesare pentru a deveni un pianist acomplinit.",
+    descriere: "Descoperă universul fascinant al pianului la Armonia Academy! Pianul este considerat regele instrumentelor și oferă cele mai complete fundamente muzicale. Cursurile noastre sunt adaptate pentru toate vârstele și nivelurile, de la primele melodii simple până la interpretări complexe ale marilor compozitori. Profesorii noștri experimentați te vor ghida în dezvoltarea tehnică, interpretativă și muzicalității necesare pentru a deveni un pianist acomplinit. Învață să explorezi întreaga gamă expresivă a pianului, de la delicatețea unei balade la puterea unei simfonii.",
     ceOsaInveti: "Tehnica fundamentală: Poziția corectă, digitația și coordonarea mâinilor Citirea notelor: Cheia de SOL și FA, armuri, ritmuri complexe Repertoriu variat: Clasic (Bach, Chopin, Mozart), jazz, pop, muzică contemporană Pedalarea: Tehnici de utilizare a pedalelor pentru expresivitate Improvizația: Dezvoltarea creativității și spontaneității muzicale Acompaniamentul: Susținerea vocii sau a altor instrumente Teoria muzicală: Înțelegerea armoniei, scalelor și structurilor muzicale",
+
     profesor: {
       nume: "Ana Maria Scrioșteanu / Matei Alexandru / Antonia Ștefănescu",
       experienta: "peste 10 ani experiență combinată",
@@ -31,10 +32,9 @@ const cardData = [
       val4: "Disponibilitate pentru lecții săptămânale constante"
     },
     cuiISeadreseaza: {
-      val1: "Copii și adolescenți pasionați de muzică clasică și modernă",
-      val2: "Adulți care își doresc să învețe un instrument nobil",
-      val3: "Persoane care vor să dezvolte disciplina și concentrarea",
-      val4: "Viitori muzicieni care vor să înțeleagă armonia muzicală"
+      tipuri: ["Incepatori", "Intermediari"],
+      varsta: "7 ani si peste",
+      scop: "Dezvoltarea abilitatilor muzicale si a creativitatii"
     },
     curicula: {
       ceOSaInveti: "Tehnici de bază pentru interpretarea la pian, noțiuni de teorie muzicală și dezvoltarea urechii muzicale."
@@ -49,17 +49,18 @@ const cardData = [
       ]
     },
     optiuniDeplata: {
-      tipuri: {
-        integral: "Plata integrală 520 RON - LUNAR"
+      tipuri:
+      {
+        integral: "Plata integrala",
       },
       optiuniDePlataInRate: {
         opt1: {
-          descriere: "8-10 cursuri în 3 rate fără dobândă.",
-          pret: "347 RON lunar"
+          descriere: "2 rate fara dobanda.",
+          pret: "111"
         },
         opt2: {
-          descriere: "12-15 cursuri în 6 rate fără dobândă.",
-          pret: "260 RON lunar"
+          descriere: "12 rate fara dobanda.",
+          pret: "3212"
         }
       }
     }
@@ -68,35 +69,34 @@ const cardData = [
     id: 2,
     name: "Tobe",
     category: "sound",
-    instrumentImage: "./images/tobe.png",
-    pin: "./images/green-pin.png",
+    instrumentImage: "/images/tobe.png",
+    pin: "/images/green-pin.png",
     culoareText: "text-green-secondary-rgb",
-    humanIcon: "./images/green-human.png",
+    humanIcon: "/images/green-human.png",
     buttonColor1: "bg-green-secondary",
     buttonColor2: "bg-teal-400",
     customText: "Alege cursul perfect pentru tine și începe o călătorie de dezvoltare personală și profesională.",
-    pretFull : "750 RON",
-    pretDiscounted : "520 RON",
-    descriere:"Eliberează-ți energia și descoperă puterea ritmului cu cursurile de tobe de la Armonia Academy! Tobele sunt inima oricărei formații muzicale și oferă una dintre cele mai captivante experiențe muzicale. De la beaturi simple la pattern-uri complexe, te invităm să explorezi universul percuției într-o sală special amenajată, alături de un profesor cu experiență bogată în interpretare și producție muzicală. Cursurile noastre acoperă toate stilurile - de la pop și rock la jazz și metal - și sunt adaptate pentru toate vârstele și nivelurile, oferind o experiență completă și interactivă.",
-    ceOsaInveti:"Tehnica fundamentală: Poziția corectă, ținerea băților, coordonarea membrelor Rudimente de bază: Paradiddle, flam, roll și alte tehnici esențiale Pattern-uri ritmice: Pentru toate stilurile muzicale (rock, pop, jazz, funk, latin) Citirea notației: Partituri pentru percuție și chart-uri Coordonarea: Independența membrelor și poliritmuri Dinamica și expresivitate: Control asupra volumului și intensității Acompaniament live: Integrarea cu alte instrumente (pian, chitară) Tehnici avansate: Ghost notes, fills creativi, subdiviziuni complexe",
+    pretFull: "750 RON",
+    pretDiscounted: "520 RON",
+    descriere: "Eliberează-ți energia și descoperă puterea ritmului cu cursurile de tobe de la Armonia Academy! Tobele sunt inima oricărei formații muzicale și oferă una dintre cele mai captivante experiențe muzicale. De la beaturi simple la pattern-uri complexe, te invităm să explorezi universul percuției într-o sală special amenajată, alături de un profesor cu experiență bogată în interpretare și producție muzicală. Cursurile noastre acoperă toate stilurile - de la pop și rock la jazz și metal - și sunt adaptate pentru toate vârstele și nivelurile, oferind o experiență completă și interactivă.",
+    ceOsaInveti: "Tehnica fundamentală: Poziția corectă, ținerea băților, coordonarea membrelor Rudimente de bază: Paradiddle, flam, roll și alte tehnici esențiale Pattern-uri ritmice: Pentru toate stilurile muzicale (rock, pop, jazz, funk, latin) Citirea notației: Partituri pentru percuție și chart-uri Coordonarea: Independența membrelor și poliritmuri Dinamica și expresivitate: Control asupra volumului și intensității Acompaniament live: Integrarea cu alte instrumente (pian, chitară) Tehnici avansate: Ghost notes, fills creativi, subdiviziuni complexe",
 
     profesor: {
       nume: "Aurel Ciucur",
       experienta: "peste 5 ani",
       descriere: "Profesor pasionat și producător muzical cu peste 5 ani de experiență în predare și interpretare scenică. Aurel combină cunoștințele teoretice cu experiența practică în trupe, oferind o perspectivă completă asupra muzicii moderne și a producției muzicale."
     },
-       ceriinte: {
-      val1 :"Fără experiență necesară - începem cu fundamentele absolute",
-      val2 :"Vârsta minimă de 3 ani pentru dezvoltarea coordinării",
-      val3 :"Răbdarea pentru dezvoltarea treptată a tehnicii",
-      val4 :"Dedicare pentru exersare și progres",
+    ceriinte: {
+      val1: "Fără experiență necesară - începem cu fundamentele absolute",
+      val2: "Vârsta minimă de 3 ani pentru dezvoltarea coordinării",
+      val3: "Răbdarea pentru dezvoltarea treptată a tehnicii",
+      val4: "Dedicare pentru exersare și progres",
 
     },
-    cuiISeadreseaza:{
-      val1 :"Prima experiență muzicală - tobele dezvoltă ritmul natural",
-      val2 :"Copii cu energie în exces - canal perfect de exprimare",
-      val3 :"Pasionați de muzică modernă - rock, pop, hip-hop",
-      val4 :"Dezvoltarea disciplinei și a concentrării prin exercițiu",
+    cuiISeadreseaza: {
+      tipuri: ["Incepatori", "Intermediari"],
+      varsta: "7 ani si peste",
+      scop: "Dezvoltarea abilitatilor muzicale si a creativitatii"
     },
     curicula: {
       ceOSaInveti: "Tehnici de baza pentru interpretarea la pian, notiuni de teorie muzicala si dezvoltarea urechii muzicale."
@@ -111,37 +111,38 @@ const cardData = [
       ]
     },
     optiuniDeplata: {
-      tipuri: 
+      tipuri:
       {
-        integral:"Plata integrala 520 RON - LUNAR",
+        integral: "Plata integrala",
       },
-      optiuniDePlataInRate:{
-        opt1:{
-          descriere: "8-10 cursuri in 3 rate fara dobanda.",
-          pret:"347 RON lunar"
+      optiuniDePlataInRate: {
+        opt1: {
+          descriere: "2 rate fara dobanda.",
+          pret: "111"
         },
-        opt2:{
-          descriere: "12-15 cursuri in 6 rate fara dobanda.",
-          pret:"260 RON lunar"
+        opt2: {
+          descriere: "12 rate fara dobanda.",
+          pret: "3212"
         }
       }
     }
   },
-    {
+  {
     id: 3,
     name: "Chitară",
     category: "sound",
-    instrumentImage: "./images/chitara.png",
-    pin: "./images/green-pin.png",
+    instrumentImage: "/images/pian.png",
+    pin: "/images/green-pin.png",
     culoareText: "text-green-secondary-rgb",
-    humanIcon: "./images/green-human.png",
+    humanIcon: "/images/green-human.png",
     buttonColor1: "bg-green-secondary",
     buttonColor2: "bg-teal-400",
-    customText: "Alege cursul perfect pentru tine și începe o călătorie de dezvoltare personală și profesională.",
+    customText: "chitara e smechera",
     pretFull: "750 RON",
     pretDiscounted: "520 RON",
-    descriere: "Învață să cânți la chitară cu profesorii noștri experimentați de la Armonia Academy! Chitara este unul dintre cele mai versatile și populare instrumente, perfectă pentru orice stil muzical - de la clasic la rock, folk, jazz sau pop. Indiferent dacă vrei să înveți acordurile tale preferate sau să devii un chitarist profesionist, cursurile noastre sunt adaptate pentru toate vârstele și nivelurile.",
-    ceOsaInveti: "Tehnica fundamentală: Poziția corectă, acordarea instrumentului Acorduri de bază: Majore, minore, septimă Tehnici de mână dreaptă: Picking, strumming, fingerstyle Scări muzicale: Pentatonice, majore, minore blues Citirea tablaturilor și partiturilor Ritmuri și pattern-uri pentru diverse stiluri Improvizația și solourile Acompaniamentul vocal și instrumental Tehnici avansate: Bending, vibrato, hammer-on, pull-off",
+    descriere: "",
+    ceOsaInveti: "",
+
     profesor: {
       nume: "Matei Alexandru / Ștefan Dupu / Lucian Sanda",
       experienta: "peste 15 ani experiență combinată",
@@ -154,10 +155,9 @@ const cardData = [
       val4: "Răbdare pentru formarea calusurilor pe degete"
     },
     cuiISeadreseaza: {
-      val1: "Începători care vor să cânte piesele preferate",
-      val2: "Tineri interesați de muzica modernă și rock",
-      val3: "Adulți care vor un hobby relaxant și creativ",
-      val4: "Viitori membri de formații muzicale"
+      tipuri: ["Incepatori", "Intermediari"],
+      varsta: "7 ani si peste",
+      scop: "Dezvoltarea abilitatilor muzicale si a creativitatii"
     },
     curicula: {
       ceOSaInveti: "Acorduri de bază, tehnici de chitară și interpretarea pieselor preferate."
@@ -172,17 +172,18 @@ const cardData = [
       ]
     },
     optiuniDeplata: {
-      tipuri: {
-        integral: "Plata integrală 520 RON - LUNAR"
+      tipuri:
+      {
+        integral: "Plata integrala",
       },
       optiuniDePlataInRate: {
         opt1: {
-          descriere: "8-10 cursuri în 3 rate fără dobândă.",
-          pret: "347 RON lunar"
+          descriere: "2 rate fara dobanda.",
+          pret: "111"
         },
         opt2: {
-          descriere: "12-15 cursuri în 6 rate fără dobândă.",
-          pret: "260 RON lunar"
+          descriere: "12 rate fara dobanda.",
+          pret: "3212"
         }
       }
     }
@@ -252,7 +253,7 @@ const cardData = [
     name: "Vioară",
     category: "sound",
     instrumentImage: "./images/vioara.png",
-     pin: "./images/green-pin.png",
+    pin: "./images/green-pin.png",
     culoareText: "text-green-secondary-rgb",
     humanIcon: "./images/green-human.png",
     buttonColor1: "bg-green-secondary",
@@ -312,7 +313,7 @@ const cardData = [
     name: "Saxofon",
     category: "sound",
     instrumentImage: "./images/saxofon.png",
-     pin: "./images/green-pin.png",
+    pin: "./images/green-pin.png",
     culoareText: "text-green-secondary-rgb",
     humanIcon: "./images/green-human.png",
     buttonColor1: "bg-green-secondary",
@@ -372,7 +373,7 @@ const cardData = [
     name: "Mandolină",
     category: "sound",
     instrumentImage: "./images/mandolina.png",
-     pin: "./images/green-pin.png",
+    pin: "./images/green-pin.png",
     culoareText: "text-green-secondary-rgb",
     humanIcon: "./images/green-human.png",
     buttonColor1: "bg-green-secondary",
@@ -428,65 +429,65 @@ const cardData = [
     }
   },
   {
-  id: 8,
-  name: "Ukulele",
-  category: "sound",
-  instrumentImage: "./images/ukulele.png",
-   pin: "./images/green-pin.png",
+    id: 8,
+    name: "Ukulele",
+    category: "sound",
+    instrumentImage: "./images/ukulele.png",
+    pin: "./images/green-pin.png",
     culoareText: "text-green-secondary-rgb",
     humanIcon: "./images/green-human.png",
     buttonColor1: "bg-green-secondary",
     buttonColor2: "bg-teal-400",
-  customText: "Alege cursul perfect pentru tine și începe o călătorie de dezvoltare personală și profesională.",
-  pretFull: "750 RON",
-  pretDiscounted: "520 RON",
-  descriere: "Alătură-te aventurii muzicale cu ukulele la Armonia Academy! Ukulele este instrumentul perfect pentru începători și pentru cei care vor să aducă bucurie și spontaneitate în muzică. Cu sonoritatea sa caldă și prietenoasă, ukulele este ideal pentru acompaniament vocal și interpretări relaxate. Cursurile noastre combină tehnica de bază cu plăcerea de a cânta, fiind perfecte pentru toate vârstele.",
-  ceOsaInveti: "Tehnica fundamentală: Poziția corectă, strumming de bază Acorduri esențiale: Majore, minore, septimă Ritmuri populare: Pentru diverse stiluri muzicale Fingerpicking: Tehnici pentru melodii și arpegii Citirea tablaturilor: Sistem simplu și eficient Repertoriu variat: Pop, folk, hawaiian, indie Acompaniament vocal: Cântatul și însoțirea la ukulele Tehnici avansate: Percuție pe instrument, ornamentații Improvizația: Dezvoltarea creativității personale",
-  profesor: {
-    nume: "Codruț Andrei / Lucian Sanda / Ștefan Dupu",
-    experienta: "experiență combinată în diverse stiluri",
-    descriere: "Echipa noastră de profesori de ukulele aduce o experiență variată din domenii muzicale diverse, de la jazz și blues la folk și muzica populară, oferind o abordare completă și relaxată a învățării ukulele."
-  },
-  ceriinte: {
-    val1: "Fără experiență necesară - perfect pentru începători",
-    val2: "Vârsta minimă de 5 ani - instrument ideal pentru copii",
-    val3: "Dorința de a se distra și de a cânta",
-    val4: "Deschidere pentru acompaniament vocal"
-  },
-  cuiISeadreseaza: {
-    val1: "Începători care vor un instrument accesibil și distractiv",
-    val2: "Copii și adolescenți - primul lor instrument muzical",
-    val3: "Adulți care caută un hobby relaxant și social",
-    val4: "Iubitori de muzică folk, pop și hawaiiană"
-  },
-  curicula: {
-    ceOSaInveti: "Acorduri de bază la ukulele, ritmuri simple și acompaniament vocal."
-  },
-  sesiuni: "4-5 sesiuni",
-  capitoleCurs: {
-    capitole: [
-      "Introducere în ukulele și acorduri de bază",
-      "Ritmuri și strumming patterns",
-      "Fingerpicking și melodii simple",
-      "Acompaniament vocal și repertoriu"
-    ]
-  },
-  optiuniDeplata: {
-    tipuri: {
-      integral: "Plata integrală 520 RON - LUNAR"
+    customText: "Alege cursul perfect pentru tine și începe o călătorie de dezvoltare personală și profesională.",
+    pretFull: "750 RON",
+    pretDiscounted: "520 RON",
+    descriere: "Alătură-te aventurii muzicale cu ukulele la Armonia Academy! Ukulele este instrumentul perfect pentru începători și pentru cei care vor să aducă bucurie și spontaneitate în muzică. Cu sonoritatea sa caldă și prietenoasă, ukulele este ideal pentru acompaniament vocal și interpretări relaxate. Cursurile noastre combină tehnica de bază cu plăcerea de a cânta, fiind perfecte pentru toate vârstele.",
+    ceOsaInveti: "Tehnica fundamentală: Poziția corectă, strumming de bază Acorduri esențiale: Majore, minore, septimă Ritmuri populare: Pentru diverse stiluri muzicale Fingerpicking: Tehnici pentru melodii și arpegii Citirea tablaturilor: Sistem simplu și eficient Repertoriu variat: Pop, folk, hawaiian, indie Acompaniament vocal: Cântatul și însoțirea la ukulele Tehnici avansate: Percuție pe instrument, ornamentații Improvizația: Dezvoltarea creativității personale",
+    profesor: {
+      nume: "Codruț Andrei / Lucian Sanda / Ștefan Dupu",
+      experienta: "experiență combinată în diverse stiluri",
+      descriere: "Echipa noastră de profesori de ukulele aduce o experiență variată din domenii muzicale diverse, de la jazz și blues la folk și muzica populară, oferind o abordare completă și relaxată a învățării ukulele."
     },
-    optiuniDePlataInRate: {
-      opt1: {
-        descriere: "8-10 cursuri în 3 rate fără dobândă.",
-        pret: "347 RON lunar"
+    ceriinte: {
+      val1: "Fără experiență necesară - perfect pentru începători",
+      val2: "Vârsta minimă de 5 ani - instrument ideal pentru copii",
+      val3: "Dorința de a se distra și de a cânta",
+      val4: "Deschidere pentru acompaniament vocal"
+    },
+    cuiISeadreseaza: {
+      val1: "Începători care vor un instrument accesibil și distractiv",
+      val2: "Copii și adolescenți - primul lor instrument muzical",
+      val3: "Adulți care caută un hobby relaxant și social",
+      val4: "Iubitori de muzică folk, pop și hawaiiană"
+    },
+    curicula: {
+      ceOSaInveti: "Acorduri de bază la ukulele, ritmuri simple și acompaniament vocal."
+    },
+    sesiuni: "4-5 sesiuni",
+    capitoleCurs: {
+      capitole: [
+        "Introducere în ukulele și acorduri de bază",
+        "Ritmuri și strumming patterns",
+        "Fingerpicking și melodii simple",
+        "Acompaniament vocal și repertoriu"
+      ]
+    },
+    optiuniDeplata: {
+      tipuri: {
+        integral: "Plata integrală 520 RON - LUNAR"
       },
-      opt2: {
-        descriere: "12-15 cursuri în 6 rate fără dobândă.",
-        pret: "260 RON lunar"
+      optiuniDePlataInRate: {
+        opt1: {
+          descriere: "8-10 cursuri în 3 rate fără dobândă.",
+          pret: "347 RON lunar"
+        },
+        opt2: {
+          descriere: "12-15 cursuri în 6 rate fără dobândă.",
+          pret: "260 RON lunar"
+        }
       }
     }
-  }
-},
+  },
   {
     id: 9,
     name: "Bass",
@@ -548,65 +549,65 @@ const cardData = [
     }
   },
   {
-  id: 10,
-  name: "Clarinet",
-  category: "sound",
-  instrumentImage: "./images/clarinet.png",
-   pin: "./images/green-pin.png",
+    id: 10,
+    name: "Clarinet",
+    category: "sound",
+    instrumentImage: "./images/clarinet.png",
+    pin: "./images/green-pin.png",
     culoareText: "text-green-secondary-rgb",
     humanIcon: "./images/green-human.png",
     buttonColor1: "bg-green-secondary",
     buttonColor2: "bg-teal-400",
-  customText: "Alege cursul perfect pentru tine și începe o călătorie de dezvoltare personală și profesională.",
-  pretFull: "750 RON",
-  pretDiscounted: "520 RON",
-  descriere: "Explorează versatilitatea și eleganța clarinelului cu cursurile noastre de la Armonia Academy! Clarinetul este unul dintre cele mai expresive instrumente de suflat, cu o gamă dinamică impresionantă și capacitatea de a interpreta atât muzica clasică, cât și jazz-ul modern. Cu un profesor în curs de absolvire la UNMB, cursurile oferă o fundație solidă și o abordare contemporană a învățării.",
-  ceOsaInveti: "Tehnica respirației: Control al suflului și respirația diafragmatică Embouchure: Poziția corectă pentru clarinet Tehnica suflului: Atacul, legato, staccato Scări și arpegii: Pentru toate tonalitățile Citirea notației: Partituri pentru clarinet în Bb Tehnici expresive: Vibrato, glissando, bend Repertoriu clasic: Mozart, Weber, Brahms Improvizația jazz: Elemente de swing și bebop Colaborarea: Muzică de cameră și orchestre",
-  profesor: {
-    nume: "Damian Marin",
-    experienta: "student anul final UNMB",
-    descriere: "În curs de absolvire a facultății de interpretare instrumentală la clarinet din cadrul UNMB, unde își va continua formarea la nivel de masterat. Drumul neconvențional în muzică demonstrează că pasiunea și dedicarea pot depăși orice obstacol, oferind o perspectivă unică că 'muzica nu are vârstă'."
-  },
-  ceriinte: {
-    val1: "Fără experiență necesară - curajul de a începe",
-    val2: "Vârsta minimă de 9 ani pentru controlul respirației",
-    val3: "Motivație și dorința de a evolua constant",
-    val4: "Dedicare pentru practica regulată"
-  },
-  cuiISeadreseaza: {
-    val1: "Persoane care cred că 'muzica nu are vârstă'",
-    val2: "Tineri atrași de sonoritățile clasice și jazz",
-    val3: "Viitori membri ai orchestrelor și ansamblurilor",
-    val4: "Muzicieni care vor să exploreze versatilitatea instrumentului"
-  },
-  curicula: {
-    ceOSaInveti: "Tehnica clarinelului, respirație corectă și repertoriu clasic și modern."
-  },
-  sesiuni: "4-5 sesiuni",
-  capitoleCurs: {
-    capitole: [
-      "Introducere în clarinet și tehnica respirației",
-      "Embouchure și tehnica suflului",
-      "Scări, exerciții și citirea notelor",
-      "Repertoriu și interpretare muzicală"
-    ]
-  },
-  optiuniDeplata: {
-    tipuri: {
-      integral: "Plata integrală 520 RON - LUNAR"
+    customText: "Alege cursul perfect pentru tine și începe o călătorie de dezvoltare personală și profesională.",
+    pretFull: "750 RON",
+    pretDiscounted: "520 RON",
+    descriere: "Explorează versatilitatea și eleganța clarinelului cu cursurile noastre de la Armonia Academy! Clarinetul este unul dintre cele mai expresive instrumente de suflat, cu o gamă dinamică impresionantă și capacitatea de a interpreta atât muzica clasică, cât și jazz-ul modern. Cu un profesor în curs de absolvire la UNMB, cursurile oferă o fundație solidă și o abordare contemporană a învățării.",
+    ceOsaInveti: "Tehnica respirației: Control al suflului și respirația diafragmatică Embouchure: Poziția corectă pentru clarinet Tehnica suflului: Atacul, legato, staccato Scări și arpegii: Pentru toate tonalitățile Citirea notației: Partituri pentru clarinet în Bb Tehnici expresive: Vibrato, glissando, bend Repertoriu clasic: Mozart, Weber, Brahms Improvizația jazz: Elemente de swing și bebop Colaborarea: Muzică de cameră și orchestre",
+    profesor: {
+      nume: "Damian Marin",
+      experienta: "student anul final UNMB",
+      descriere: "În curs de absolvire a facultății de interpretare instrumentală la clarinet din cadrul UNMB, unde își va continua formarea la nivel de masterat. Drumul neconvențional în muzică demonstrează că pasiunea și dedicarea pot depăși orice obstacol, oferind o perspectivă unică că 'muzica nu are vârstă'."
     },
-    optiuniDePlataInRate: {
-      opt1: {
-        descriere: "8-10 cursuri în 3 rate fără dobândă.",
-        pret: "347 RON lunar"
+    ceriinte: {
+      val1: "Fără experiență necesară - curajul de a începe",
+      val2: "Vârsta minimă de 9 ani pentru controlul respirației",
+      val3: "Motivație și dorința de a evolua constant",
+      val4: "Dedicare pentru practica regulată"
+    },
+    cuiISeadreseaza: {
+      val1: "Persoane care cred că 'muzica nu are vârstă'",
+      val2: "Tineri atrași de sonoritățile clasice și jazz",
+      val3: "Viitori membri ai orchestrelor și ansamblurilor",
+      val4: "Muzicieni care vor să exploreze versatilitatea instrumentului"
+    },
+    curicula: {
+      ceOSaInveti: "Tehnica clarinelului, respirație corectă și repertoriu clasic și modern."
+    },
+    sesiuni: "4-5 sesiuni",
+    capitoleCurs: {
+      capitole: [
+        "Introducere în clarinet și tehnica respirației",
+        "Embouchure și tehnica suflului",
+        "Scări, exerciții și citirea notelor",
+        "Repertoriu și interpretare muzicală"
+      ]
+    },
+    optiuniDeplata: {
+      tipuri: {
+        integral: "Plata integrală 520 RON - LUNAR"
       },
-      opt2: {
-        descriere: "12-15 cursuri în 6 rate fără dobândă.",
-        pret: "260 RON lunar"
+      optiuniDePlataInRate: {
+        opt1: {
+          descriere: "8-10 cursuri în 3 rate fără dobândă.",
+          pret: "347 RON lunar"
+        },
+        opt2: {
+          descriere: "12-15 cursuri în 6 rate fără dobândă.",
+          pret: "260 RON lunar"
+        }
       }
     }
   }
-}
 ];
 
 export default function Programe() {
@@ -631,7 +632,7 @@ export default function Programe() {
     <div className="md:container md:mx-auto px-6 flex flex-col gap-10 mt-[50px]">
       {/* Banner */}
       <div className="mb-[70px]">
-        <img src="./images/banner.png" alt="" className="w-full" />
+        <img src="/images/banner.png" alt="" className="w-full" />
       </div>
 
       {/* Buttons and search bar */}
@@ -675,7 +676,7 @@ export default function Programe() {
             type="submit"
             className="bg-teal-500 rounded-full hover:bg-teal-400 text-white px-5 py-4 transition"
           >
-            <img src="./images/search.png" alt="Search" className="w-6 h-6" />
+            <img src="/images/search.png" alt="Search" className="w-6 h-6" />
           </button>
         </form>
       </div>
@@ -683,7 +684,7 @@ export default function Programe() {
       {/* Chat Buble */}
       <div className="hidden xl:flex justify-end absolute -bottom-60 right-10">
         <a className="btn btn-ghost hover:bg-transparent text-base font-normal px-0 pb-2 relative z-10">
-          <img className="scale-50 md:scale-90 lg:scale-100" src="./images/chat_bot.png" alt="" />
+          <img className="scale-50 md:scale-90 lg:scale-100" src="/images/chat_bot.png" alt="" />
         </a>
       </div>
 
@@ -724,7 +725,7 @@ export default function Programe() {
                   <div className="flex gap-2 mt-6">
                     <div className="relative text-[#E6E6E6]">
                       <div className="absolute">
-                        <img src="./images/red-line.png" alt="" />
+                        <img src="/images/red-line.png" alt="" />
                       </div>
                       <p className="text-xl font-bold font-epilogue">{card.pretFull}</p>
                     </div>
@@ -739,7 +740,7 @@ export default function Programe() {
                         'flex select-none items-center justify-center rounded-full gap-2 pl-4 text-white transition active:scale-[0.97]', card.buttonColor1
                       )}
                     >
-                      <Link to="/program">
+                      <Link key={card.id} to={`/curs/${card.id}`} state={{ card }}>
                         <span className="text-sm font-medium">Vezi mai Mult</span>
                       </Link>
                       <div className={cn("p-4 rounded-full", card.buttonColor2)}>
@@ -766,8 +767,8 @@ export default function Programe() {
 
       <div className="md:container flex w-full relative md:mx-auto rounded-3xl  bg-yellow-secondary text-black">
         <div className="py-5 ~px-2/10 flex justify-center md:block">
-          <img src="./images/intrebare-black.png" alt="" className="w-80 h-20 sm:hidden" />
-          <img src="./images/intrebare-black.png" alt="" className="hidden sm:block" />
+          <img src="/images/intrebare-black.png" alt="" className="w-80 h-20 sm:hidden" />
+          <img src="/images/intrebare-black.png" alt="" className="hidden sm:block" />
         </div>
         <div className="flex flex-col pr-4 items-center md:items-start text-center md:text-start gap-2 py-5 max-w-4xl">
           <div className="font-saint ~text-2xl/3xl">
