@@ -25,7 +25,7 @@ const blogs: BlogPost[] = [
     categoria: "Ghiduri pentru începători",
     keywords: ["primul instrument", "alegere instrument muzical", "cursuri muzica bucuresti", "armonia academy"],
     descriere: {
-      title: "Alegerea Primului Instrument Muzical - Factori Esențiali de Considerat",
+      title: "Alegerea Primului Instrument Muzical -  Factori Esențiali de Considerat",
       continut1: "Alegerea primului instrument muzical poate fi o provocare pentru mulți începători. În acest ghid complet, îți voi prezenta factorii esențiali care te vor ajuta să iei decizia corectă. De la vârstă și preferințe muzicale, până la buget și spațiul disponibil acasă, fiecare aspect contează în această decizie importantă. La Armonia Academy, am ghidat sute de elevi în alegerea instrumentului perfect pentru ei.",
       subtitlu1: "Factorii Principali în Alegerea Instrumentului",
       pozaDescriere: "./images/blog-instruments.jpg",
