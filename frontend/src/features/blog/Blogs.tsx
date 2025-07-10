@@ -129,20 +129,22 @@ export default function Blogs() {
                       </div>
                     </div>
                     <h3 className="~text-xl/3xl font-semibold text-blue-text-primary mb-2">{post.title}</h3>
-                    <div className="flex items-center justify-between my-6">
-                      <div
-                        className={cn(
-                          'flex select-none items-center justify-center rounded-full gap-2 pl-4 text-white transition active:scale-[0.97] bg-purple-primary',
-                        )}
-                      >
-                        <Link to={"/blog"}>
+
+                    <Link to={"/blog"}>
+                      <div className="flex items-center justify-between my-6">
+                        <div
+                          className={cn(
+                            'flex select-none items-center justify-center rounded-full gap-2 pl-4 text-white transition active:scale-[0.97] bg-purple-primary',
+                          )}
+                        >
                           <span className="text-sm font-sora">Vezi Mai Mult</span>
-                        </Link>
-                        <div className={cn("p-4 rounded-full bg-purple-secondary")}>
-                          <FiArrowRight className="text-xl" />
+                          <div className={cn("p-4 rounded-full bg-purple-secondary")}>
+                            <FiArrowRight className="text-xl" />
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </Link>
+
                   </div>
                 </div>
               );

@@ -97,23 +97,23 @@ const Pachete = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between mt-6">
-                    <div
-                      className={cn(
-                        'flex select-none items-center justify-center rounded-full gap-2 pl-4 text-white transition active:scale-[0.97]', card.buttonColor1
-                      )}
-                    >
-                      <Link key={card.id} to={`/curs/${card.id}`} state={{ card }}>
+                  <Link key={card.id} to={`/curs/${card.id}`} state={{ card }}>
+                    <div className="flex items-center justify-between mt-6">
+                      <div
+                        className={cn(
+                          'flex select-none items-center justify-center rounded-full gap-2 pl-4 text-white transition active:scale-[0.97]', card.buttonColor1
+                        )}
+                      >
                         <span className="text-sm font-medium">Vezi mai Mult</span>
-                      </Link>
-                      <div className={cn("p-4 rounded-full", card.buttonColor2)}>
-                        <FiArrowRight className="text-xl" />
+                        <div className={cn("p-4 rounded-full", card.buttonColor2)}>
+                          <FiArrowRight className="text-xl" />
+                        </div>
+                      </div>
+                      <div className="flex items-end">
+                        <img src={card.humanIcon} alt="" className="w-5 h-10" />
                       </div>
                     </div>
-                    <div className="flex items-end">
-                      <img src={card.humanIcon} alt="" className="w-5 h-10" />
-                    </div>
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -161,20 +161,20 @@ const Pachete = () => {
         }
       `}</style>
 
-      <div className="flex items-center justify-center mt-6 cursor-pointer ml-6 md:mr-6">
-        <div
-          className={cn(
-            'flex bg-green-secondary items-center justify-center rounded-full gap-2 pl-4 text-white transition active:scale-[0.97]',
-          )}
-        >
-          <Link to={"cursuri"}>
+      <Link to={"/programe"}>
+        <div className="flex items-center justify-center mt-6 cursor-pointer ml-6 md:mr-6">
+          <div
+            className={cn(
+              'flex bg-green-secondary items-center justify-center rounded-full gap-2 pl-4 text-white transition active:scale-[0.97]',
+            )}
+          >
             <span className="text-sm font-medium select-none">Vezi Cursurile</span>
-          </Link>
-          <div className={cn("p-4 rounded-full bg-teal-400")}>
-            <FiArrowRight className="text-xl" />
+            <div className={cn("p-4 rounded-full bg-teal-400")}>
+              <FiArrowRight className="text-xl" />
+            </div>
           </div>
         </div>
-      </div>
+      </Link>
 
     </div>
   );

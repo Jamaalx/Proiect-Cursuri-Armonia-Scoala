@@ -105,24 +105,23 @@ export default function CursuriOferte({ card }: { card: any; }) {
                           <p className="text-xl font-bold font-epilogue text-green-secondary">1200 €</p>
                         </div>
                       </div>
-
-                      <div className="flex items-center justify-between mt-6">
-                        <div
-                          className={cn(
-                            'flex select-none items-center justify-center rounded-full gap-2 pl-4 text-white transition active:scale-[0.97]', card.buttonColor1
-                          )}
-                        >
-                          <Link key={card.id} to={`/curs/${card.id}`} state={{ card }}>
+                      <Link key={card.id} to={`/curs/${card.id}`} state={{ card }}>
+                        <div className="flex items-center justify-between mt-6">
+                          <div
+                            className={cn(
+                              'flex select-none items-center justify-center rounded-full gap-2 pl-4 text-white transition active:scale-[0.97]', card.buttonColor1
+                            )}
+                          >
                             <span className="text-sm font-medium">Vezi mai Mult</span>
-                          </Link>
-                          <div className={cn("p-4 rounded-full", card.buttonColor2)}>
-                            <FiArrowRight className="text-xl" />
+                            <div className={cn("p-4 rounded-full", card.buttonColor2)}>
+                              <FiArrowRight className="text-xl" />
+                            </div>
+                          </div>
+                          <div className="flex items-end">
+                            <img src={card.humanIcon} alt="" className="w-5 h-10" />
                           </div>
                         </div>
-                        <div className="flex items-end">
-                          <img src={card.humanIcon} alt="" className="w-5 h-10" />
-                        </div>
-                      </div>
+                      </Link>
                     </div>
                   </div>
                 </div>
