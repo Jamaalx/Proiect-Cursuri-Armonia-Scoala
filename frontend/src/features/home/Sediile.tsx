@@ -32,7 +32,7 @@ export default function Sediile() {
       telefon: "+ 40273092740",
       email: "contact@scoalaarmona.ro",
       adresa: "Strada Vespasian nr.34, Sector 1,\nBucuresti",
-      zona: "Zona gara de Nord vis-a-vis de Gradina\nZu-Zum",
+      zona: "Zona gara de Nord vis-a-vis de Gradinaita Zum-Zum",
       program: [
         "Luni - Vineri: 10:00 - 21:00",
         "Sambata: 09:00 - 21:00",
@@ -49,7 +49,7 @@ export default function Sediile() {
       telefon: "+ 40723092740",
       email: "mihaibravu@scoalaarmona.ro",
       adresa: "Strada Stirului nr.14-16, Sector 3,\nBucuresti",
-      zona: "Zona Mihai Bravu, vis-a-vis de Magazinul Mathaus\nZu-Zum",
+      zona: "Zona Mihai Bravu, vis-a-vis de Magazinul Mathaus",
       program: [
         "Luni - Vineri: 10:00 - 21:00",
         "Sambata: 09:00 - 21:00",

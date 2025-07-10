@@ -193,44 +193,77 @@ Pasiunea noastră se reflectă în tot ce facem: creăm experiențe de învăța
         </div>
       </div>
 
-      <div className="md:container justify-center flex flex-col md:flex-row relative md:mx-auto rounded-3xl mx-6 bg-green-secondary text-white mb-20">
-        <div className="flex flex-col p-5 items-center text-center md:text-start gap-2 py-5 max-w-7xl">
-          <div className="font-abril ~text-2xl/5xl">
-            <p>Vei beneficia de o experiență impecabilă</p>
-          </div>
-          <div className='~text-sm/4xl'>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod or incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud..Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod or incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud..</p>
-          </div>
-          <div className="font-abril ~text-2xl/5xl">
-            <p>Ce îți oferim?</p>
-          </div>
+    <div className="md:container justify-center flex flex-col md:flex-row relative md:mx-auto rounded-3xl mx-6 bg-green-secondary text-white mb-20">
+  <div className="flex flex-col p-5 items-center text-center md:text-start gap-2 py-5 max-w-7xl">
+    <div className="font-abril ~text-2xl/5xl">
+      <p>Vei beneficia de o experiență impecabilă</p>
+    </div>
+    <div className='~text-sm/4xl'>
+      <p>La Armonia Academy, fiecare lecție este o călătorie de descoperire muzicală. Profesorii noștri dedicați combină pasiunea cu experiența pentru a-ți oferi o educație muzicală completă, adaptată nivelului și obiectivelor tale. Indiferent dacă ești la început de drum sau vrei să îți perfecționezi abilitățile, îți garantăm o experiență de învățare inspirațională și profesională.</p>
+    </div>
+    <div className="font-abril ~text-2xl/5xl">
+      <p>Ce îți oferim?</p>
+    </div>
 
-          <div className="px-4 grid py-8 md:container md:mx-auto ~gap-2/8 grid-cols-4 align-middle">
-            <div className="p-2 shadow-lg bg-white rounded-lg flex flex-col ~w-12/64 ~h-14/64">
-              <div className="m-4">
-              </div>
-            </div>
-            <div className="p-2 shadow-lg bg-white rounded-lg flex flex-col ~w-12/64 ~h-14/64">
-              <div className="m-4">
-              </div>
-            </div>
-            <div className="p-2 shadow-lg bg-white rounded-lg flex flex-col ~w-12/64 ~h-14/64">
-              <div className="m-4">
-              </div>
-            </div>
-            <div className="p-2 shadow-lg bg-white rounded-lg flex flex-col ~w-12/64 ~h-14/64">
-              <div className="m-4">
-              </div>
-            </div>
+    <div className="px-8 py-12 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
+        
+        {/* Card 1: Profesori Experimentați */}
+        <div className="p-8 shadow-xl bg-white rounded-2xl flex flex-col w-full max-w-sm h-64 text-gray-800 items-center text-center justify-center hover:shadow-2xl transition-shadow duration-300">
+          <div className="mb-6 p-4 bg-purple-100 rounded-full">
+            <svg className="w-12 h-12 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
           </div>
-
-          <div className="mt-6 btn-click-effect cursor-pointer select-none mb-4">
-            <span className="bg-purple-primary px-16 rounded-full tracking-wider font-semibold py-4">
-              Înscrie-te
-            </span>
-          </div>
+          <h4 className="font-bold text-lg mb-3 text-gray-800">Profesori Experimentați</h4>
+          <p className="text-sm text-gray-600 leading-relaxed">Echipă de specialiști cu experiență vastă și rezultate dovedite</p>
         </div>
+
+        {/* Card 2: Lecții Personalizate */}
+        <div className="p-8 shadow-xl bg-white rounded-2xl flex flex-col w-full max-w-sm h-64 text-gray-800 items-center text-center justify-center hover:shadow-2xl transition-shadow duration-300">
+          <div className="mb-6 p-4 bg-orange-100 rounded-full">
+            <svg className="w-12 h-12 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <h4 className="font-bold text-lg mb-3 text-gray-800">Lecții Personalizate</h4>
+          <p className="text-sm text-gray-600 leading-relaxed">Curriculum adaptat nivelului și obiectivelor fiecărui elev</p>
+        </div>
+
+        {/* Card 3: 5 Sedii în București */}
+        <div className="p-8 shadow-xl bg-white rounded-2xl flex flex-col w-full max-w-sm h-64 text-gray-800 items-center text-center justify-center hover:shadow-2xl transition-shadow duration-300">
+          <div className="mb-6 p-4 bg-green-100 rounded-full">
+            <svg className="w-12 h-12 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+          </div>
+          <h4 className="font-bold text-lg mb-3 text-gray-800">5 Sedii Moderne</h4>
+          <p className="text-sm text-gray-600 leading-relaxed">Locații convenabile în București cu echipamente de calitate</p>
+        </div>
+
+        {/* Card 4: Flexibilitate Program */}
+        <div className="p-8 shadow-xl bg-white rounded-2xl flex flex-col w-full max-w-sm h-64 text-gray-800 items-center text-center justify-center hover:shadow-2xl transition-shadow duration-300">
+          <div className="mb-6 p-4 bg-yellow-100 rounded-full">
+            <svg className="w-12 h-12 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+            </svg>
+          </div>
+          <h4 className="font-bold text-lg mb-3 text-gray-800">Program Flexibil</h4>
+          <p className="text-sm text-gray-600 leading-relaxed">Orar adaptat stilului tău de viață, inclusiv weekend</p>
+        </div>
+
       </div>
+    </div>
+
+    {/* Buton Call-to-Action */}
+    <div className="mt-4">
+      <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-full transition-colors duration-300 shadow-lg">
+        Înscrie-te
+      </button>
+    </div>
+
+  </div>
+</div>
     </div>
   );
 }
