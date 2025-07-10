@@ -8,7 +8,7 @@ import { cn } from '../../lib/cn';
 import { Link } from 'react-router-dom';
 import { useGetCoursesStore } from '../../store/armoniaDataStore';
 
-export default function CursuriOferte({ card }: { card: any; }) {
+export default function CursuriOferte() {
   const cardData = useGetCoursesStore((state) => state.courses);
   const [_, setActiveIndex] = useState(0);
   const swiperRef = useRef<SwiperType | null>(null);

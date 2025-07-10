@@ -17,7 +17,7 @@ const videos = [
   },
 ];
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const OurClients = ({ card }: { card: any; }) => {
+const OurClients = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
   const swiperRef = useRef<SwiperType | null>(null);

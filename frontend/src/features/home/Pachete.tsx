@@ -12,6 +12,7 @@ const Pachete = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef<SwiperType | null>(null);
   const courses = useGetCoursesStore((state) => state.courses);
+  console.log(activeIndex);
 
   return (
     <div className="md:container mx-auto px-6 py-10 bg-green-50 rounded-3xl relative">

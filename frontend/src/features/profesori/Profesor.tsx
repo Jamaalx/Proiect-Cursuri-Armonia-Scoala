@@ -166,7 +166,7 @@ export default function Profesor() {
                 <div className="p-2 select-none shadow-lg rounded-lg flex flex-col">
                   <img src={profesor.imagineTeacher} alt="" />
                   <div className="m-4">
-                    <p className="font-bold text-lg text-blue-text-primary">{profesor.nume}</p>
+                    <p className="font-bold text-lg text-blue-text-primary">{profesor.name}</p>
                     <p className="text-sm text-green-secondary">Teacher</p>
                   </div>
                 </div>

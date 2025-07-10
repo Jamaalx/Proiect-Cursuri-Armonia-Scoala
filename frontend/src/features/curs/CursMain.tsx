@@ -2,18 +2,17 @@ import CursuriOferte from "./CursuriOferte";
 import IntroDetails from "./Intro-Details";
 import OptiuniSiInscriere from "./OptiuniSiInscriere";
 import OurClients from "./OurClients";
-import { useParams, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export default function CursMain() {
   const location = useLocation();
   const card = location.state?.card;
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { id } = useParams();
+
   return (
     <div>
       <IntroDetails card={card} />
-      <OurClients card={card} />
-      <CursuriOferte card={card} />
+      <OurClients />
+      <CursuriOferte />
       <OptiuniSiInscriere card={card} />
     </div>
   );
