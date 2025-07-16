@@ -19,7 +19,7 @@ export default function Blog() {
           <img className="w-full" src="/images/blog-image-main.png" alt="" />
           <div className="flex gap-4">
             <div className="flex items-center gap-2">
-              <img src="/images/green-calendar.png" alt="" />
+              <img src="/images/green-calendar.png" alt="" />b
               <p className="text-[#888888] font-bold">14 iunie 2025</p>
             </div>
             <div className="flex items-center gap-2">
