@@ -32,7 +32,7 @@ export default function Inscrieri() {
         {/* Header section */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block bg-green-secondary text-white tracking-wider text-sm font-semibold px-4 py-1 rounded-full mb-4">
-            Înscriere Armonia Academy
+            Înscriere Armonia Academy!
           </div>
           <h1 className="font-saint text-4xl sm:text-5xl md:text-6xl mb-6">Începe călătoria ta spre excelență</h1>
           <p className="text-gray-600">Cu un singur click poți lua legătura cu noi. Tot ce trebuie să faci este să completezi formularul și să apeși pe butonul ÎNSCRIERE pentru a începe drumul tău în domeniul ales.</p>
