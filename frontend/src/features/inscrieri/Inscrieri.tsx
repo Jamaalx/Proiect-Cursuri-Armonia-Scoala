@@ -84,8 +84,6 @@ export default function Inscrieri() {
                     <p className="font-medium text-gray-700 pl-4">Alege sediul:</p>
                     <div className="space-y-2">
                       {[
-                        "Sediul Muncii - Decebal (Str. Trifoi nr.5)",
-                        "Sediul Obor - Moșilor (Str. Ion Maiorescu 37)",
                         "Sediul Gara de Nord (Str. Vespasian 34)",
                         "Sediul Fainari (Str. Episcop Radu nr. 63)",
                         "Sediul Mihai Bravu (Str. Stirului 14-16)",
