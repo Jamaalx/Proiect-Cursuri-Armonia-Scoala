@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export default function Inscrieri() {
-  const [formData, setFormData] = useState({
+  const [formData] = useState({
     nume: '',
     email: '',
     telefon: '',
