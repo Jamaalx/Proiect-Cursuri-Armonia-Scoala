@@ -56,7 +56,7 @@ export type Course = {
   };
 };
 export type BlogPost = {
-  id: number;
+  id: string;
   photoUrl: string;
   photosUrls?: { photo: string; }[];
   title: string;
@@ -728,7 +728,7 @@ export const useGetCoursesStore = create<CourseStore>(() => ({
 export const useGetBlogsStore = create<BlogsStore>(() => ({
   blogs: [
     {
-      id: 1,
+      id: "blog-1",
       photoUrl: "/images/blog-1.jpg",
       photosUrls: [
         { photo: "/images/blog-1.jpg" },
@@ -744,13 +744,13 @@ export const useGetBlogsStore = create<BlogsStore>(() => ({
         title: "Alegerea Primului Instrument Muzical -  Factori Esențiali de Considerat",
         continut1: "Alegerea primului instrument muzical poate fi o provocare pentru mulți începători. În acest ghid complet, îți voi prezenta factorii esențiali care te vor ajuta să iei decizia corectă. De la vârstă și preferințe muzicale, până la buget și spațiul disponibil acasă, fiecare aspect contează în această decizie importantă. La Armonia Academy, am ghidat sute de elevi în alegerea instrumentului perfect pentru ei.",
         subtitlu1: "Factorii Principali în Alegerea Instrumentului",
-        pozaDescriere: "./images/blog-instruments.jpg",
+        pozaDescriere: "/images/blog-instruments.jpg",
         continut2: "Vârsta este primul factor de considerat - copiii de 4-6 ani se descurcă excelent cu pianul sau ukulele, în timp ce adolescenții preferă adesea chitara sau tobele. Preferințele muzicale joacă un rol crucial: dacă îți place rock-ul, chitara electrică ar fi ideală, dacă preferi muzica clasică, pianul sau vioara sunt opțiuni excelente. Bugetul variază considerabil - un pian digital de calitate costă între 2000-5000 lei, o chitară pentru începători între 300-800 lei. La Armonia Academy oferim consultanță gratuită pentru alegerea instrumentului și chiar posibilitatea de a testa instrumentele înainte de a lua decizia finală.",
       }
     },
     {
-      id: 2,
-      photoUrl: "./images/blog-2.jpg",
+      id: "blog-2",
+      photoUrl: "/images/blog-2.jpg",
       title: "Beneficiile Învățării Muzicii pentru Dezvoltarea Creierului la Copii",
       date: "Iunie 1, 2025",
       author: "Alex Mantello",
@@ -760,13 +760,13 @@ export const useGetBlogsStore = create<BlogsStore>(() => ({
         title: "Cum Influențează Muzica Dezvoltarea Cognitivă a Copiilor",
         continut1: "Studiile neuroștiințifice demonstrează că învățarea muzicii produce schimbări remarcabile în creierul copilului. În acest articol, voi explora cercetările recente care arată cum lecțiile de muzică îmbunătățesc memoria, atenția, limbajul și abilitățile matematice ale copiilor. Observațiile din cei 12 ani de predare la Armonia Academy confirmă aceste beneficii extraordinare.",
         subtitlu1: "Impactul Neurologic al Educației Muzicale",
-        pozaDescriere: "./images/blog-brain-music.jpg",
+        pozaDescriere: "/images/blog-brain-music.jpg",
         continut2: "Cercetările de la Harvard și MIT arată că copiii care învață muzică dezvoltă conexiuni neuronale mai puternice în zonele responsabile pentru procesarea limbajului și matematica. Am observat personal că elevii mei care studiază pianul de minimum 6 luni îmbunătățesc semnificativ performanțele școlare. Muzica stimulează ambele emisfere cerebrale simultan, dezvoltând gândirea creativă și logică. Copiii care învață instrumente cu coarde (vioară, chitară) dezvoltă coordonarea și concentrarea mai rapid decât colegii lor. La Armonia Academy, programele noastre sunt special concepute pentru a maximiza aceste beneficii cognitive.",
       }
     },
     {
-      id: 3,
-      photoUrl: "./images/blog-3.jpg",
+      id: "blog-3",
+      photoUrl: "/images/blog-3.jpg",
       title: "Ghidul Complet pentru Lecțiile de Pian: De la Început la Performanță",
       date: "Mai 25, 2025",
       author: "Alex Mantello",
@@ -776,13 +776,13 @@ export const useGetBlogsStore = create<BlogsStore>(() => ({
         title: "Totul Despre Lecțiile de Pian - De la Primii Pași la Măiestrie",
         continut1: "Pianul este considerat 'regele instrumentelor' și pe bună dreptate. În acest ghid detaliat, voi împărtăși secretele unei progresii rapide la pian, bazate pe experiența mea de predare și pe metodele dovedite la Armonia Academy. Vei învăța cum să practici eficient, cum să dezvolți tehnică și cum să interpretezi cu emoție.",
         subtitlu1: "Metodologia Eficientă de Învățare a Pianului",
-        pozaDescriere: "./images/blog-piano-lesson.jpg",
+        pozaDescriere: "/images/blog-piano-lesson.jpg",
         continut2: "Secretul progresiei rapide la pian constă în practicarea structurată și îndrumarea profesională. Recomand 30 minute de practică zilnică pentru începători, împărțite în exerciții de tehnică (10 min), studiul piesei noi (15 min) și repetarea pieselor învățate (5 min). Poziția corectă la pian este fundamentală - șezutul la 2/3 din banchetă, picioarele pe podea, încheieturile ușor ridicate. La Armonia Academy folosim metoda progresivă: începem cu piese simple de 5 note, apoi evoluăm către scale majore și minore, acorduri și eventual piese complexe de Bach sau Chopin. Elevii noștri ating nivel intermediar în 8-12 luni cu practică regulată.",
       }
     },
     {
-      id: 4,
-      photoUrl: "./images/blog-4.jpg",
+      id: "blog-4",
+      photoUrl: "/images/blog-4.jpg",
       title: "Chitara pentru Începători: Totul Ce Trebuie să Știi în 2025",
       date: "Mai 15, 2025",
       author: "Alex Mantello",
@@ -792,13 +792,13 @@ export const useGetBlogsStore = create<BlogsStore>(() => ({
         title: "Drumul de la Zero la Chitarist - Ghid Practic pentru Începători",
         continut1: "Chitara este unul dintre cele mai populare instrumente, iar începutul poate fi intimidant. După 12 ani de predare a chitarei, am dezvoltat o metodă care face învățarea rapidă și plăcută. În acest articol voi dezvălui secretele pentru o progresie rapidă și voi răspunde la toate întrebările frecvente ale începătorilor.",
         subtitlu1: "Primul Tău Acord și Primele Tale Melodii",
-        pozaDescriere: "./images/blog-guitar-beginner.jpg",
+        pozaDescriere: "/images/blog-guitar-beginner.jpg",
         continut2: "Primul acord pe care îl învață elevii mei este G major - simplu și sonor. Urmează C major și D major, cu care poți cânta deja sute de melodii populare. Poziția corectă a mâinii stângi este crucială: degetul mare pe spatele gâtului, celelalte degete curbate peste corzi. Pentru mâna dreaptă, recomand să începi cu atacul alternativ simplu înainte de a trece la fingerpicking. La Armonia Academy, elevii învață primele 10 acorduri în prima lună și pot cânta prima melodie completă în lecția 4-5. Investiția într-o chitară de calitate (500-800 lei pentru începători) face diferența enormă în progresie și motivație.",
       }
     },
     {
-      id: 5,
-      photoUrl: "./images/blog-5.jpg",
+      id: "blog-5",
+      photoUrl: "/images/blog-5.jpg",
       title: "Tehnicile de Respirație pentru Canto: Secretele Profesioniștilor",
       date: "Mai 8, 2025",
       author: "Alex Mantello",
@@ -808,13 +808,13 @@ export const useGetBlogsStore = create<BlogsStore>(() => ({
         title: "Respirația Diafragmatică - Fundația Unei Voci Puternice",
         continut1: "Respirația este fundamentul cântului profesional. În acest ghid detaliat, voi explica tehnicile de respirație folosite de cântăreții profesioniști și voi oferi exerciții practice pentru dezvoltarea capacității pulmonare și controlului respirației. Aceste tehnici sunt esențiale pentru orice aspirant la canto.",
         subtitlu1: "Exerciții Practice pentru Dezvoltarea Respirației",
-        pozaDescriere: "./images/blog-breathing-technique.jpg",
+        pozaDescriere: "/images/blog-breathing-technique.jpg",
         continut2: "Respirația diafragmatică se învață prin exerciții sistematice. Exercițiul 'câinelui' (respirații rapide și scurte) dezvoltă controlul diafragmei, în timp ce respirațiile lungi pe sunetul 'ahh' îmbunătățesc capacitatea pulmonară. Recomand 10 minute de exerciții de respirație înainte de fiecare sesiune de canto. Poziția corectă: în picioare, umerii relaxați, o mână pe piept, una pe burtă - când respiri corect, doar mâna de pe burtă se mișcă. La Armonia Academy, profesorii noștri de canto încep fiecare lecție cu 5 minute de exerciții de respirație, iar elevii observă îmbunătățiri semnificative ale vocii în doar 2-3 săptămâni.",
       }
     },
     {
-      id: 6,
-      photoUrl: "./images/blog-6.jpg",
+      id: "blog-6",
+      photoUrl: "/images/blog-6.jpg",
       title: "Vioară vs Vișlă: Care Instrument cu Coarde să Alegi?",
       date: "Mai 1, 2025",
       author: "Alex Mantello",
@@ -824,13 +824,13 @@ export const useGetBlogsStore = create<BlogsStore>(() => ({
         title: "Comparația Completă: Vioară sau Violă pentru Începători",
         continut1: "Alegerea între vioară și violă confundă mulți începători. Deși similare la prima vedere, aceste instrumente au caracteristici distincte care influențează experiența de învățare. În acest articol voi analiza diferențele tehnice, muzicale și practice pentru a te ajuta să faci alegerea corectă.",
         subtitlu1: "Diferențele Tehnice și Muzicale Esențiale",
-        pozaDescriere: "./images/blog-violin-viola.jpg",
+        pozaDescriere: "/images/blog-violin-viola.jpg",
         continut2: "Vioara este cu 7 cm mai scurtă și acordată cu o cvintă mai înalt decât viola, având un sunet mai strălucitor și penetrant. Viola produce tonuri mai calde și profunde, fiind acordată în do-sol-re-la. Pentru copii sub 12 ani recomand vioara, fiind mai ușoară și cu dimensiuni adaptate vârstei. Viola necesită mâini și degete mai lungi, fiind ideală pentru adolescenți și adulți. Din perspectiva repertoriului, vioara are o literatură vastă de solistic, în timp ce viola excelează în muzica de cameră. La Armonia Academy avem instrumente de toate dimensiunile și oferim lecția de probă gratuită pentru ambele instrumente.",
       }
     },
     {
-      id: 7,
-      photoUrl: "./images/blog-7.jpg",
+      id: "blog-7",
+      photoUrl: "/images/blog-7.jpg",
       title: "Saxofonul în Muzica Modernă: De la Jazz la Pop Contemporary",
       date: "Aprilie 25, 2025",
       author: "Alex Mantello",
@@ -840,13 +840,13 @@ export const useGetBlogsStore = create<BlogsStore>(() => ({
         title: "Evoluția Saxofonului în Stilurile Muzicale Contemporane",
         continut1: "Saxofonul a parcurs o călătorie fascinantă de la jazz-ul clasic la pop-ul modern. În acest articol voi explora cum acest instrument versatil s-a adaptat diferitelor stiluri muzicale și care sunt tehnicile specifice pentru fiecare gen. De asemenea, voi oferi sfaturi pentru aspiranții saxofoniști.",
         subtitlu1: "Tehnici Specifice pentru Fiecare Stil Muzical",
-        pozaDescriere: "./images/blog-saxophone-styles.jpg",
+        pozaDescriere: "/images/blog-saxophone-styles.jpg",
         continut2: "Jazz-ul tradițional cere maeștria improvizației și înțelegerea progresiilor armonii complexe. Saxofoniștii de jazz dezvoltă un vibrato caracteristic și o frazare expresivă. În funk și R&B, accentul este pe groove și ritmuri sincopate, cu tehnici precum 'growling' și 'bending'. Pop-ul contemporary folosește saxofonul pentru hooks memorabile și solo-uri emotionale, cerând o abordare mai lirică. La Armonia Academy, profesorii noștri de saxofon sunt specializați în toate stilurile și adaptează lecțiile la preferințele muzicale ale fiecărui elev. Recomand să începi cu jazz-ul tradițional pentru a dezvolta baza tehnică solidă.",
       }
     },
     {
-      id: 8,
-      photoUrl: "./images/blog-8.jpg",
+      id: "blog-8",
+      photoUrl: "/images/blog-8.jpg",
       title: "Tobele: Fundamentele Ritmului și Coordinării în Muzică",
       date: "Aprilie 18, 2025",
       author: "Alex Mantello",
@@ -856,13 +856,13 @@ export const useGetBlogsStore = create<BlogsStore>(() => ({
         title: "Drumming pentru Începători - De la Primele Beats la Groove Complex",
         continut1: "Tobele sunt inima fiecărei formații muzicale, oferind fundația ritmică pe care se construiește întreaga muzică. În acest ghid complet voi explica fundamentele drumming-ului, de la ținerea corectă a bățelor până la dezvoltarea groove-urilor complexe și a coordination avansate.",
         subtitlu1: "Dezvoltarea Coordinării și a Simțului Ritmic",
-        pozaDescriere: "./images/blog-drums-coordination.jpg",
+        pozaDescriere: "/images/blog-drums-coordination.jpg",
         continut2: "Coordinarea între cele patru membre este cea mai mare provocare la tobe. Începem cu exerciții simple: mâna dreaptă pe hi-hat, stânga pe snare, piciorul drept pe kick drum. Metronómul este esențial pentru dezvoltarea timing-ului precis - recomand să începi cu 60 BPM și să crești treptat. Fill-urile se învață progresiv: simple de 2 beats, apoi 4 beats, eventual full-bar fills. La Armonia Academy folosim baterii electronice pentru începători, permițând practicarea cu căștile fără a deranja vecinii. Stilurile de bază (rock, funk, latin) se învață în primele 3-6 luni, iar elevii pot cânta în formație după un an de studiu.",
       }
     },
     {
-      id: 9,
-      photoUrl: "./images/blog-9.jpg",
+      id: "blog-9",
+      photoUrl: "/images/blog-9.jpg",
       title: "Teoria Muzicii Simplificată: Ghidul Complet pentru Începători",
       date: "Aprilie 11, 2025",
       author: "Alex Mantello",
@@ -872,13 +872,13 @@ export const useGetBlogsStore = create<BlogsStore>(() => ({
         title: "Înțelegerea Fundamentelor: Note, Scale și Acorduri",
         continut1: "Teoria muzicii poate părea intimidantă, dar înțelegerea fundamentelor face diferența între un muzician și un adevărat artist. În acest ghid voi simplifica conceptele complexe și voi explica cum se aplică teoria în practica muzicală zilnică. Nu este necesară cunoașterea teoriei pentru a începe, dar te va ajuta enormemente în progresie.",
         subtitlu1: "De la Note la Acorduri - Construirea Cunoștințelor Teoretice",
-        pozaDescriere: "./images/blog-music-theory.jpg",
+        pozaDescriere: "/images/blog-music-theory.jpg",
         continut2: "Sistemul muzical occidental folosește 12 note (7 naturale + 5 alterații), organizate în octave de 8 note. Scările majore urmează formula T-T-S-T-T-T-S (ton-ton-semiton), în timp ce scările minore naturale folosesc T-S-T-T-S-T-T. Acordurile se construiesc prin suprapunerea terțelor: triad major (1-3-5), minor (1-3b-5), diminuat (1-3b-5b). Înțelegerea intervalelor este fundamentală pentru improvizație și compoziție. La Armonia Academy integrăm teoria gradual în lecțiile practice - elevii învață conceptele prin piesele pe care le cântă, nu prin memorarea abstractă. Această abordare face teoria accesibilă și utilă pentru toți elevii.",
       }
     },
     {
-      id: 10,
-      photoUrl: "./images/blog-10.jpg",
+      id: "blog-10",
+      photoUrl: "/images/blog-10.jpg",
       title: "Pregătirea pentru Examene și Concursuri Muzicale",
       date: "Aprilie 4, 2025",
       author: "Alex Mantello",
@@ -893,7 +893,7 @@ export const useGetBlogsStore = create<BlogsStore>(() => ({
       }
     },
     {
-      id: 11,
+      id: "blog-11",
       photoUrl: "./images/blog-11.jpg",
       title: "Cum să Practici Eficient Acasă: Maximizează Timpul de Studiu",
       date: "Martie 28, 2025",
@@ -909,7 +909,7 @@ export const useGetBlogsStore = create<BlogsStore>(() => ({
       }
     },
     {
-      id: 12,
+      id: "blog-12",
       photoUrl: "./images/blog-12.jpg",
       title: "Muzica în Era Digitală: Aplicații și Tehnologii pentru Muzicieni",
       date: "Martie 21, 2025",
@@ -925,7 +925,7 @@ export const useGetBlogsStore = create<BlogsStore>(() => ({
       }
     },
     {
-      id: 13,
+      id: "blog-13",
       photoUrl: "./images/blog-13.jpg",
       title: "Construirea unei Cariere Muzicale: De la Pasiune la Profesie",
       date: "Martie 14, 2025",
@@ -941,7 +941,7 @@ export const useGetBlogsStore = create<BlogsStore>(() => ({
       }
     },
     {
-      id: 14,
+      id: "blog-14",
       photoUrl: "./images/blog-14.jpg",
       title: "Muzica de Cameră: Beneficiile Cântatului în Ansamblu",
       date: "Martie 7, 2025",
@@ -957,7 +957,7 @@ export const useGetBlogsStore = create<BlogsStore>(() => ({
       }
     },
     {
-      id: 15,
+      id: "blog-15",
       photoUrl: "./images/blog-15.jpg",
       title: "Viitorul Educației Muzicale: Tendințe și Inovații în 2025",
       date: "Martie 31, 2025",

@@ -65,6 +65,7 @@ export default function Navbar() {
           <li><Link to="/despre-noi" onClick={handleItemClick}>Despre Noi</Link></li>
           <li><Link to="/blogs" onClick={handleItemClick}>Blog</Link></li>
           <li><Link to="/Contact" onClick={handleItemClick}>Contact</Link></li>
+          <li><Link to="/inscrieri" onClick={handleItemClick}>Înscrieri</Link></li>
           <li><Link to="/signup" onClick={handleItemClick}>Înregistrează-Te</Link></li>
         </ul>
       </div>
@@ -90,6 +91,7 @@ export default function Navbar() {
         <ul className="menu menu-horizontal px-0 text-lg xl:gap-8">
           <li><Link to="/blogs">Blog</Link></li>
           <li><Link to="/Contact">Contact</Link></li>
+          <li><Link to="/inscrieri">Înscrieri</Link></li>
         </ul>
         <Link to="/signup" className="btn btn-ghost hover:bg-transparent text-base font-normal px-0 pb-2 mr-4 relative">
           <img src="/images/inregistreaza-te.png" alt="" />

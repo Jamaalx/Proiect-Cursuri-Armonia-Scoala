@@ -23,7 +23,7 @@ export default function Blogs() {
   const selectedPosts = filteredPosts.slice(startIndex, startIndex + POSTS_PER_PAGE);
   const [imageIndices, setImageIndices] = useState<{ [postId: string]: number; }>({});
 
-  const handleNextImage = (postId: number, imagesLength: number) => {
+  const handleNextImage = (postId: string, imagesLength: number) => {
     setImageIndices((prev) => ({
       ...prev,
       [postId]: (prev[postId] ?? 0) + 1 >= imagesLength ? 0 : (prev[postId] ?? 0) + 1,
@@ -34,7 +34,7 @@ export default function Blogs() {
     setSearchTerm(e.target.value.toLowerCase());
   };
 
-  const handlePrevImage = (postId: number, imagesLength: number) => {
+  const handlePrevImage = (postId: string, imagesLength: number) => {
     setImageIndices((prev) => ({
       ...prev,
       [postId]: (prev[postId] ?? 0) - 1 < 0 ? imagesLength - 1 : (prev[postId] ?? 0) - 1,
@@ -57,12 +57,12 @@ export default function Blogs() {
       <div className="absolute hidden 2xl:block right-0 2xl:top-[1200px] ">
         <img src="/images/green-right-gear.png" alt="" />
       </div>
-      <div className="md:container md:mx-auto flex mx-6 gap-20 mt-10">
+      <div className="md:container md:mx-auto flex flex-col lg:flex-row mx-4 sm:mx-6 gap-8 lg:gap-20 mt-6 sm:mt-10">
         <div className="flex flex-col flex-1">
           <div className="lg:hidden flex flex-col gap-5 mb-4">
             <form
               onSubmit={(e) => e.preventDefault()}
-              className="flex border border-gray-200 bg-white w-full rounded-full overflow-hidden shadow-xl text-sm"
+              className="flex border border-gray-200 bg-white w-full rounded-full overflow-hidden shadow-lg sm:shadow-xl text-sm"
             >
               <input
                 type="text"
@@ -93,44 +93,44 @@ export default function Blogs() {
 
               return (
                 <div key={post.id}>
-                  <div className="relative">
+                  <div>
                     <img
                       src={currentImage}
                       alt="blog"
                       className="rounded-3xl mb-3 w-full"
                     />
                     {hasMultipleImages && post.photosUrls!.length > 1 && (
-                      <div className="absolute bottom-0 left-0 mx-2 right-0 flex justify-between items-center transform -translate-y-1/2">
+                      <div className="flex justify-end gap-2 mb-4">
                         <button
                           onClick={() => handlePrevImage(post.id, post.photosUrls!.length)}
-                          className="bg-white text-white px-2 py-1 rounded hover:bg-opacity-70"
+                          className="bg-white border border-gray-200 p-2 rounded-lg shadow-sm hover:bg-gray-50 transition-colors"
                         >
-                          <img src="/images/left-arrow.png" alt="" className="~p-1/4" />
+                          <img src="/images/left-arrow.png" alt="Previous" className="w-5 h-5" />
                         </button>
                         <button
                           onClick={() => handleNextImage(post.id, post.photosUrls!.length)}
-                          className="bg-white text-white px-2 py-1 rounded hover:bg-opacity-70"
+                          className="bg-white border border-gray-200 p-2 rounded-lg shadow-sm hover:bg-gray-50 transition-colors"
                         >
-                          <img src="/images/right-arrow.png" alt="" className="~p-1/4" />
+                          <img src="/images/right-arrow.png" alt="Next" className="w-5 h-5" />
                         </button>
                       </div>
                     )}
                   </div>
 
                   <div className="flex flex-col gap-4 mb-16">
-                    <div className="flex gap-4">
+                    <div className="flex flex-wrap gap-4">
                       <div className="flex gap-2 items-center">
-                        <img src="/images/green-calendar.png" alt="" />
-                        <p className="text-sm text-gray-500">{post.date}</p>
+                        <img src="/images/green-calendar.png" alt="" className="w-5 h-5" />
+                        <p className="text-xs sm:text-sm text-gray-500">{post.date}</p>
                       </div>
                       <div className="flex gap-2 items-center">
                         <img src="/images/little-user.png" alt="" className="w-[11px] h-[13px]" />
-                        <p className="text-sm text-gray-700">Autor: {post.author}</p>
+                        <p className="text-xs sm:text-sm text-gray-700">Autor: {post.author}</p>
                       </div>
                     </div>
-                    <h3 className="~text-xl/3xl font-semibold text-blue-text-primary mb-2">{post.title}</h3>
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-blue-text-primary mb-2">{post.title}</h3>
 
-                    <Link to={"/blog"}>
+                    <Link to={`/blog/${post.id}`}>
                       <div className="flex items-center justify-between my-6">
                         <div
                           className={cn(
@@ -149,14 +149,11 @@ export default function Blogs() {
                 </div>
               );
             })}
-          </div>
-
-
-          <div className="flex justify-center mt-6 gap-2 items-center">
-            <button
-              onClick={() => handlePageChange(currentPage - 1)}
-              disabled={currentPage === 1}
-              className={`px-3 py-1 rounded border ${currentPage === 1
+          </div>            <div className="flex justify-center mt-6 gap-1 sm:gap-2 items-center">
+              <button
+                onClick={() => handlePageChange(currentPage - 1)}
+                disabled={currentPage === 1}
+                className={`px-2 sm:px-3 py-1 rounded border ${currentPage === 1
                 ? "text-gray-400 border-gray-300 cursor-not-allowed"
                 : "text-purple-600 border-purple-600 hover:bg-purple-50"
                 }`}
@@ -210,63 +207,29 @@ export default function Blogs() {
             </button>
           </form>
           <p className="text-blue-text-primary font-epilogue tracking-wider text-xl">
-            RECENT POST dadw
+            RECENT POST
           </p>
-          <div className="gap-4">
-            <img src="/images/recent-1.png" alt="" />
-            <div className="flex flex-col gap-1">
-              <div className="flex gap-1 items-center">
-                <img src="/images/green-calendar.png" alt="" />
-                <p className="text-sm">14 Iunie</p>
-              </div>
-              <p className="max-w-56 text-blue-text-primary font-semibold text-[13px]">Interdum velit laoreet id
-                donec ultrices tincidunt arcu.</p>
-            </div>
-          </div>
-          <div className="flex gap-4">
-            <img src="/images/recent-2.png" alt="" />
-            <div className="flex flex-col gap-1">
-              <div className="flex gap-1 items-center">
-                <img src="/images/green-calendar.png" alt="" />
-                <p className="text-sm">14 Iunie 2025</p>
-              </div>
-              <p className="max-w-56 text-blue-text-primary font-semibold text-[13px]">Interdum velit laoreet id
-                donec ultrices tincidunt arcu.</p>
-            </div>
-          </div>
-          <div className="flex gap-4">
-            <img src="/images/recent-3.png" alt="" />
-            <div className="flex flex-col gap-1">
-              <div className="flex gap-1 items-center">
-                <img src="/images/green-calendar.png" alt="" />
-                <p className="text-sm">14 Iunie 2025</p>
-              </div>
-              <p className="max-w-56 text-blue-text-primary font-semibold text-[13px]">Interdum velit laoreet id
-                donec ultrices tincidunt arcu.</p>
-            </div>
-          </div>
-          <div className="flex gap-4">
-            <img src="/images/recent-4.png" alt="" />
-            <div className="flex flex-col gap-1">
-              <div className="flex gap-1 items-center">
-                <img src="/images/green-calendar.png" alt="" />
-                <p className="text-sm">14 Iunie 2025</p>
-              </div>
-              <p className="max-w-56 text-blue-text-primary font-semibold text-[13px]">Interdum velit laoreet id
-                donec ultrices tincidunt arcu.</p>
-            </div>
-          </div>
-          <div className="flex gap-4">
-            <img src="/images/recent-5.png" alt="" />
-            <div className="flex flex-col gap-1">
-              <div className="flex gap-1 items-center">
-                <img src="/images/green-calendar.png" alt="" />
-                <p className="text-sm">14 Iunie 2025</p>
-              </div>
-              <p className="max-w-56 text-blue-text-primary font-semibold text-[13px]">Interdum velit laoreet id
-                donec ultrices tincidunt arcu.</p>
-            </div>
-          </div>
+          {blogs
+            .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+            .slice(0, 5)
+            .map((post) => (
+              <Link to={`/blog/${post.id}`} key={post.id} className="flex gap-4 group hover:opacity-80 transition-opacity">
+                <img 
+                  src={post.photoUrl} 
+                  alt={post.title}
+                  className="w-24 h-24 object-cover rounded-lg" 
+                />
+                <div className="flex flex-col gap-1">
+                  <div className="flex gap-1 items-center">
+                    <img src="/images/green-calendar.png" alt="" className="w-4 h-4" />
+                    <p className="text-sm text-gray-600">{post.date}</p>
+                  </div>
+                  <p className="max-w-56 text-blue-text-primary font-semibold text-[13px] group-hover:text-purple-600 transition-colors">
+                    {post.title}
+                  </p>
+                </div>
+              </Link>
+            ))}
           <p className="text-blue-text-primary font-epilogue tracking-wider text-xl">
             POPULAR TAG:
           </p>

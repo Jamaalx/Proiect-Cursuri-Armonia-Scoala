@@ -1,4 +1,15 @@
+import { useGetBlogsStore } from '../../store/armoniaDataStore';
+import { useParams } from 'react-router-dom';
+
 export default function Blog() {
+  const { id } = useParams();
+  const blogs = useGetBlogsStore((state) => state.blogs);
+  const blog = blogs.find(blog => blog.id === id);
+
+  if (!blog) {
+    return <div className="text-center mt-12">Blog not found</div>;
+  }
+
   return (
     <div>
       {/* floating elements are here */}
@@ -16,58 +27,59 @@ export default function Blog() {
       {/* content start here */}
       <div className="md:container md:mx-auto mt-12">
         <div className="mx-5 xl:mx-10 flex flex-col ~gap-4/8">
-          <img className="w-full" src="/images/blog-image-main.png" alt="" />
+          {/* Main Image */}
+          <img className="w-full" src={blog.photoUrl} alt={blog.title} />
+          
+          {/* Date and Author */}
           <div className="flex gap-4">
             <div className="flex items-center gap-2">
-              <img src="/images/green-calendar.png" alt="" />b
-              <p className="text-[#888888] font-bold">14 iunie 2025</p>
+              <img src="/images/green-calendar.png" alt="" />
+              <p className="text-[#888888] font-bold">{blog.date}</p>
             </div>
             <div className="flex items-center gap-2">
               <img src="/images/comment.png" alt="" />
-              <p className="text-[#888888] font-bold">Comment (06)</p>
+              <p className="text-[#888888] font-bold">Autor: {blog.author}</p>
             </div>
           </div>
-          <p className="text-[#202124] font-semibold ~text-lg/4xl">Pellentesque dignissim enim sit amet venenatis cursus eget nunc</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor in reprehenderit.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor in reprehenderit.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor in reprehenderit.</p>
+
+          {/* Title and Content */}
+          <h1 className="text-[#202124] font-semibold text-3xl">{blog.descriere.title}</h1>
+          <p className="text-[17px]">{blog.descriere.continut1}</p>
+          
+          {/* Subtitlu and Image */}
+          <h2 className="text-[#202124] font-semibold text-2xl">{blog.descriere.subtitlu1}</h2>
           <div className="flex justify-center flex-col lg:flex-row gap-4">
-            <img src="/images/blog-img1.png" alt="" />
+            <img src={blog.descriere.pozaDescriere} alt={blog.title} className="w-full" />
           </div>
-          <p className="text-blue-text-primary font-epilogue font-semibold ~text-lg/4xl">
-            Latest Articles Uldated Daily
-          </p>
-          <p className="text-[17px]">
-            With worldwide annual spend on digital advertising surpassing $325 billion, it’s no surprise that
-            different approaches to online marketing are becoming available. One of these new approaches is
-            performance marketing or digital performance marketing. Keep reading to learn all about
-            performance marketing
-          </p>
-          <div className="flex flex-col lg:flex-row gap-4 justify-between">
-            <div className="flex gap-3 md:items-center">
-              <p className="text-blue-text-primary text-[#17px] w-24 font-bold">Posted in:</p>
+          <p className="text-[17px]">{blog.descriere.continut2}</p>
+
+          {/* Categories and Keywords */}
+          <div className="flex flex-col lg:flex-row gap-4 justify-between mt-8">
+            <div className="flex gap-3 md:items-center flex-wrap">
+              <p className="text-blue-text-primary text-[17px] font-bold">Posted in:</p>
               <div className="flex flex-wrap gap-2">
-                <p className="bg-gray-100 px-4">Development</p>
-                <p className="bg-gray-100 px-4">Digital</p>
-                <p className="bg-gray-100 px-4">Tech</p>
+                <p className="bg-gray-100 px-4 py-2 rounded-lg">{blog.categoria}</p>
+                {blog.keywords.map((keyword, index) => (
+                  <p key={index} className="bg-gray-100 px-4 py-2 rounded-lg">{keyword}</p>
+                ))}
               </div>
             </div>
             <div className="flex gap-3 items-center">
-              <p className="text-blue-text-primary text-[#17px] font-bold mr-4">Share:</p>
-              <img src="/images/facebook-green.png" alt="" />
-              <img src="/images/instagram-green.png" alt="" />
-              <img src="/images/twitter-green.png" alt="" />
+              <p className="text-blue-text-primary text-[17px] font-bold mr-4">Share:</p>
+              <img src="/images/facebook-green.png" alt="facebook" className="cursor-pointer hover:scale-110 transition-transform" />
+              <img src="/images/instagram-green.png" alt="instagram" className="cursor-pointer hover:scale-110 transition-transform" />
+              <img src="/images/twitter-green.png" alt="twitter" className="cursor-pointer hover:scale-110 transition-transform" />
             </div>
           </div>
-          <div className="p-4 md:p-16 lg:mx-40 flex flex-col gap-4 shadow-xl rounded-xl">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl text-blue-text-primary font-bold">Let’s Get in Touch</h2>
+
+          {/* Comment Form */}
+          <div className="p-4 md:p-16 lg:mx-40 flex flex-col gap-4 shadow-xl rounded-xl mt-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl text-blue-text-primary font-bold">Let's Get in Touch</h2>
             <p className="text-[17px]">
               Your email address will not be published. Required fields are marked *
             </p>
 
-            {/* Form begin */}
             <form className="flex flex-col gap-6">
-              {/* Nume + Prenume */}
               <div className="flex flex-col md:flex-row gap-6">
                 <input
                   type="text"
@@ -91,13 +103,12 @@ export default function Blog() {
               <div className="flex h-60">
                 <textarea
                   className="flex-1 shadow-lg px-5 py-3 rounded-2xl text-black focus:outline-none"
-                  name="" id=""
                   placeholder="Mesaj"
-                >
-                </textarea>
+                  name="message"
+                  id="message"
+                ></textarea>
               </div>
 
-              {/* Button */}
               <div className="flex justify-center md:justify-start">
                 <button
                   type="submit"

@@ -60,8 +60,22 @@ export default function Footer() {
               </div>
 
               <div className="flex items-center gap-2 pt-2">
-                <img src="./images/footer-logo-1.png" alt="Soluționarea Online a Litigiilor" />
-                <img src="./images/footer-logo-2.png" alt="ANPC - Protecția Consumatorilor" />
+                <a 
+                  href="https://consumer-redress.ec.europa.eu/index_en" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:opacity-80 transition-opacity"
+                >
+                  <img src="./images/footer-logo-1.png" alt="Soluționarea Online a Litigiilor" />
+                </a>
+                <a 
+                  href="https://reclamatiisal.anpc.ro/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:opacity-80 transition-opacity"
+                >
+                  <img src="./images/footer-logo-2.png" alt="ANPC - Protecția Consumatorilor" />
+                </a>
               </div>
             </div>
           </div>

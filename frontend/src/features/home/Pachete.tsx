@@ -59,59 +59,58 @@ const Pachete = () => {
           >
             <div
               key={card.id}
-
-              className="bg-white text-black hover:scale-105 rounded-xl mx-6 py-6 shadow-xl hover:shadow-xl transition"
+              className="bg-white text-black hover:scale-105 rounded-xl mx-6 py-6 shadow-xl hover:shadow-xl transition max-w-[540px] w-full"
             >
-              <div className="flex items-center ~gap-4/8">
-                <div>
-                  <img src={card.instrumentImage} alt="" className='~w-10/60 h-auto mx-4' />
+              <div className="flex items-start gap-4 px-4">
+                <div className="flex-shrink-0">
+                  <img src={card.instrumentImage} alt="" className='w-16 h-auto' />
                 </div>
 
-                <div className="flex flex-col">
-                  <div className='flex w-fit mb-6 gap-3 bg-green-secondary-rgb/10 items-center py-2 px-2 rounded-lg'>
-                    <div className="h-3 w-3 rounded-full bg-green-400" />
-                    <p className="text-sm font-medium text-green-secondary-rgb">ARMONIA Academy</p>
+                <div className="flex flex-col flex-grow min-w-0">
+                  <div className='flex w-fit mb-4 gap-2 bg-green-secondary-rgb/10 items-center py-1.5 px-2 rounded-lg'>
+                    <div className="h-2.5 w-2.5 rounded-full bg-green-400 flex-shrink-0" />
+                    <p className="text-sm font-medium text-green-secondary-rgb whitespace-nowrap">ARMONIA Academy</p>
                   </div>
 
-                  <div className="flex gap-2">
-                    <img src={card.pin} alt="" className="w-5 aspect-square object-contain" />
-                    <p className="m-0 text-sm tracking-wider text-[#4D5756]">Bucuresti</p>
+                  <div className="flex gap-2 items-center">
+                    <img src={card.pin} alt="" className="w-4 h-4 flex-shrink-0" />
+                    <p className="text-sm tracking-wider text-[#4D5756]">Bucuresti</p>
                   </div>
 
-                  <div className={`~text-4xl/6xl mt-2 font-saint ${card.culoareText}`}>
-                    <p>{card.name}</p>
+                  <div className={`text-3xl sm:text-4xl mt-2 font-saint ${card.culoareText} leading-tight`}>
+                    <p className="line-clamp-2">{card.name}</p>
                   </div>
 
-                  <div className="text-[#333931] text-sm ~max-w-52/96">
-                    <p>Lorem ipsum dolor sit amet, consectetur elit, sed doeiusmod tempor</p>
+                  <div className="text-[#333931] text-sm mt-2">
+                    <p className="line-clamp-2">Alege cursul perfect pentru tine și începe o călătorie de dezvoltare personală și profesională.</p>
                   </div>
 
-                  <div className="flex gap-2 mt-6">
+                  <div className="flex gap-3 mt-4">
                     <div className="relative text-[#E6E6E6]">
-                      <div className="absolute">
-                        <img src="/images/red-line.png" alt="" />
+                      <div className="absolute inset-y-0 w-full flex items-center">
+                        <img src="/images/red-line.png" alt="" className="w-full" />
                       </div>
-                      <p className="text-xl font-bold font-epilogue">1420 €</p>
+                      <p className="text-lg font-bold font-epilogue">750 RON</p>
                     </div>
                     <div>
-                      <p className="text-xl font-bold font-epilogue text-green-secondary">1200 €</p>
+                      <p className="text-lg font-bold font-epilogue text-green-secondary">520 RON</p>
                     </div>
                   </div>
 
                   <Link key={card.id} to={`/curs/${card.id}`} state={{ card }}>
-                    <div className="flex items-center justify-between mt-6">
+                    <div className="flex items-center justify-between mt-4">
                       <div
                         className={cn(
                           'flex select-none items-center justify-center rounded-full gap-2 pl-4 text-white transition active:scale-[0.97]', card.buttonColor1
                         )}
                       >
-                        <span className="text-sm font-medium">Vezi mai Mult</span>
-                        <div className={cn("p-4 rounded-full", card.buttonColor2)}>
-                          <FiArrowRight className="text-xl" />
+                        <span className="text-sm font-medium whitespace-nowrap">Vezi mai Mult</span>
+                        <div className={cn("p-3 rounded-full", card.buttonColor2)}>
+                          <FiArrowRight className="text-lg" />
                         </div>
                       </div>
-                      <div className="flex items-end">
-                        <img src={card.humanIcon} alt="" className="w-5 h-10" />
+                      <div className="flex items-end ml-2">
+                        <img src={card.humanIcon} alt="" className="w-4 h-8" />
                       </div>
                     </div>
                   </Link>

@@ -4,6 +4,7 @@ import { Swiper as SwiperType } from 'swiper/types';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { cn } from '../../lib/cn';
 import { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useGetTeachersStore } from '../../store/armoniaDataStore';
 
 export default function Passion() {
@@ -19,7 +20,7 @@ export default function Passion() {
           </div>
           <div className="font-saint ~text-xl/5xl text-[#0E2A46]">
             Pasiunea noastră este să lucrăm cu oamenii la
-            <span className="text-green-secondary-rgb"> Armonia Acedemy.</span>
+            <span className="text-green-secondary-rgb"> Armonia Academy.</span>
           </div>
 
           <div className="~text-sm/lg">
@@ -153,9 +154,11 @@ export default function Passion() {
               alegere corectă a noului tău drum în carieră.</p>
           </div>
           <div className="btn-click-effect mt-2 cursor-pointer select-none">
-            <span className="bg-white rounded-full tracking-wider font-semibold px-4 py-2">
-              Programează o discuție
-            </span>
+            <Link to="/contact">
+              <span className="bg-white rounded-full tracking-wider font-semibold px-4 py-2">
+                Programează o discuție
+              </span>
+            </Link>
           </div>
         </div>
       </div>
@@ -221,14 +224,6 @@ export default function Passion() {
 
             </div>
           </div>
-
-          {/* Buton Call-to-Action */}
-          <div className="mt-4">
-            <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-full transition-colors duration-300 shadow-lg">
-              Înscrie-te
-            </button>
-          </div>
-
         </div>
       </div>
     </div>

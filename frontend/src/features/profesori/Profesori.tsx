@@ -24,8 +24,12 @@ export default function Profesori() {
       </div>
       <div className="md:container md:mx-auto flex flex-col gap-10 mx-4 mt-[50px]">
         {/* Banner */}
-        <div className="~mb-6/10">
-          <img src="/images/profesori-banner.png" alt="" className=" h-1/2" />
+        <div className="w-full overflow-hidden rounded-3xl">
+          <img 
+            src="/images/profesori-banner.png" 
+            alt="Profesorii Armonia" 
+            className="w-full h-auto object-cover min-h-[200px] sm:min-h-[250px] md:min-h-[300px]" 
+          />
         </div>
       </div>
       {/* Search bar */}
@@ -81,9 +85,11 @@ export default function Profesori() {
               alegere corectă a noului tău drum în carieră.</p>
           </div>
           <div className="mt-6 btn-click-effect cursor-pointer select-none">
-            <span className="bg-white rounded-full tracking-wider font-semibold px-4 py-2">
-              Programează o discuție
-            </span>
+            <Link to="/contact">
+              <span className="bg-white rounded-full tracking-wider font-semibold px-4 py-2">
+                Programează o discuție
+              </span>
+            </Link>
           </div>
         </div>
       </div>

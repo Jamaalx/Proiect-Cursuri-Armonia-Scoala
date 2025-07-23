@@ -13,6 +13,7 @@ import SignUp from "../../features/auth/SignUp";
 import SignIn from "../../features/auth/SignIn";
 import NotFound from "../../features/not-found/NotFound";
 import Cookies from "../../features/cookies/Cookies";
+import Inscrieri from "../../features/inscrieri/Inscrieri";
 
 export const router = createBrowserRouter([
   {
@@ -31,12 +32,13 @@ export const router = createBrowserRouter([
 
       { path: "blogs", element: <Blogs /> },
 
-      // this will be for the single profesor by id
-      { path: "blog", element: <Blog /> },
+      // this will be for the single blog by id
+      { path: "blog/:id", element: <Blog /> },
 
       { path: "contact", element: <Contact /> },
       { path: "signup", element: <SignUp /> },
       { path: "signin", element: <SignIn /> },
+      { path: "inscrieri", element: <Inscrieri /> },
       { path: "not-found", element: <NotFound /> },
       { path: "cookies", element: <Cookies /> },
     ]

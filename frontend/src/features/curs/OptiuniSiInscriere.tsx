@@ -1,25 +1,30 @@
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function OptiuniSiInscriere({ card }: { card: any; }) {
+  // Set this to true when you want to enable the payment options
+  const showPaymentOptions = false;
+
   return (
     <div className="">
-      <div className="md:container relative top-24 z-10 md:mx-auto ~text-lg/3xl font-bold">
-        <p className="text-center font-saint ~text-3xl/5xl mb-4">Optiuni de plata</p>
-        <div className="bg-yellow-secondary p-8 rounded-2xl flex flex-col gap-4 mx-6">
-          <div className="flex justify-between text-center flex-col md:flex-row items-center bg-white rounded-full px-6 py-2 mb-4">
-            <p>{card.optiuniDeplata.tipuri.integral}</p>
-            <p>1234 Lei</p>
-          </div>
-          <p className="pl-4 text-[#333931] font-saint">Optiuni de plata in rate</p>
-          <div className="flex justify-between text-center flex-col md:flex-row items-center bg-white rounded-full px-6 py-2">
-            <p>2 rate fara dobanda</p>
-            <p>1234 Lei/luna</p>
-          </div>
-          <div className="flex justify-between text-center flex-col md:flex-row items-center bg-white rounded-full px-6 py-2 mb-4">
-            <p>12 rate fara dobanda</p>
-            <p>12 Lei/luna</p>
+      {showPaymentOptions && (
+        <div className="md:container relative top-24 z-10 md:mx-auto ~text-lg/3xl font-bold">
+          <p className="text-center font-saint ~text-3xl/5xl mb-4">Optiuni de plata</p>
+          <div className="bg-yellow-secondary p-8 rounded-2xl flex flex-col gap-4 mx-6">
+            <div className="flex justify-between text-center flex-col md:flex-row items-center bg-white rounded-full px-6 py-2 mb-4">
+              <p>{card.optiuniDeplata?.tipuri?.integral || 'Plata integrala'}</p>
+              <p>1234 Lei Lunar </p>
+            </div>
+            <p className="pl-4 text-[#333931] font-saint">Optiuni de plata in rate</p>
+            <div className="flex justify-between text-center flex-col md:flex-row items-center bg-white rounded-full px-6 py-2">
+              <p>2 rate fara dobanda</p>
+              <p>1234 Lei/luna</p>
+            </div>
+            <div className="flex justify-between text-center flex-col md:flex-row items-center bg-white rounded-full px-6 py-2 mb-4">
+              <p>12 rate fara dobanda</p>
+              <p>12 Lei/luna</p>
+            </div>
           </div>
         </div>
-      </div>
+      )}
       {/* Here we do space between Optiuni de plata and Formulaire */}
       <div className="mb-10"></div>
       <div className="bg-purple-primary w-full absolute h-[1000px] py-16 px-4 text-white">

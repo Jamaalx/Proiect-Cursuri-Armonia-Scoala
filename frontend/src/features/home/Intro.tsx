@@ -17,11 +17,11 @@ export default function Intro() {
 
         <div className="flex flex-col gap-1 justify-center">
           <div className="w-max bg-green-secondary ~text-xs/sm font-semibold text-white mb-2 ~py-1/2 ~px-2/4 rounded-full">
-            <p className="tracking-wider">Armonia Acedemy</p>
+            <p className="tracking-wider">Armonia Academy</p>
           </div>
           <div className="font-saint text-sm md:text-xl xl:text-5xl leading-tight ~max-w-36/5xl text-[#0E2A46]">
             Pasiunea Noastră pentru educație și dezvoltare personală ne definește.
-            <span className="text-green-secondary-rgb"> Armonia Acedemy.</span>
+            <span className="text-green-secondary-rgb"> Armonia Academy.</span>
           </div>
 
           <div className="~text-xs/lg ~max-w-36/5xl mb-2">

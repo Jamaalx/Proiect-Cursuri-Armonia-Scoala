@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Help() {
   return (
     <div className="mt-16 relative">
@@ -18,9 +20,11 @@ export default function Help() {
               alegere corectă a noului tău drum în carieră.</p>
           </div>
           <div className="btn-click-effect mt-2 cursor-pointer select-none">
-            <span className="bg-white rounded-full tracking-wider font-semibold text-purple-primary px-4 py-2">
-              Programează o discuție
-            </span>
+            <Link to="/contact">
+              <span className="bg-white rounded-full tracking-wider font-semibold text-purple-primary px-4 py-2">
+                Programează o discuție
+              </span>
+            </Link>
           </div>
         </div>
       </div>
