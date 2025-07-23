@@ -27,7 +27,6 @@
   "devDependencies": {
     "@eslint/js": "9.26.0",
     "concurrently": "9.1.2",
-    "eslint": "9.26.0",
     "fluid-tailwind": "^1.0.4",
     "globals": "16.1.0",
     "nodemon": "3.1.10"
