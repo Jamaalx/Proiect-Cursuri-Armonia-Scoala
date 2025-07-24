@@ -9,7 +9,7 @@ export default function Profesori() {
     setSearchTerm(e.target.value.toLowerCase());
   };
   const filteredCards = teachers.filter((teacher) => {
-    const matchesSearch = teacher.name.toLowerCase().includes(searchTerm);
+    const matchesSearch = teacher.role.toLowerCase().includes(searchTerm);
     return matchesSearch;
   });
   return (

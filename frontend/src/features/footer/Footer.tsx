@@ -1,7 +1,24 @@
-export default function Footer() {
-  return (
-    <div className="relative mt-52 bg-cover min-h-[550px] text-white" style={{ backgroundImage: "url('./images/footer-feet.png')" }}>
+import { useState, useEffect } from 'react';
 
+export default function Footer() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    // Simple loading state to prevent flash
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div 
+      className={`relative mt-52 bg-cover min-h-[550px] text-white transition-opacity duration-300 ${
+        isLoaded ? 'opacity-100' : 'opacity-0'
+      }`}
+      style={{ backgroundImage: "url('./images/footer-feet.png')" }}
+    >
       {/* Elemente decorative */}
       <div className="absolute -top-44 -left-36 md:-left-2 z-10">
         <img className="scale-75 md:scale-100" src="./images/footer-gear.png" alt="" />
@@ -17,7 +34,6 @@ export default function Footer() {
       <div className="relative z-10 lg:container md:mx-auto px-6 pt-24">
         <div className="flex md:flex-wrap flex-col md:flex-row md:justify-between xl:gap-20 w-full">
 
-          {/* ⬅️ Coloana 1: Armonia */}
           {/* ⬅️ Coloana 1: Armonia */}
           <div className="flex flex-col items-center md:items-left gap-4 md:w-1/3 text-[15px]">
             <div>
@@ -79,6 +95,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
+
           {/* 💌 Coloana 2: Newsletter */}
           <div className="flex flex-col items-center sm:mr-10 md:justify-center mb-10 md:mb-0 gap-4 mt-10 md:mt-0 md:w-1/3 text-[15px]">
             <p className="text-[#0A033C] font-raleway text-sm text-center">

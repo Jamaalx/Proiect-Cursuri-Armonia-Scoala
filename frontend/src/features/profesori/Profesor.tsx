@@ -5,15 +5,29 @@ import { FiArrowRight, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { useState, useRef } from 'react';
 import 'swiper/swiper-bundle.css';
 import { cn } from '../../lib/cn';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useParams, Navigate } from 'react-router-dom';
 import { useGetTeachersStore } from '../../store/armoniaDataStore';
 
 export default function Profesor() {
   const location = useLocation();
-  const teacher = location.state?.teacher;
+  const { id } = useParams();
+  const teachers = useGetTeachersStore((state) => state.teachers);
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef<SwiperType | null>(null);
-  const teachers = useGetTeachersStore((state) => state.teachers);
+
+  // Try to get teacher from location state first, otherwise find it by ID
+  let teacher = location.state?.teacher;
+  
+  if (!teacher && id) {
+    // If no teacher in state, find it by ID from the store
+    teacher = teachers.find(t => t.id === Number(id));
+  }
+  
+  // If still no teacher found, redirect to teachers page
+  if (!teacher) {
+    return <Navigate to="/profesori" replace />;
+  }
+
   return (
     <div className="relative">
       <div className="absolute hidden 2xl:block top-[80px] sm:top-[150px] md:top-[200px] lg:top-[350px] xl:top-[450px] 2xl:top-[500px] 
@@ -28,7 +42,7 @@ export default function Profesor() {
       <div className='md:container rounded-xl shadow-xl p-6 gap-10 flex flex-col md:flex-row md:mx-auto'>
         <div className='flex flex-col items-center'>
           <div>
-            <img src={`${teacher.imagineTeacher}`} alt="" className='w-96 h-auto md:w-[243px] md:h-[243px]' />
+            <img src={teacher.imagineTeacher} alt={teacher.name} className='w-96 h-auto md:w-[243px] md:h-[243px]' />
             <div className='flex justify-evenly items-center ~py-2/9'>
               <a href="">
                 <img src="/images/facebook2.png" alt="" className='scale-50' />
@@ -75,7 +89,7 @@ export default function Profesor() {
         <div className="flex flex-col flex-1">
           <div className="flex flex-col gap-4 mb-6">
             <p className="text-blue-text-primary ~text-lg/2xl font-saint">{teacher.name}</p>
-            <p className='text-green-secondary text-sm'>Profesor</p>
+            <p className='text-green-secondary text-sm'>{teacher.role}</p>
             <p className="text-[#333931] ~text-xs/lg ~leading-2/9">{teacher.descriereScurta}</p>
             <p className="text-[#333931] ~text-xs/lg ~leading-2/9">{teacher.descriereCompleta}</p>
 
@@ -84,18 +98,22 @@ export default function Profesor() {
               {teacher.educatie}
             </p>
             <p className="text-blue-text-primary ~text-lg/2xl font-saint">Expertise & Skills:</p>
-            <p className="text-blue-text-primary">{teacher.expertiza[0]}</p>
-            <div className='h-1 w-full bg-[#09B289]/30'></div>
-            <p className="text-blue-text-primary">{teacher.expertiza[1]}s</p>
-            <div className='h-2 w-full bg-[#09B289]/30'></div>
-            <p className="text-blue-text-primary">{teacher.expertiza[2]}</p>
-            <div className='h-3 w-full bg-[#09B289]/30'></div>
-            <p className="text-blue-text-primary">{teacher.expertiza[3]}</p>
-            <div className='h-4 w-full bg-[#09B289]/30'></div>
-            <p className="text-blue-text-primary">{teacher.expertiza[4]}</p>
-            <div className='h-5 w-full bg-[#09B289]/30'></div>
+            
+            {/* Safe rendering of expertise with fallbacks */}
+            {teacher.expertiza && teacher.expertiza.length > 0 ? (
+              teacher.expertiza.map((expertise: string, index: number) => (
+                <div key={index}>
+                  <p className="text-blue-text-primary">{expertise}</p>
+                  <div 
+                    className='bg-[#09B289]/30' 
+                    style={{ height: `${(index + 1) * 4}px`, width: '100%' }}
+                  ></div>
+                </div>
+              ))
+            ) : (
+              <p className="text-gray-500">Informații despre expertiza vor fi adăugate în curând.</p>
+            )}
           </div>
-
         </div>
       </div>
 
@@ -163,13 +181,15 @@ export default function Profesor() {
                   activeIndex === index ? 'scale-105' : 'scale-95',
                 )}
               >
-                <div className="p-2 select-none shadow-lg rounded-lg flex flex-col">
-                  <img src={profesor.imagineTeacher} alt="" />
-                  <div className="m-4">
-                    <p className="font-bold text-lg text-blue-text-primary">{profesor.name}</p>
-                    <p className="text-sm text-green-secondary">Teacher</p>
+                <Link to={`/profesor/${profesor.id}`} state={{ teacher: profesor }}>
+                  <div className="p-2 select-none shadow-lg rounded-lg flex flex-col">
+                    <img src={profesor.imagineTeacher} alt={profesor.name} />
+                    <div className="m-4">
+                      <p className="font-bold text-lg text-blue-text-primary">{profesor.name}</p>
+                      <p className="text-sm text-green-secondary">{profesor.role}</p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
             </SwiperSlide>
           ))}
@@ -196,30 +216,30 @@ export default function Profesor() {
 
         {/* Fade Right */}
         <div className="pointer-events-none absolute top-0 right-0 md:w-[100px] lg:w-[250px] xl:w-[350px] 2xl:w-[500px] h-full z-20 bg-gradient-to-l from-white via-white/80 to-transparent" />
-      </div>;
+      </div>
 
       {/* PAGINATION */}
-      <div className="custom-pagination-pachete flex justify-center gap-2" />;
+      <div className="custom-pagination-pachete flex justify-center gap-2" />
 
       {/* Bullet customization */}
       <style>{`
-              .swiper-bullet {
-                width: 12px;
-                height: 12px;
-                border-radius: 9999px;
-                background-color: #cbd5e0;
-                margin: 0 4px;
-                display: inline-block;
-                opacity: 0.7;
-                transition: all 0.3s ease;
-              }
-              .swiper-bullet.swiper-pagination-bullet-active {
-                background-color: #14b8a6;
-                width: 12px;
-                height: 12px;
-                opacity: 1;
-              }
-            `}</style>
-    </div >
+        .swiper-bullet {
+          width: 12px;
+          height: 12px;
+          border-radius: 9999px;
+          background-color: #cbd5e0;
+          margin: 0 4px;
+          display: inline-block;
+          opacity: 0.7;
+          transition: all 0.3s ease;
+        }
+        .swiper-bullet.swiper-pagination-bullet-active {
+          background-color: #14b8a6;
+          width: 12px;
+          height: 12px;
+          opacity: 1;
+        }
+      `}</style>
+    </div>
   );
 }

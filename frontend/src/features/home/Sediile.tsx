@@ -4,8 +4,24 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperType } from 'swiper/types';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
+// Define the type for sediu data
+type SediuData = {
+  nume: string;
+  imagineSediu: string;
+  pin: string;
+  culoareText: string;
+  telefon: string;
+  email?: string;
+  adresa: string;
+  zona?: string;
+  program: string[];
+  icon: string;
+  link: string;
+  customText?: string;
+};
+
 export default function Sediile() {
-  const sediiData = [
+  const sediiData: SediuData[] = [
     {
       nume: "Obor-Fainari ",
       imagineSediu: "/images/sediu-green.png",
@@ -104,7 +120,7 @@ export default function Sediile() {
         </a>
       </div>
       <div className="hidden lg:grid max-w-[95%] md:max-w-[90%] lg:max-w-[85%] mx-auto md:mt-10 gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-10">
-        {sediiData.map((sediu, index) => (
+        {sediiData.map((sediu: SediuData, index: number) => (
           <div
             key={index}
             className="bg-white/70 shadow-lg rounded-xl p-8 flex flex-col min-h-[560px] relative"
@@ -124,7 +140,7 @@ export default function Sediile() {
             </div>
 
             <h2 className={`${sediu.customText || "text-5xl"} font-saint mb-2 ${sediu.culoareText}`}>
-              {sediu.nume.split("\n").map((line, i) => (
+              {sediu.nume.split("\n").map((line: string, i: number) => (
                 <div key={i}>{line}</div>
               ))}
             </h2>
@@ -158,7 +174,7 @@ export default function Sediile() {
                 <p className="m-0 tracking-wider font-bold">Program:</p>
               </div>
 
-              {sediu.program.map((linie, idx) => (
+              {sediu.program.map((linie: string, idx: number) => (
                 <div key={idx} className="flex gap-2 rounded-full items-center">
                   <p className="m-0 tracking-wider">{linie}</p>
                 </div>
@@ -191,7 +207,7 @@ export default function Sediile() {
               `<span class="swiper-bullet ${className}"></span>`,
           }}
         >
-          {sediiData.map((sediu, index) => (
+          {sediiData.map((sediu: SediuData, index: number) => (
             <SwiperSlide
               key={index}
               className="md:!w-80 flex justify-center py-10"
@@ -215,7 +231,7 @@ export default function Sediile() {
                 </div>
 
                 <h2 className={`${sediu.customText || "text-md leading-7"} font-saint mb-2 ${sediu.culoareText}`}>
-                  {sediu.nume.split("\n").map((line, i) => (
+                  {sediu.nume.split("\n").map((line: string, i: number) => (
                     <div key={i}>{line}</div>
                   ))}
                 </h2>
@@ -248,7 +264,7 @@ export default function Sediile() {
                     <p className="m-0 tracking-wider font-bold">Program:</p>
                   </div>
 
-                  {sediu.program.map((linie, idx) => (
+                  {sediu.program.map((linie: string, idx: number) => (
                     <div key={idx} className="flex gap-2 rounded-full items-center">
                       <p className="m-0 tracking-wider">{linie}</p>
                     </div>

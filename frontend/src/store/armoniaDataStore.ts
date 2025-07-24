@@ -247,62 +247,60 @@ export const useGetCoursesStore = create<CourseStore>(() => ({
       category: "sound",
       instrumentImage: "/images/green-guitar.png",
       pin: "/images/green-pin.png",
-      culoareText: "text-green-secondary-rgb",
-      humanIcon: "/images/green-human.png",
-      buttonColor1: "bg-green-secondary",
-      buttonColor2: "bg-teal-400",
-      customText: "Alege cursul perfect pentru tine și începe o călătorie de dezvoltare personală și profesională.",
-      pretFull: "750 RON",
-      pretDiscounted: "520 RON",
-      descriere: "",
-      ceOsaInveti: "",
-
-      profesor: {
-        nume: "Matei Alexandru",
-        experienta: "peste 15 ani experiență combinată",
-        descriere: "Echipa noastră de profesori de chitară aduce o experiență vastă din diferite domenii muzicale - de la clasic la metal, jazz și folk românesc. Fiecare profesor își adaptează stilul de predare la personalitatea și obiectivele elevului."
-      },
-      ceriinte: {
-        val1: "Fără experiență necesară - de la primul acord",
-        val2: "Vârsta minimă de 7 ani pentru mânuirea instrumentului",
-        val3: "Exercițiu regulat pentru dezvoltarea dexterității",
-        val4: "Răbdare pentru formarea calusurilor pe degete"
-      },
-      cuiISeadreseaza: {
-        val1: "Incepatori",
-        val2: "7 ani si peste",
-        val3: "Dezvoltarea abilitatilor muzicale si a creativitatii",
-        val4: "Intermediari"
-      },
-      curicula: {
-        ceOSaInveti: "Acorduri de bază, tehnici de chitară și interpretarea pieselor preferate."
-      },
-      sesiuni: "4-5 sesiuni",
-      capitoleCurs: {
-        capitole: [
-          "Introducere în chitară și acorduri de bază",
-          "Tehnici de picking și strumming",
-          "Scări și improvizație",
-          "Repertoriu și interpretare"
-        ]
-      },
-      optiuniDeplata: {
-        tipuri:
-        {
-          integral: "Plata integrala",
-        },
-        optiuniDePlataInRate: {
-          opt1: {
-            descriere: "2 rate fara dobanda.",
-            pret: "111"
-          },
-          opt2: {
-            descriere: "12 rate fara dobanda.",
-            pret: "3212"
-          }
-        }
-      }
+  culoareText: "text-green-secondary-rgb",
+  humanIcon: "/images/green-human.png",
+  buttonColor1: "bg-green-secondary",
+  buttonColor2: "bg-teal-400",
+  customText: "Alege cursul perfect pentru tine și începe o călătorie de dezvoltare personală și profesională.",
+  pretFull: "750 RON",
+  pretDiscounted: "520 RON",
+  descriere: "Descoperă universul fascinant al chitarei cu cursurile noastre de la Armonia Academy! Chitara este unul dintre cele mai populare și versatile instrumente muzicale, perfectă pentru orice stil - de la clasic la rock, pop și folk. Cursurile noastre sunt adaptate pentru toate vârstele și nivelurile, de la primii acorduri până la tehnici avansate de interpretare. Profesorii noștri experimentați te vor ghida să descoperi frumusețea acestui instrument minunat, dezvoltându-ți atât tehnica cât și pasiunea pentru muzică.",
+  ceOsaInveti: "Acorduri fundamentale: Majore, minore și septimă pentru toate tonalitățile Tehnici de strumming: Pattern-uri ritmice pentru diverse stiluri muzicale Fingerpicking: Tehnici de degete pentru melodii și arpegii Citirea tablaturilor: Sistemul de notație specific chitarei Scări muzicale: Majore, minore, pentatonice pentru improvizație Barré și tehnici avansate: Pentru acorduri complexe și tranziții fluide Repertoriu variat: De la piese clasice la hits-uri contemporane Acompaniament vocal: Cântatul și însoțirea la chitară Tehnici de chitară electrică: Pentru cei interesați de stilurile rock și blues",
+  profesor: {
+    nume: "Matei Alexandru",
+    experienta: "peste 15 ani experiență combinată",
+    descriere: "Echipa noastră de profesori de chitară aduce o experiență vastă din diferite domenii muzicale - de la clasic la metal, jazz și folk românesc. Fiecare profesor își adaptează stilul de predare la personalitatea și obiectivele elevului."
+  },
+        ceriinte: {
+    val1: "Fără experiență necesară - de la primul acord",
+    val2: "Vârsta minimă de 7 ani pentru mânuirea instrumentului",
+    val3: "Exercițiu regulat pentru dezvoltarea dexterității",
+    val4: "Răbdare pentru formarea calusurilor pe degete"
+  },
+  cuiISeadreseaza: {
+    val1: "Incepatori",
+    val2: "7 ani si peste",
+    val3: "Dezvoltarea abilitatilor muzicale si a creativitatii",
+    val4: "Intermediari"
+  },
+  curicula: {
+    ceOSaInveti: "Acorduri de bază, tehnici de chitară și interpretarea pieselor preferate."
+  },
+  sesiuni: "4-5 sesiuni",
+  capitoleCurs: {
+    capitole: [
+      "Introducere în chitară și acorduri de bază",
+      "Tehnici de picking și strumming",
+      "Scări și improvizație",
+      "Repertoriu și interpretare"
+    ]
+  },
+  optiuniDeplata: {
+    tipuri: {
+      integral: "Plata integrala",
     },
+    optiuniDePlataInRate: {
+      opt1: {
+        descriere: "2 rate fara dobanda.",
+        pret: "111"
+      },
+      opt2: {
+        descriere: "12 rate fara dobanda.",
+        pret: "3212"
+      }
+    }
+  }
+  },
     {
       id: 4,
       name: "Canto",
@@ -1030,7 +1028,7 @@ export const useGetTeachersStore = create<TeacherStore>(() => ({
       id: 3,
       name: "ANA MARIA SCRIOȘTEANU",
       role: "Profesor Pian/Canto",
-      imagineTeacher: "/images/ana-maria-scriosteanu.png",
+      imagineTeacher: "/images/anamariascriosteanu.png",
       locatie: "Gara de Nord, București",
       email: "ana.scriosteanu@armoniaacademy.ro",
       website: "armoniaacademy.ro",
@@ -1377,22 +1375,6 @@ export const useGetSediiStore = create<SediiStore>(() => ({
       ],
       icon: "/images/purple-human.png",
       link: "https://www.google.com/maps/dir/44.451156,26.1338887/USR+Sector+4,+Strada+L%C3%A2n%C4%83riei+99,+Bucure%C8%99ti+040321/@44.4327556,26.0996873,4736m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40b1ff7cc579647d:0x5cbe9c6547bcdae1!2m2!1d26.1028006!2d44.4152935?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
-    },
-    {
-      nume: "Sediul Premium Atomic Academy",
-      customText: "",
-      imagineSediu: "/images/purple-hat.png",
-      pin: "/images/purple-pin.png",
-      culoareText: "text-purple-primary",
-      telefon: "+ 40736924645",
-      adresa: "Cladirea Cocor, Bdul Ion C. Bratianu nr.29-33",
-      program: [
-        "Luni - Vineri: 10:00 - 21:00",
-        "Sambata: 09:00 - 21:00",
-        "Duminica: 09:00 - 16:00"
-      ],
-      icon: "/images/purple-human.png",
-      link: "https://www.google.com/maps/dir/44.451156,26.1338887/Cocor,+Bulevardul+Ion+C.+Br%C4%83tianu+29-33,+Bucure%C8%99ti+030167/@44.4405521,26.1016744,4736m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40b1ff3e6b6b9f2d:0x70a781d665a6dc87!2m2!1d26.1041419!2d44.4303647?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
-    },
+    }
   ]
 }));

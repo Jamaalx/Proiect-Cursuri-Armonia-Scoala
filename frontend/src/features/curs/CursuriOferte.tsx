@@ -14,28 +14,6 @@ export default function CursuriOferte() {
   const swiperRef = useRef<SwiperType | null>(null);
   return (
     <div>
-      <div className="md:container flex mt-10 flex-col lg:flex-row relative md:mx-auto rounded-3xl mx-6 bg-green-secondary text-black mb-28">
-        <div className="py-5 px-10 flex justify-center lg:block">
-          <p className="text-white ~text-2xl/4xl font-black">Capitole Curs</p>
-        </div>
-        <div className="flex flex-col items-center lg:items-start text-center lg:text-start gap-2 md:py-5 flex-1">
-          <div className="flex flex-col ~text-sm/2xl lg:flex-row text-white ~gap-2/10 w-full">
-            <div className="flex flex-col">
-              <p>✓ Introducere în vioară</p>
-              <p>✓ Poziția corectă</p>
-            </div>
-            <div className="flex flex-col">
-              <p>✓ Tehnici de arcuș</p>
-              <p>✓ Note și ritm</p>
-            </div>
-            <div className="flex flex-col">
-              <p>✓ Primele melodii</p>
-              <p>✓ Audiții și exerciții</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* swiper is here */}
       <div className="relative md:container md:mx-auto ~mb-2/10 text-center">
         <p className='font-saint ~text-2xl/5xl'>Cursuri Populare</p>
@@ -67,7 +45,6 @@ export default function CursuriOferte() {
               >
                 <div
                   key={card.id}
-
                   className="bg-white text-black hover:scale-105 rounded-xl mx-6 py-6 shadow-xl hover:shadow-xl transition"
                 >
                   <div className="flex items-center ~gap-4/8">
@@ -91,7 +68,7 @@ export default function CursuriOferte() {
                       </div>
 
                       <div className="text-[#333931] text-sm ~max-w-52/96">
-                        <p>Lorem ipsum dolor sit amet, consectetur elit, sed doeiusmod tempor</p>
+                        <p>{card.customText}</p>
                       </div>
 
                       <div className="flex gap-2 mt-6">
@@ -99,10 +76,10 @@ export default function CursuriOferte() {
                           <div className="absolute">
                             <img src="/images/red-line.png" alt="" />
                           </div>
-                          <p className="text-xl font-bold font-epilogue">1420 €</p>
+                          <p className="text-xl font-bold font-epilogue">{card.pretFull}</p>
                         </div>
                         <div>
-                          <p className="text-xl font-bold font-epilogue text-green-secondary">1200 €</p>
+                          <p className="text-xl font-bold font-epilogue text-green-secondary">{card.pretDiscounted}</p>
                         </div>
                       </div>
                       <Link key={card.id} to={`/curs/${card.id}`} state={{ card }}>
