@@ -886,13 +886,13 @@ export const useGetBlogsStore = create<BlogsStore>(() => ({
         title: "Strategii de Pregătire pentru Performanțe Muzicale de Succes",
         continut1: "Pregătirea pentru concursuri și examene muzicale necesită o abordare strategică și disciplinată. În acest articol voi împărtăși metodele dovedite pentru pregătirea eficientă, gestionarea anxietății de scenă și maximizarea performanței în momentele cheie. Experiența mea cu elevii câștigători de premii oferă perspective valoroase.",
         subtitlu1: "Planificarea și Execuția unei Pregătiri de Succes",
-        pozaDescriere: "./images/blog-music-competition.jpg",
+        pozaDescriere: "/images/blog-music-competition.jpg",
         continut2: "Pregătirea începe cu minimum 3 luni înainte de concurs. Prima lună se dedică alegerii repertoriului potrivit și înțelegerii cerințelor tehnice. Luna a doua se concentrează pe perfecționarea tehnică și interpretare. Luna finală include simulări de concurs și antrenament mental. Gestionarea stresului se învață prin exerciții de respirație și vizualizare pozitivă. Recomand înregistrări audio ale propriei performanțe pentru auto-evaluare. La Armonia Academy organizăm 'mini-concursuri' interne pentru a-i obișnui pe elevi cu atmosfera competițională. Elevii noștri au câștigat peste 50 de premii la concursuri naționale în ultimii 5 ani.",
       }
     },
     {
       id: "blog-11",
-      photoUrl: "./images/blog-11.jpg",
+      photoUrl: "/images/blog-11.jpg",
       title: "Cum să Practici Eficient Acasă: Maximizează Timpul de Studiu",
       date: "Martie 28, 2025",
       author: "Alex Mantello",
@@ -902,13 +902,13 @@ export const useGetBlogsStore = create<BlogsStore>(() => ({
         title: "Secretele Practicii Eficiente - Progresie Maximă în Timp Minim",
         continut1: "Calitatea practicii contează mai mult decât cantitatea. În acest ghid detaliat voi dezvălui tehnicile de practică folosite de muzicienii profesioniști, care permit progresie rapidă chiar și cu timp limitat. Aceste metode transformă 30 de minute de practică focalizată în echivalentul a 2 ore de practică dezorganizată.",
         subtitlu1: "Structurarea Sesiunilor de Practică pentru Rezultate Optime",
-        pozaDescriere: "./images/blog-practice-routine.jpg",
+        pozaDescriere: "/images/blog-practice-routine.jpg",
         continut2: "Sesiunea ideală de practică începe cu 5 minute de încălzire (scale, arpegii), urmată de 15 minute de lucru tehnic concentrat pe dificultățile specifice, și se termină cu 10 minute de interpretare expresivă. Metoda 'slow practice' este esențială: practică piesa cu 50% din tempo-ul normal, concentrându-te pe precizia fiecărei note. Folosește metronómul pentru dezvoltarea timing-ului precis. Împarte piesele complexe în secțiuni de 4-8 măsuri și perfecționează fiecare secțiune separat. La Armonia Academy oferim elevilor 'jurnal de practică' pentru monitorizarea progresului și identificarea zonelor problematice. Consistența bate intensitatea - 20 minute zilnic sunt mai eficiente decât 3 ore o dată pe săptămână.",
       }
     },
     {
       id: "blog-12",
-      photoUrl: "./images/blog-12.jpg",
+      photoUrl: "/images/blog-12.jpg",
       title: "Muzica în Era Digitală: Aplicații și Tehnologii pentru Muzicieni",
       date: "Martie 21, 2025",
       author: "Alex Mantello",
@@ -918,13 +918,13 @@ export const useGetBlogsStore = create<BlogsStore>(() => ({
         title: "Instrumentele Digitale Esențiale pentru Muzicianul Modern",
         continut1: "Tehnologia a revoluționat modul în care învățăm și creăm muzică. În acest articol voi prezenta cele mai utile aplicații și software-uri pentru muzicieni, de la metronoame avansate și tunere precise, până la DAW-uri profesionale și instrumente de compoziție. Aceste unelte digitale accelerează învățarea și deschid noi posibilități creative.",
         subtitlu1: "Selecția Celor Mai Bune Aplicații și Software-uri Muzicale",
-        pozaDescriere: "./images/blog-music-technology.jpg",
+        pozaDescriere: "/images/blog-music-technology.jpg",
         continut2: "Pentru începători recomand Simply Piano (iOS/Android) pentru învățarea pianului, Yousician pentru instrumente multiple, și Metronome Plus pentru dezvoltarea timing-ului. Muzicienii intermediari beneficiază de GarageBand (gratuit pe Mac) sau Reaper pentru înregistrări home studio. Profesional, Logic Pro X și Pro Tools rămân standardul industriei. Pentru teorie muzicală, Tenuto și Music Theory Helper sunt excelente. Aplicațiile de acordare precum Boss Tuner oferă precizie superioară clasicelor tunere fizice. La Armonia Academy integrăm aceste tehnologii în lecții, iar elevii primesc liste personalizate de aplicații recomandate pentru instrumentul lor. Tehnologia nu înlocuiește profesorul, ci completează învățarea tradițională.",
       }
     },
     {
       id: "blog-13",
-      photoUrl: "./images/blog-13.jpg",
+      photoUrl: "/images/blog-13.jpg",
       title: "Construirea unei Cariere Muzicale: De la Pasiune la Profesie",
       date: "Martie 14, 2025",
       author: "Alex Mantello",
@@ -934,13 +934,13 @@ export const useGetBlogsStore = create<BlogsStore>(() => ({
         title: "Drumul către Succes în Industria Muzicală Contemporană",
         continut1: "Transformarea pasiunii pentru muzică într-o carieră sustenabilă necesită mai mult decât talent - cere planificare strategică, networking și înțelegerea industriei. În acest ghid voi explora diferitele căi de carieră muzicală și voi oferi sfaturi practice pentru construirea unei cariere de succes în muzică.",
         subtitlu1: "Opțiunile de Carieră și Strategiile de Dezvoltare Profesională",
-        pozaDescriere: "./images/blog-music-career.jpg",
+        pozaDescriere: "/images/blog-music-career.jpg",
         continut2: "Carierele muzicale moderne includ: artist/interpret, profesor de muzică, producător, inginer de sunet, compozitor pentru film/TV, muzician de studio, și manager artistic. Fiecare cale cere abilități specifice și strategii diferite. Pentru artiști, social media și platformele streaming sunt esențiale pentru construirea fanbase-ului. Profesorii de muzică pot lucra în școli, universități, sau ca instructori privați. Networking-ul se face prin participarea la jam sessions, concerte, și evenimente ale industriei. La Armonia Academy, mulți dintre profesorii noștri au cariere artistice active și oferă elevilor perspective realiste despre industrie. Recomand să dezvolți multiple surse de venit în muzică pentru stabilitate financiară.",
       }
     },
     {
       id: "blog-14",
-      photoUrl: "./images/blog-14.jpg",
+      photoUrl: "/images/blog-14.jpg",
       title: "Muzica de Cameră: Beneficiile Cântatului în Ansamblu",
       date: "Martie 7, 2025",
       author: "Alex Mantello",
@@ -950,13 +950,13 @@ export const useGetBlogsStore = create<BlogsStore>(() => ({
         title: "Arta Colaborării Muzicale - De la Solo la Ansamblu",
         continut1: "Muzica de cameră oferă o experiență unică de învățare și performanță, dezvoltând abilități care nu pot fi dobândite prin studiul individual. În acest articol voi explora beneficiile cântatului în ansamblu, de la dezvoltarea ascultării active până la îmbunătățirea comunicării muzicale și a sincronizării perfecte.",
         subtitlu1: "Dezvoltarea Abilităților de Colaborare și Sincronizare",
-        pozaDescriere: "./images/blog-chamber-music.jpg",
+        pozaDescriere: "/images/blog-chamber-music.jpg",
         continut2: "Muzica de cameră dezvoltă ascultarea activă - muzicienii învață să își ajusteze volumul, tempo-ul și interpretarea în funcție de colegii lor. Comunicarea non-verbală devine esențială: contactul vizual, respirația comună, și gesturile discrete coordonează ansamblul. Responsabilitatea individuală crește - fiecare greșeală afectează întregul grup. Repertoriul de cameră, de la Bach la Brahms, oferă o bogăție interpretativă imensă. La Armonia Academy organizăm sesiuni lunare de muzică de cameră pentru elevii avansați, formând cvartetere de coarde, trio-uri de pian, și ansambluri de instrumente de suflat. Aceste experiențe pregătesc elevii pentru muzica profesională și dezvoltă prietenii de-o viață.",
       }
     },
     {
       id: "blog-15",
-      photoUrl: "./images/blog-15.jpg",
+      photoUrl: "/images/blog-15.jpg",
       title: "Viitorul Educației Muzicale: Tendințe și Inovații în 2025",
       date: "Martie 31, 2025",
       author: "Alex Mantello",
@@ -966,7 +966,7 @@ export const useGetBlogsStore = create<BlogsStore>(() => ({
         title: "Cum se Transformă Educația Muzicală în Era Digitală",
         continut1: "Educația muzicală traversează o perioadă de transformare accelerată, impulsionată de tehnologiile emergente și schimbarea nevoilor elevilor. În acest articol prospectiv voi analiza tendințele care vor forma viitorul învățării muzicale și cum Armonia Academy se adaptează pentru a oferi cea mai bună experiență educațională.",
         subtitlu1: "Inovațiile Tehnologice și Metodologice în Educația Muzicală",
-        pozaDescriere: "./images/blog-future-music-education.jpg",
+        pozaDescriere: "/images/blog-future-music-education.jpg",
         continut2: "Realitatea augmentată (AR) începe să transforme lecțiile de muzică - elevii pot vediza notele muzicale în spațiul 3D și pot practica cu instrumente virtuale. Inteligența artificială oferă feedback instant asupra performanței și personalizează curriculum-ul pentru fiecare elev. Lecțiile hibride (online + offline) devin norma, oferind flexibilitate maximă. Gamification face învățarea mai angajantă, cu sisteme de puncte și provocări. La Armonia Academy investim constant în tehnologie educațională, menținând echilibrul între inovație și metodele tradiționale dovedite. Viitorul aparține profesorilor care îmbină experiența umană cu puterea tehnologiei pentru a crea experiențe de învățare extraordinare.",
       }
     }

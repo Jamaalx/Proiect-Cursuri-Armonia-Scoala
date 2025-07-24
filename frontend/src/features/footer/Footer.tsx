@@ -17,17 +17,17 @@ export default function Footer() {
       className={`relative mt-52 bg-cover min-h-[550px] text-white transition-opacity duration-300 ${
         isLoaded ? 'opacity-100' : 'opacity-0'
       }`}
-      style={{ backgroundImage: "url('./images/footer-feet.png')" }}
+      style={{ backgroundImage: "url('/images/footer-feet.png')" }}
     >
       {/* Elemente decorative */}
       <div className="absolute -top-44 -left-36 md:-left-2 z-10">
-        <img className="scale-75 md:scale-100" src="./images/footer-gear.png" alt="" />
+        <img className="scale-75 md:scale-100" src="/images/footer-gear.png" alt="" />
       </div>
       <div className="absolute -right-20 md:right-0 -top-64 lg:-top-48 z-10">
-        <img className="hidden md:block scale-75 md:scale-100" src="./images/footer-air.png" alt="" />
+        <img className="hidden md:block scale-75 md:scale-100" src="/images/footer-air.png" alt="" />
       </div>
       <div className="absolute right-0 -top-24 md:-top-40 z-10">
-        <img className="md:hidden scale-75" src="./images/footer-air-scaleddown.png" alt="" />
+        <img className="md:hidden scale-75" src="/images/footer-air-scaleddown.png" alt="" />
       </div>
 
       {/* Construcția principală a footerului */}
@@ -38,14 +38,14 @@ export default function Footer() {
           <div className="flex flex-col items-center md:items-left gap-4 md:w-1/3 text-[15px]">
             <div>
               <a className="btn btn-ghost hover:bg-transparent p-0 mb-4">
-                <img src="./images/armonia.png" alt="Armonia Logo" className="h-10" />
+                <img src="/images/armonia.png" alt="Armonia Logo" className="h-10" />
               </a>
             </div>
 
             <div className="flex flex-col gap-4">
               <div className="flex flex-col gap-2">
                 <div className="flex gap-4">
-                  <img className="w-4 aspect-square object-contain" src="./images/white-pin.png" alt="" />
+                  <img className="w-4 aspect-square object-contain" src="/images/white-pin.png" alt="" />
                   <p>Sedii Armonia Academy:</p>
                 </div>
                 <div className="flex flex-col gap-1 max-w-80 text-sm">
@@ -58,12 +58,12 @@ export default function Footer() {
               </div>
 
               <div className="flex items-center gap-4">
-                <img src="./images/phone.png" alt="" />
+                <img src="/images/phone.png" alt="" />
                 <p>Tel: +40 723 092 740</p>
               </div>
 
               <div className="flex items-center gap-4">
-                <img src="./images/time.png" alt="" />
+                <img src="/images/time.png" alt="" />
                 <div className="flex flex-col text-sm">
                   <p>Luni-Vineri: 10:00-21:00</p>
                   <p>Sâmbătă: 09:00-21:00, Duminică: 09:00-16:00</p>
@@ -71,7 +71,7 @@ export default function Footer() {
               </div>
 
               <div className="flex items-center gap-4">
-                <img src="./images/mail.png" alt="" />
+                <img src="/images/mail.png" alt="" />
                 <p>Email: contact@scoalaarmonia.ro</p>
               </div>
 
@@ -82,7 +82,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="hover:opacity-80 transition-opacity"
                 >
-                  <img src="./images/footer-logo-1.png" alt="Soluționarea Online a Litigiilor" />
+                  <img src="/images/footer-logo-1.png" alt="Soluționarea Online a Litigiilor" />
                 </a>
                 <a 
                   href="https://reclamatiisal.anpc.ro/" 
@@ -90,7 +90,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="hover:opacity-80 transition-opacity"
                 >
-                  <img src="./images/footer-logo-2.png" alt="ANPC - Protecția Consumatorilor" />
+                  <img src="/images/footer-logo-2.png" alt="ANPC - Protecția Consumatorilor" />
                 </a>
               </div>
             </div>
