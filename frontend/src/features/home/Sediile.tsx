@@ -98,16 +98,16 @@ export default function Sediile() {
       <div className="absolute right-0 -top-40">
         <img src="/images/cercuri.png" alt="" />
       </div>
-      <div className="ml-8 relative container md:mx-auto md:mt-24 flex md:justify-center">
+      <div className="mx-4 relative max-w-[95%] md:max-w-[90%] lg:max-w-[85%] md:mx-auto md:mt-24 flex md:justify-center">
         <a className="bg-green-secondary font-normal ~px-6/16 rounded-full btn btn-ghost hover:bg-green-secondary-rgb text-white ~text-sm/lg">
           Sediile Noastre
         </a>
       </div>
-      <div className="hidden lg:container mx-auto md:mt-10 gap-10 md:flex mb-10 justify-center flex-wrap">
+      <div className="hidden lg:grid max-w-[95%] md:max-w-[90%] lg:max-w-[85%] mx-auto md:mt-10 gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-10">
         {sediiData.map((sediu, index) => (
           <div
             key={index}
-            className="bg-white/70 shadow-lg rounded-xl p-8 flex flex-col w-full md:max-w-80 lg:max-w-96 min-h-[560px] relative"
+            className="bg-white/70 shadow-lg rounded-xl p-8 flex flex-col min-h-[560px] relative"
           >
             <div className="flex items-center justify-between gap-4 md:gap-16 mb-10">
               <div>
@@ -171,7 +171,7 @@ export default function Sediile() {
           </div>
         ))}
       </div>
-      <div className='lg:hidden mx-8'>
+      <div className='lg:hidden mx-4 max-w-[95%] md:max-w-[90%] md:mx-auto'>
         <Swiper
           modules={[Navigation, Pagination]}
           slidesPerView="auto"
@@ -208,7 +208,9 @@ export default function Sediile() {
                     <div>
                       <img src="/images/google-pin.png" alt="" />
                     </div>
-                    <p className="m-0 text-blue-500 font-semibold ~text-xs/sm tracking-wider">Direction</p>
+                    <a href={sediu.link} target="_blank" rel="noopener noreferrer">
+                      <p className="m-0 text-blue-500 font-semibold ~text-xs/sm tracking-wider cursor-pointer">Direction</p>
+                    </a>
                   </div>
                 </div>
 

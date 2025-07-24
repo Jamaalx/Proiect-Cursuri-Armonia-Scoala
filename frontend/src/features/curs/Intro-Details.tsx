@@ -1,8 +1,9 @@
 
 import { useState } from "react";
 import { getTodayFormatted } from "../../lib/dateConvert";
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function IntroDetails({ card }: { card: any; }) {
+import { Course } from "../../store/armoniaDataStore";
+
+export default function IntroDetails({ card }: { card: Course }) {
   const [videoSrc, setVideoSrc] = useState("/videos/video-test.mp4");
   const [selected, setSelected] = useState("incepator");
 

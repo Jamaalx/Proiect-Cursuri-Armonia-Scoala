@@ -57,9 +57,9 @@ export default function Blogs() {
       <div className="absolute hidden 2xl:block right-0 2xl:top-[1200px] ">
         <img src="/images/green-right-gear.png" alt="" />
       </div>
-      <div className="md:container md:mx-auto flex flex-col lg:flex-row mx-4 sm:mx-6 gap-8 lg:gap-20 mt-6 sm:mt-10">
-        <div className="flex flex-col flex-1">
-          <div className="lg:hidden flex flex-col gap-5 mb-4">
+      <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row px-4 gap-4 lg:gap-8 mt-4">
+        <div className="flex flex-col flex-1 max-w-[800px]">
+          <div className="lg:hidden flex flex-col gap-4 mb-3">
             <form
               onSubmit={(e) => e.preventDefault()}
               className="flex border border-gray-200 bg-white w-full rounded-full overflow-hidden shadow-lg sm:shadow-xl text-sm"
@@ -97,10 +97,10 @@ export default function Blogs() {
                     <img
                       src={currentImage}
                       alt="blog"
-                      className="rounded-3xl mb-3 w-full"
+                      className="rounded-2xl mb-2 w-full"
                     />
                     {hasMultipleImages && post.photosUrls!.length > 1 && (
-                      <div className="flex justify-end gap-2 mb-4">
+                      <div className="flex justify-end gap-2 mb-3">
                         <button
                           onClick={() => handlePrevImage(post.id, post.photosUrls!.length)}
                           className="bg-white border border-gray-200 p-2 rounded-lg shadow-sm hover:bg-gray-50 transition-colors"
@@ -117,21 +117,21 @@ export default function Blogs() {
                     )}
                   </div>
 
-                  <div className="flex flex-col gap-4 mb-16">
-                    <div className="flex flex-wrap gap-4">
+                  <div className="flex flex-col gap-3 mb-12">
+                    <div className="flex flex-wrap gap-3">
                       <div className="flex gap-2 items-center">
-                        <img src="/images/green-calendar.png" alt="" className="w-5 h-5" />
-                        <p className="text-xs sm:text-sm text-gray-500">{post.date}</p>
+                        <img src="/images/green-calendar.png" alt="" className="w-4 h-4" />
+                        <p className="text-xs text-gray-500">{post.date}</p>
                       </div>
                       <div className="flex gap-2 items-center">
                         <img src="/images/little-user.png" alt="" className="w-[11px] h-[13px]" />
                         <p className="text-xs sm:text-sm text-gray-700">Autor: {post.author}</p>
                       </div>
                     </div>
-                    <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-blue-text-primary mb-2">{post.title}</h3>
+                    <h3 className="text-lg sm:text-xl lg:text-xl font-semibold text-blue-text-primary mb-2">{post.title}</h3>
 
                     <Link to={`/blog/${post.id}`}>
-                      <div className="flex items-center justify-between my-6">
+                      <div className="flex items-center justify-between my-4">
                         <div
                           className={cn(
                             'flex select-none items-center justify-center rounded-full gap-2 pl-4 text-white transition active:scale-[0.97] bg-purple-primary',
@@ -187,17 +187,17 @@ export default function Blogs() {
           </div>
         </div>
         {/* Sidebar */}
-        <div className="hidden lg:flex flex-col gap-10">
+        <div className="hidden lg:flex flex-col gap-6 w-[300px]">
           <form
             onSubmit={(e) => e.preventDefault()}
-            className="flex border border-gray-200 bg-white md:w-full max-w-lg rounded-full overflow-hidden shadow-xl text-sm"
+            className="flex border border-gray-200 bg-white w-full rounded-full overflow-hidden shadow text-sm"
           >
             <input
               type="text"
               placeholder="Pe cine doresti sa cauti?"
               value={searchTerm}
               onChange={handleSearchChange}
-              className="flex-1 pl-4 lg:px-6 py-4 text-black
+              className="flex-1 pl-4 lg:px-5 py-3 text-black
                 focus:outline-none placeholder:text-gray-300 placeholder:text-base text-lg"
             />
             <button
@@ -213,11 +213,11 @@ export default function Blogs() {
             .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
             .slice(0, 5)
             .map((post) => (
-              <Link to={`/blog/${post.id}`} key={post.id} className="flex gap-4 group hover:opacity-80 transition-opacity">
+              <Link to={`/blog/${post.id}`} key={post.id} className="flex gap-3 group hover:opacity-80 transition-opacity">
                 <img 
                   src={post.photoUrl} 
                   alt={post.title}
-                  className="w-24 h-24 object-cover rounded-lg" 
+                  className="w-20 h-20 object-cover rounded-lg" 
                 />
                 <div className="flex flex-col gap-1">
                   <div className="flex gap-1 items-center">
@@ -235,8 +235,8 @@ export default function Blogs() {
           </p>
           <div className="flex flex-col gap-2">
             <div className="flex gap-2">
-              <div className="font-sora text-sm text-[#4D5756] bg-gray-100 px-10 py-3">Balance</div>
-              <div className="font-sora text-sm text-[#4D5756] bg-gray-100 px-10 py-3">Coaching</div>
+              <div className="font-sora text-sm text-[#4D5756] bg-gray-100 px-6 py-2">Balance</div>
+              <div className="font-sora text-sm text-[#4D5756] bg-gray-100 px-6 py-2">Coaching</div>
             </div>
             <div className="flex gap-2">
               <div className="font-sora text-sm text-[#4D5756] bg-gray-100 px-10 py-3">Motivation</div>

@@ -6,7 +6,7 @@ import ScrollToTop from "../../lib/scrollToTop";
 
 function App() {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Navbar />
       <ScrollToTop />
       <Outlet /> {/* this outlet will be remplaced by components in the route*/}

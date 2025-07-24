@@ -74,9 +74,9 @@ export default function Blog() {
 
           {/* Comment Form */}
           <div className="p-4 md:p-16 lg:mx-40 flex flex-col gap-4 shadow-xl rounded-xl mt-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl text-blue-text-primary font-bold">Let's Get in Touch</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl text-blue-text-primary font-bold">Ia legătura cu noi.</h2>
             <p className="text-[17px]">
-              Your email address will not be published. Required fields are marked *
+              Adresa ta de email nu va fi publicată. Câmpurile marcate cu * sunt obligatorii.
             </p>
 
             <form className="flex flex-col gap-6">
@@ -95,7 +95,7 @@ export default function Blog() {
               <div className="flex">
                 <input
                   type="text"
-                  placeholder="Website"
+                  placeholder="Subiect"
                   className="flex-1 shadow-lg px-5 py-3 rounded-full text-black focus:outline-none"
                 />
               </div>

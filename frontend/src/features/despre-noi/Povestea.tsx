@@ -91,63 +91,61 @@ export default function Povestea() {
           </div>
         </div>
 
-        <div className="bg-purple-primary flex flex-col md:hidden rounded-3xl gap-4 py-10 px-14">
-          <div className="flex flex-1 justify-around">
-            <div className="flex flex-col items-center text-center sm:flex-row gap-4">
+        <div className="bg-purple-primary flex flex-col md:hidden rounded-3xl gap-6 py-10 px-8">
+          <div className="grid grid-cols-2 gap-6">
+            <div className="flex flex-col items-center text-center gap-2">
               <div>
-                <img src="/images/student-icon.png" alt="" />
+                <img src="/images/student-icon.png" alt="" className="w-12 h-12" />
               </div>
 
-              <div className="flex flex-col justify-between">
+              <div className="flex flex-col items-center gap-1">
                 <div>
-                  <p className="font-epilogue ~text-lg/3xl">3K +</p>
+                  <p className="font-epilogue text-2xl">500+</p>
                 </div>
                 <div>
-                  <p className="text-sm">Successfully Trained</p>
+                  <p className="text-sm">Cursanți Activi</p>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col items-center text-center sm:flex-row gap-4">
+            <div className="flex flex-col items-center text-center gap-2">
               <div>
-                <img src="/images/student-icon.png" alt="" />
+                <img src="/images/student-icon.png" alt="" className="w-12 h-12" />
               </div>
 
-              <div className="flex flex-col justify-between">
+              <div className="flex flex-col items-center gap-1">
                 <div>
-                  <p className="font-epilogue ~text-lg/3xl">3K +</p>
+                  <p className="font-epilogue text-2xl">15+</p>
                 </div>
                 <div>
-                  <p className="text-sm">Successfully Trained</p>
+                  <p className="text-sm">Profesori Experimentați</p>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="flex flex-1 justify-around">
-            <div className="flex flex-col items-center text-center sm:flex-row gap-4">
+            <div className="flex flex-col items-center text-center gap-2">
               <div>
-                <img src="/images/student-icon.png" alt="" />
+                <img src="/images/student-icon.png" alt="" className="w-12 h-12" />
               </div>
 
-              <div className="flex flex-col justify-between">
+              <div className="flex flex-col items-center gap-1">
                 <div>
-                  <p className="font-epilogue ~text-lg/3xl">3K +</p>
+                  <p className="font-epilogue text-2xl">5</p>
                 </div>
                 <div>
-                  <p className="text-sm">Successfully Trained</p>
+                  <p className="text-sm">Sedii în București</p>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col items-center text-center sm:flex-row gap-4">
+            <div className="flex flex-col items-center text-center gap-2">
               <div>
-                <img src="/images/student-icon.png" alt="" />
+                <img src="/images/student-icon.png" alt="" className="w-12 h-12" />
               </div>
 
-              <div className="flex flex-col justify-between">
+              <div className="flex flex-col items-center gap-1">
                 <div>
-                  <p className="font-epilogue ~text-lg/3xl">3K +</p>
+                  <p className="font-epilogue text-2xl">8</p>
                 </div>
                 <div>
-                  <p className="text-sm">Successfully Trained</p>
+                  <p className="text-sm">Ani de Experiență</p>
                 </div>
               </div>
 
