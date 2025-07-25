@@ -1,17 +1,14 @@
 import { useState } from 'react';
-
-type FormData = {
-  nume: string;
-  email: string;
-  telefon: string;
-  varsta: string;
-  sediu: string;
-  selectedCourses: string[];
-  acceptTerms: boolean;
-};
+import { 
+  sendGeneralRegistrationEmail, 
+  GeneralRegistrationData, 
+  showNotification,
+  isValidEmail,
+  isValidPhoneNumber 
+} from '../../services/emailService';
 
 export default function Inscrieri() {
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState<GeneralRegistrationData>({
     nume: '',
     email: '',
     telefon: '',
@@ -22,6 +19,7 @@ export default function Inscrieri() {
   });
 
   const [showCourseDropdown, setShowCourseDropdown] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const availableCourses = [
     "Pian",
@@ -55,17 +53,101 @@ export default function Inscrieri() {
     }));
   };
 
-  const handleInputChange = (field: keyof FormData, value: string | boolean) => {
+  const handleInputChange = (field: keyof GeneralRegistrationData, value: string | boolean) => {
     setFormData(prev => ({
       ...prev,
       [field]: value
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const validateForm = (): boolean => {
+    if (!formData.nume.trim()) {
+      showNotification('error', 'Numele este obligatoriu!');
+      return false;
+    }
+
+    if (!formData.email.trim()) {
+      showNotification('error', 'Email-ul este obligatoriu!');
+      return false;
+    }
+
+    if (!isValidEmail(formData.email)) {
+      showNotification('error', 'Email-ul nu este valid!');
+      return false;
+    }
+
+    if (!formData.telefon.trim()) {
+      showNotification('error', 'Telefonul este obligatoriu!');
+      return false;
+    }
+
+    if (!isValidPhoneNumber(formData.telefon)) {
+      showNotification('error', 'Numărul de telefon nu este valid! (Ex: 0722123456 sau +40722123456)');
+      return false;
+    }
+
+    if (!formData.varsta.trim()) {
+      showNotification('error', 'Vârsta este obligatorie!');
+      return false;
+    }
+
+    const age = parseInt(formData.varsta);
+    if (isNaN(age) || age < 3 || age > 99) {
+      showNotification('error', 'Vârsta trebuie să fie între 3 și 99 de ani!');
+      return false;
+    }
+
+    if (!formData.sediu) {
+      showNotification('error', 'Trebuie să selectați un sediu!');
+      return false;
+    }
+
+    if (formData.selectedCourses.length === 0) {
+      showNotification('error', 'Trebuie să selectați cel puțin un curs!');
+      return false;
+    }
+
+    if (!formData.acceptTerms) {
+      showNotification('error', 'Trebuie să acceptați termenii și condițiile!');
+      return false;
+    }
+
+    return true;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    
+    if (!validateForm()) {
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const success = await sendGeneralRegistrationEmail(formData);
+      
+      if (success) {
+        showNotification('success', 'Înscrierea a fost trimisă cu succes! Vă vom contacta în curând pentru programarea evaluării gratuite.');
+        // Reset form
+        setFormData({
+          nume: '',
+          email: '',
+          telefon: '',
+          varsta: '',
+          sediu: '',
+          selectedCourses: [],
+          acceptTerms: false
+        });
+      } else {
+        showNotification('error', 'A apărut o eroare la trimiterea înscrierii. Încercați din nou.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      showNotification('error', 'A apărut o eroare la trimiterea înscrierii. Încercați din nou.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -101,41 +183,47 @@ export default function Inscrieri() {
                   <div>
                     <input
                       type="text"
-                      placeholder="Nume și Prenume"
+                      placeholder="Nume și Prenume *"
                       value={formData.nume}
                       onChange={(e) => handleInputChange('nume', e.target.value)}
-                      className="w-full px-5 py-3 rounded-full border border-gray-200 focus:outline-none focus:border-green-secondary"
+                      className="w-full px-5 py-3 rounded-full border border-gray-200 focus:outline-none focus:border-green-secondary focus:ring-2 focus:ring-green-secondary/20"
                       required
+                      disabled={isSubmitting}
                     />
                   </div>
                   <div>
                     <input
                       type="email"
-                      placeholder="Email"
+                      placeholder="Email *"
                       value={formData.email}
                       onChange={(e) => handleInputChange('email', e.target.value)}
-                      className="w-full px-5 py-3 rounded-full border border-gray-200 focus:outline-none focus:border-green-secondary"
+                      className="w-full px-5 py-3 rounded-full border border-gray-200 focus:outline-none focus:border-green-secondary focus:ring-2 focus:ring-green-secondary/20"
                       required
+                      disabled={isSubmitting}
                     />
                   </div>
                   <div>
                     <input
                       type="tel"
-                      placeholder="Telefon"
+                      placeholder="Telefon * (Ex: 0722123456)"
                       value={formData.telefon}
                       onChange={(e) => handleInputChange('telefon', e.target.value)}
-                      className="w-full px-5 py-3 rounded-full border border-gray-200 focus:outline-none focus:border-green-secondary"
+                      className="w-full px-5 py-3 rounded-full border border-gray-200 focus:outline-none focus:border-green-secondary focus:ring-2 focus:ring-green-secondary/20"
                       required
+                      disabled={isSubmitting}
                     />
                   </div>
                   <div>
                     <input
                       type="number"
-                      placeholder="Vârsta"
+                      placeholder="Vârsta *"
                       value={formData.varsta}
                       onChange={(e) => handleInputChange('varsta', e.target.value)}
-                      className="w-full px-5 py-3 rounded-full border border-gray-200 focus:outline-none focus:border-green-secondary"
+                      min="3"
+                      max="99"
+                      className="w-full px-5 py-3 rounded-full border border-gray-200 focus:outline-none focus:border-green-secondary focus:ring-2 focus:ring-green-secondary/20"
                       required
+                      disabled={isSubmitting}
                     />
                   </div>
 
@@ -147,8 +235,11 @@ export default function Inscrieri() {
                     <div className="relative">
                       <button
                         type="button"
-                        onClick={() => setShowCourseDropdown(!showCourseDropdown)}
-                        className="w-full px-5 py-3 rounded-full border border-gray-200 focus:outline-none focus:border-green-secondary text-left bg-white flex items-center justify-between"
+                        onClick={() => !isSubmitting && setShowCourseDropdown(!showCourseDropdown)}
+                        className={`w-full px-5 py-3 rounded-full border border-gray-200 focus:outline-none focus:border-green-secondary text-left bg-white flex items-center justify-between ${
+                          isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:border-green-secondary'
+                        }`}
+                        disabled={isSubmitting}
                       >
                         <span className={formData.selectedCourses.length === 0 ? 'text-gray-400' : 'text-gray-700'}>
                           {formData.selectedCourses.length === 0 
@@ -166,7 +257,7 @@ export default function Inscrieri() {
                         </svg>
                       </button>
                       
-                      {showCourseDropdown && (
+                      {showCourseDropdown && !isSubmitting && (
                         <div className="absolute z-10 w-full mt-1 bg-white border border-gray-200 rounded-2xl shadow-lg max-h-60 overflow-y-auto">
                           {availableCourses.map((course, index) => (
                             <label 
@@ -197,8 +288,11 @@ export default function Inscrieri() {
                             {course}
                             <button
                               type="button"
-                              onClick={() => handleCourseToggle(course)}
-                              className="ml-1 text-green-500 hover:text-green-700"
+                              onClick={() => !isSubmitting && handleCourseToggle(course)}
+                              className={`ml-1 text-green-500 hover:text-green-700 ${
+                                isSubmitting ? 'cursor-not-allowed opacity-50' : ''
+                              }`}
+                              disabled={isSubmitting}
                             >
                               ×
                             </button>
@@ -210,7 +304,7 @@ export default function Inscrieri() {
 
                   {/* Sedii selection */}
                   <div className="space-y-3">
-                    <p className="font-medium text-gray-700 pl-4">Alege sediul:</p>
+                    <p className="font-medium text-gray-700 pl-4">Alege sediul: *</p>
                     <div className="space-y-2">
                       {[
                         "Sediul Gara de Nord (Str. Vespasian 34)",
@@ -218,7 +312,9 @@ export default function Inscrieri() {
                         "Sediul Mihai Bravu (Str. Stirului 14-16)",
                         "Sediul Piata Progresul (Str. Tufisului Nr. 14)"
                       ].map((sediu, index) => (
-                        <label key={index} className="flex items-center gap-2 cursor-pointer pl-4">
+                        <label key={index} className={`flex items-center gap-2 cursor-pointer pl-4 ${
+                          isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
+                        }`}>
                           <input
                             type="radio"
                             name="sediu"
@@ -226,6 +322,8 @@ export default function Inscrieri() {
                             checked={formData.sediu === sediu}
                             onChange={(e) => handleInputChange('sediu', e.target.value)}
                             className="text-green-secondary focus:ring-green-secondary"
+                            required
+                            disabled={isSubmitting}
                           />
                           <span className="text-sm text-gray-600">{sediu}</span>
                         </label>
@@ -234,13 +332,16 @@ export default function Inscrieri() {
                   </div>
 
                   {/* Terms checkbox */}
-                  <div className="flex items-start gap-2 pl-4">
+                  <div className={`flex items-start gap-2 pl-4 ${
+                    isSubmitting ? 'opacity-50' : ''
+                  }`}>
                     <input
                       type="checkbox"
                       checked={formData.acceptTerms}
                       onChange={(e) => handleInputChange('acceptTerms', e.target.checked)}
                       className="mt-1.5 text-green-secondary focus:ring-green-secondary"
                       required
+                      disabled={isSubmitting}
                     />
                     <p className="text-sm text-gray-600">
                       Am citit și sunt de acord cu{" "}
@@ -254,11 +355,24 @@ export default function Inscrieri() {
                   <div className="pt-4">
                     <button
                       type="submit"
-                      disabled={formData.selectedCourses.length === 0}
-                      className="bg-green-secondary text-white font-semibold px-8 py-3 rounded-full 
-                        transition hover:bg-teal-500 active:scale-[0.98] disabled:bg-gray-300 disabled:cursor-not-allowed"
+                      disabled={isSubmitting || formData.selectedCourses.length === 0}
+                      className={`font-semibold px-8 py-3 rounded-full transition-all duration-200 ${
+                        isSubmitting || formData.selectedCourses.length === 0
+                          ? 'bg-gray-300 text-gray-500 cursor-not-allowed' 
+                          : 'bg-green-secondary text-white hover:bg-teal-500 hover:scale-105 active:scale-95'
+                      }`}
                     >
-                      ÎNSCRIERE Program Armonia
+                      {isSubmitting ? (
+                        <span className="flex items-center gap-2">
+                          <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"/>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 0 1 8-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 0 1 4 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/>
+                          </svg>
+                          Se înscrie...
+                        </span>
+                      ) : (
+                        'ÎNSCRIERE Program Armonia'
+                      )}
                     </button>
                   </div>
                 </form>

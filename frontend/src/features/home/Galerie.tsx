@@ -81,10 +81,9 @@ const Galerie = () => {
                     <img
                       src={photo.image}
                       alt=""
-                      className="w-full h-full object-cover rounded-xl" // Adaugă 'object-cover rounded-xl' la imagine
+                      className="w-full h-full object-cover rounded-xl"
                     />
                   </div>
-
                 </div>
               </div>
             </SwiperSlide>
@@ -131,16 +130,28 @@ const Galerie = () => {
         }
       `}</style>
       </div>
-      {/* Map comes here */}
+      
+      {/* Armonia Academy Locations Map */}
       <div className='md:container md:mx-auto my-20 p-8 md:p-0'>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.4494974875956!2d26.113730376656946!3d44.37951647107878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff4723b04b1b%3A0xffce9928d3e321a7!2sLidl%2C%20%C8%98oseaua%20Giurgiului%2C%20Bucure%C8%99ti%20040741!5e0!3m2!1sen!2sro!4v1717011892802!5m2!1sen!2sro"
-          width="100%"
-          height="450"
-          style={{ border: 0, borderRadius: "12px" }}
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
+        <div className="mb-6 text-center">
+          <p className='bg-green-secondary text-white tracking-wider text-sm font-semibold px-6 py-2 rounded-full inline-block mb-4'>
+            Locațiile Noastre
+          </p>
+          <h2 className="font-saint text-2xl md:text-3xl text-blue-text-primary">
+            Găsește sediul cel mai aproape de tine
+          </h2>
+        </div>
+        <div className="relative overflow-hidden" style={{ borderRadius: "12px", height: "450px" }}>
+          <iframe
+            src="https://www.google.com/maps/d/embed?mid=1ZyXcsQKYCAoqFDL4BHQd2s7NBDQIFSU&ehbc=2E312F&ll=44.4435846,26.1267148&z=12"
+            width="100%"
+            height="500"
+            style={{ border: 0, marginTop: "-50px" }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Armonia Academy Locations"
+          />
+        </div>
       </div>
     </div>
   );

@@ -1,10 +1,94 @@
+import { useState } from 'react';
 import { useGetBlogsStore } from '../../store/armoniaDataStore';
 import { useParams } from 'react-router-dom';
+import { 
+  sendBlogCommentEmail, 
+  BlogCommentData, 
+  showNotification
+} from '../../services/emailService';
 
 export default function Blog() {
   const { id } = useParams();
   const blogs = useGetBlogsStore((state) => state.blogs);
   const blog = blogs.find(blog => blog.id === id);
+
+  const [formData, setFormData] = useState<BlogCommentData>({
+    nume: "",
+    prenume: "",
+    subiect: "",
+    mesaj: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const validateForm = (): boolean => {
+    if (!formData.nume.trim()) {
+      showNotification('error', 'Numele este obligatoriu!');
+      return false;
+    }
+
+    if (!formData.prenume.trim()) {
+      showNotification('error', 'Prenumele este obligatoriu!');
+      return false;
+    }
+
+    if (!formData.subiect.trim()) {
+      showNotification('error', 'Subiectul este obligatoriu!');
+      return false;
+    }
+
+    if (!formData.mesaj.trim()) {
+      showNotification('error', 'Mesajul este obligatoriu!');
+      return false;
+    }
+
+    return true;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const emailData = {
+        ...formData,
+        blogTitle: blog?.title,
+        blogId: blog?.id
+      };
+
+      const success = await sendBlogCommentEmail(emailData);
+      
+      if (success) {
+        showNotification('success', 'Comentariul a fost trimis cu succes! Vă mulțumim pentru feedback.');
+        // Reset form
+        setFormData({
+          nume: "",
+          prenume: "",
+          subiect: "",
+          mesaj: "",
+        });
+      } else {
+        showNotification('error', 'A apărut o eroare la trimiterea comentariului. Încercați din nou.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      showNotification('error', 'A apărut o eroare la trimiterea comentariului. Încercați din nou.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   if (!blog) {
     return <div className="text-center mt-12">Blog not found</div>;
@@ -79,42 +163,75 @@ export default function Blog() {
               Adresa ta de email nu va fi publicată. Câmpurile marcate cu * sunt obligatorii.
             </p>
 
-            <form className="flex flex-col gap-6">
+            <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
               <div className="flex flex-col md:flex-row gap-6">
                 <input
                   type="text"
-                  placeholder="Nume"
-                  className="flex-1 shadow-lg px-5 py-3 rounded-full text-black focus:outline-none"
+                  name="nume"
+                  value={formData.nume}
+                  onChange={handleInputChange}
+                  placeholder="Nume *"
+                  className="flex-1 shadow-lg px-5 py-3 rounded-full text-black focus:outline-none focus:ring-2 focus:ring-purple-primary"
+                  required
+                  disabled={isSubmitting}
                 />
                 <input
                   type="text"
-                  placeholder="Prenume"
-                  className="flex-1 shadow-lg px-5 py-3 rounded-full text-black focus:outline-none"
+                  name="prenume"
+                  value={formData.prenume}
+                  onChange={handleInputChange}
+                  placeholder="Prenume *"
+                  className="flex-1 shadow-lg px-5 py-3 rounded-full text-black focus:outline-none focus:ring-2 focus:ring-purple-primary"
+                  required
+                  disabled={isSubmitting}
                 />
               </div>
               <div className="flex">
                 <input
                   type="text"
-                  placeholder="Subiect"
-                  className="flex-1 shadow-lg px-5 py-3 rounded-full text-black focus:outline-none"
+                  name="subiect"
+                  value={formData.subiect}
+                  onChange={handleInputChange}
+                  placeholder="Subiect *"
+                  className="flex-1 shadow-lg px-5 py-3 rounded-full text-black focus:outline-none focus:ring-2 focus:ring-purple-primary"
+                  required
+                  disabled={isSubmitting}
                 />
               </div>
 
               <div className="flex h-60">
                 <textarea
-                  className="flex-1 shadow-lg px-5 py-3 rounded-2xl text-black focus:outline-none"
-                  placeholder="Mesaj"
-                  name="message"
-                  id="message"
-                ></textarea>
+                  name="mesaj"
+                  value={formData.mesaj}
+                  onChange={handleInputChange}
+                  className="flex-1 shadow-lg px-5 py-3 rounded-2xl text-black focus:outline-none focus:ring-2 focus:ring-purple-primary resize-none"
+                  placeholder="Mesaj *"
+                  required
+                  disabled={isSubmitting}
+                />
               </div>
 
               <div className="flex justify-center md:justify-start">
                 <button
                   type="submit"
-                  className="bg-purple-primary text-white tracking-wide px-10 py-4 rounded-full ~text-sm/lg transition hover:scale-105"
+                  disabled={isSubmitting}
+                  className={`tracking-wide px-10 py-4 rounded-full ~text-sm/lg transition-all duration-200 ${
+                    isSubmitting 
+                      ? 'bg-gray-400 text-gray-600 cursor-not-allowed' 
+                      : 'bg-purple-primary text-white hover:bg-purple-600 hover:scale-105 active:scale-95'
+                  }`}
                 >
-                  SEND MESSAGE
+                  {isSubmitting ? (
+                    <span className="flex items-center gap-2">
+                      <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"/>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 0 1 8-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 0 1 4 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/>
+                      </svg>
+                      Se trimite...
+                    </span>
+                  ) : (
+                    'SEND MESSAGE'
+                  )}
                 </button>
               </div>
             </form>
