@@ -22,29 +22,30 @@ type SediuData = {
 
 export default function Sediile() {
   const sediiData: SediuData[] = [
+    
     {
-      nume: "Obor-Fainari ",
-      imagineSediu: "/images/sediu-green.png",
-      pin: "/images/green-pin.png",
-      culoareText: "text-green-secondary-rgb",
-      telefon: "+ 40738318373",
-      email: "obor@armoniaacademy.ro",
-      adresa: "Str. Episcopul Radu nr. 63 (langa Patiseria Blitz 'n Roll din str. Fainari nr. 5)",
-      zona: "Zona Obor - Mosilor, vis-a-vis de Scoala 50 Maica Domnului",
+      nume: "Sediul Piata\nProgresul",
+      imagineSediu: "/images/purple-hamburger.png",
+      pin: "/images/purple-pin.png",
+      culoareText: "text-purple-primary",
+      telefon: "+ 40764059927",
+      email: "progresul@armoniaacademy.ro",
+      adresa: "Strada Tufișului 14, Sector 4,\nBucuresti",
+      zona: "Zona Piata Progresul, langa Lidl",
       program: [
         "Luni - Vineri: 10:00 - 21:00",
         "Sambata: 09:00 - 21:00",
         "Duminica: 09:00 - 16:00"
       ],
-      icon: "/images/green-human.png",
-      link: "https://www.google.com/maps/dir/44.4435846,26.1267148/Strada+Episcopul+Radu+63,+Bucure%C8%99ti/@44.4460768,26.1197233,1184m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40b1f8cb8e874d85:0xe579d312fd836658!2m2!1d26.12188!2d44.4476593?hl=en&entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
+      icon: "/images/purple-human.png",
+      link: "https://www.google.com/maps/dir/44.451156,26.1338887/Strada+Tufi%C5%9Fului+14,+Bucharest/@44.3991426,26.0894943,2370m/data=!3m1!1e3!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40b1ffb4c0cf8099:0xd5d76323d9371246!2m2!1d26.0935511!2d44.3957155?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
     },
     {
       nume: "Sediul Gara\nde Nord",
       imagineSediu: "/images/sediu-green.png",
       pin: "/images/green-pin.png",
       culoareText: "text-green-secondary-rgb",
-      telefon: "+ 40273092740",
+      telefon: "+ 40723092740",
       email: "gdn@armoniaacademy.ro",
       adresa: "Strada Vespasian nr.34, Sector 1,\nBucuresti",
       zona: "Zona gara de Nord vis-a-vis de Gradinaita Zum-Zum",
@@ -74,21 +75,21 @@ export default function Sediile() {
       link: "https://www.google.com/maps/dir/44.451156,26.1338887/Strada+%C8%98tirului+14,+Bucure%C8%99ti/@44.4319086,26.1096394,4737m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40b1feee4adf3005:0x105915c8e42dee1!2m2!1d26.1320982!2d44.4135867?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
     },
     {
-      nume: "Sediul Piata\nProgresul",
-      imagineSediu: "/images/purple-hamburger.png",
-      pin: "/images/purple-pin.png",
-      culoareText: "text-purple-primary",
-      telefon: "+ 40723092740",
-      email: "progresul@armoniaacademy.ro",
-      adresa: "Strada Tufișului 14, Sector 4,\nBucuresti",
-      zona: "Zona Piata Progresul, langa Lidl",
+      nume: "Obor-Fainari ",
+      imagineSediu: "/images/sediu-green.png",
+      pin: "/images/green-pin.png",
+      culoareText: "text-green-secondary-rgb",
+      telefon: "+ 40736924645",
+      email: "obor@armoniaacademy.ro",
+      adresa: "Str. Episcopul Radu nr. 63 (langa Patiseria Blitz 'n Roll din str. Fainari nr. 5)",
+      zona: "Zona Obor - Mosilor",
       program: [
         "Luni - Vineri: 10:00 - 21:00",
         "Sambata: 09:00 - 21:00",
         "Duminica: 09:00 - 16:00"
       ],
-      icon: "/images/purple-human.png",
-      link: "https://www.google.com/maps/dir/44.451156,26.1338887/Strada+Tufi%C5%9Fului+14,+Bucharest/@44.3991426,26.0894943,2370m/data=!3m1!1e3!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40b1ffb4c0cf8099:0xd5d76323d9371246!2m2!1d26.0935511!2d44.3957155?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
+      icon: "/images/green-human.png",
+      link: "https://www.google.com/maps/dir/44.4435846,26.1267148/Strada+Episcopul+Radu+63,+Bucure%C8%99ti/@44.4460768,26.1197233,1184m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40b1f8cb8e874d85:0xe579d312fd836658!2m2!1d26.12188!2d44.4476593?hl=en&entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
     },
   ];
   const [, setActiveIndex] = useState(0);
