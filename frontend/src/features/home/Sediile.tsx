@@ -45,7 +45,7 @@ export default function Sediile() {
       pin: "/images/green-pin.png",
       culoareText: "text-green-secondary-rgb",
       telefon: "+ 40273092740",
-      email: "contact@scoalaarmona.ro",
+      email: "gdn@armoniaacademy.ro",
       adresa: "Strada Vespasian nr.34, Sector 1,\nBucuresti",
       zona: "Zona gara de Nord vis-a-vis de Gradinaita Zum-Zum",
       program: [
@@ -62,7 +62,7 @@ export default function Sediile() {
       pin: "/images/yellow-pin.png",
       culoareText: "text-[#FFD46C]",
       telefon: "+ 40723092740",
-      email: "mihaibravu@scoalaarmona.ro",
+      email: "mihaibravu@armoniaacademy.ro",
       adresa: "Strada Stirului nr.14-16, Sector 3,\nBucuresti",
       zona: "Zona Mihai Bravu, vis-a-vis de Magazinul Mathaus",
       program: [
@@ -78,8 +78,8 @@ export default function Sediile() {
       imagineSediu: "/images/purple-hamburger.png",
       pin: "/images/purple-pin.png",
       culoareText: "text-purple-primary",
-      telefon: "+ 40741231234",
-      email: "progresul@scoalaarmona.ro",
+      telefon: "+ 40723092740",
+      email: "progresul@armoniaacademy.ro",
       adresa: "Strada Tufișului 14, Sector 4,\nBucuresti",
       zona: "Zona Piata Progresul, langa Lidl",
       program: [

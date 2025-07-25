@@ -71,7 +71,7 @@ export default function Footer() {
 
               <div className="flex items-center gap-4">
                 <img src="/images/mail.png" alt="" />
-                <p>Email: contact@scoalaarmonia.ro</p>
+                <p>Email: contact@armoniaacademy.ro</p>
               </div>
 
               <div className="flex items-center gap-2 pt-2">

@@ -2,12 +2,12 @@
 import emailjs from '@emailjs/browser';
 
 // EmailJS configuration - replace with your actual credentials
-const EMAIL_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'your_service_id';
-const EMAIL_TEMPLATE_CONTACT = import.meta.env.VITE_EMAILJS_TEMPLATE_CONTACT || 'contact_template';
-const EMAIL_TEMPLATE_BLOG_COMMENT = import.meta.env.VITE_EMAILJS_TEMPLATE_BLOG || 'blog_comment_template';
-const EMAIL_TEMPLATE_COURSE_REGISTRATION = import.meta.env.VITE_EMAILJS_TEMPLATE_COURSE || 'course_registration_template';
-const EMAIL_TEMPLATE_GENERAL_REGISTRATION = import.meta.env.VITE_EMAILJS_TEMPLATE_GENERAL || 'general_registration_template';
-const EMAIL_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'your_public_key';
+const EMAIL_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_81pzwy8';
+const EMAIL_TEMPLATE_CONTACT = import.meta.env.VITE_EMAILJS_TEMPLATE_CONTACT || 'template_l1f1buh';
+const EMAIL_TEMPLATE_BLOG_COMMENT = import.meta.env.VITE_EMAILJS_TEMPLATE_BLOG || 'template_l1f1buh';
+const EMAIL_TEMPLATE_COURSE_REGISTRATION = import.meta.env.VITE_EMAILJS_TEMPLATE_COURSE || 'template_ff3w6ej';
+const EMAIL_TEMPLATE_GENERAL_REGISTRATION = import.meta.env.VITE_EMAILJS_TEMPLATE_GENERAL || 'template_ff3w6ej';
+const EMAIL_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'r4pVmtLwPm1BLHbM9';
 
 // Initialize EmailJS
 emailjs.init(EMAIL_PUBLIC_KEY);
