@@ -3,19 +3,18 @@ import { useGetSediiStore } from "../../store/armoniaDataStore";
 export default function Contact() {
   const sediiData = useGetSediiStore((state) => state.sediiData);
   return (
-    <div>
+    <div className="relative overflow-hidden">
       {/* floating elements are here */}
       <div className="absolute top-[80px] sm:top-[150px] md:top-[200px] lg:top-[350px] xl:top-[450px] 2xl:top-[500px] 
       scale-75 xl:scale-100 -left-5 opacity-40 hidden lg:block">
         <img src="/images/right-half-circle.png" alt="" />
       </div>
-      <div className="absolute hidden 2xl:block right-0 2xl:top-[500px] ">
+      <div className="absolute hidden 2xl:block right-0 2xl:top-[500px]">
         <img src="/images/footer-air-scaleddown.png" alt="" />
       </div>
-      <div className="absolute hidden 2xl:block right-0 2xl:top-[1850px] ">
+      <div className="absolute hidden 2xl:block right-0 bottom-10">
         <img src="/images/green-right-gear.png" alt="" />
       </div>
-
 
       <div className="md:container md:mx-auto justify-center mt-16 p-4 md:p-16 flex flex-col lg:flex-row gap-10 rounded-xl">
         <div className="flex flex-col gap-6 flex-1">

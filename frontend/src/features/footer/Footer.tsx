@@ -52,8 +52,7 @@ export default function Footer() {
                   <p>• <strong>Obor-Fainari:</strong> Str. Episcopul Radu nr. 63</p>
                   <p>• <strong>Gara de Nord:</strong> Str. Vespasian nr. 34, Sector 1</p>
                   <p>• <strong>Mihai Bravu:</strong> Str. Stirului nr. 14-16, Sector 3</p>
-                  <p>• <strong>Piața Progresul:</strong> Str. Exemplu 99, Sector 4</p>
-                  <p>• <strong>Premium Atomic:</strong> Cladirea Cocor, Bdul Ion C. Brătianu nr. 29-33</p>
+                  <p>• <strong>Piața Progresul:</strong> Str. Tufișului 14, Sector 4</p>
                 </div>
               </div>
 

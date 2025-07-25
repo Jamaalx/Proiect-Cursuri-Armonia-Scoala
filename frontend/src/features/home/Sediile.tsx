@@ -80,7 +80,7 @@ export default function Sediile() {
       culoareText: "text-purple-primary",
       telefon: "+ 40741231234",
       email: "progresul@scoalaarmona.ro",
-      adresa: "Strada Exemplu 99, Sector 4,\nBucuresti",
+      adresa: "Strada Tufișului 14, Sector 4,\nBucuresti",
       zona: "Zona Piata Progresul, langa Lidl",
       program: [
         "Luni - Vineri: 10:00 - 21:00",
@@ -88,23 +88,7 @@ export default function Sediile() {
         "Duminica: 09:00 - 16:00"
       ],
       icon: "/images/purple-human.png",
-      link: "https://www.google.com/maps/dir/44.451156,26.1338887/USR+Sector+4,+Strada+L%C3%A2n%C4%83riei+99,+Bucure%C8%99ti+040321/@44.4327556,26.0996873,4736m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40b1ff7cc579647d:0x5cbe9c6547bcdae1!2m2!1d26.1028006!2d44.4152935?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
-    },
-    {
-      nume: "Sediul Premium Atomic Academy",
-      customText: "",
-      imagineSediu: "/images/purple-hat.png",
-      pin: "/images/purple-pin.png",
-      culoareText: "text-purple-primary",
-      telefon: "+ 40736924645",
-      adresa: "Cladirea Cocor, Bdul Ion C. Bratianu nr.29-33",
-      program: [
-        "Luni - Vineri: 10:00 - 21:00",
-        "Sambata: 09:00 - 21:00",
-        "Duminica: 09:00 - 16:00"
-      ],
-      icon: "/images/purple-human.png",
-      link: "https://www.google.com/maps/dir/44.451156,26.1338887/Cocor,+Bulevardul+Ion+C.+Br%C4%83tianu+29-33,+Bucure%C8%99ti+030167/@44.4405521,26.1016744,4736m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40b1ff3e6b6b9f2d:0x70a781d665a6dc87!2m2!1d26.1041419!2d44.4303647?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
+      link: "https://www.google.com/maps/dir/44.451156,26.1338887/Strada+Tufi%C5%9Fului+14,+Bucharest/@44.3991426,26.0894943,2370m/data=!3m1!1e3!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40b1ffb4c0cf8099:0xd5d76323d9371246!2m2!1d26.0935511!2d44.3957155?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
     },
   ];
   const [, setActiveIndex] = useState(0);
